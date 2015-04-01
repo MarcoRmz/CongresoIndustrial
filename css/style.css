@@ -2,8 +2,8 @@
 header {
     text-align: center;
     background-attachment: scroll;
-    color: #fff;
-    background-color: #5a008e;
+    color: #00aaee;
+    background-color: #0066bb;
     /*background-image: url(../img/header-bg.jpg); */
     background-position: center center;
     background-repeat: none;
@@ -90,14 +90,14 @@ h6 {
 
 .btn-xl {
     padding: 20px 40px;
-    border-color: #662d91;
+    border-color: #ff9955;
     border-radius: 3px;
     text-transform: uppercase;
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 18px;
     font-weight: 700;
     color: #fff;
-    background-color: #662d91;
+    background-color: #ff9955;
 }
 
 .btn-xl:hover,
@@ -105,9 +105,9 @@ h6 {
 .btn-xl:active,
 .btn-xl.active,
 .open .dropdown-toggle.btn-xl {
-    border-color: #5a008e;
+    border-color: #ee5522;
     color: #fff;
-    background-color: #5a008e;
+    background-color: #ee5522;
 }
 
 .btn-xl:active,
@@ -131,7 +131,7 @@ fieldset[disabled] .btn-xl:active,
 .btn-xl.disabled.active,
 .btn-xl[disabled].active,
 fieldset[disabled] .btn-xl.active {
-    border-color: #662d91;
-    background-color: #662d91;
+    border-color: #ff9955;
+    background-color: #ff9955;
 }
 

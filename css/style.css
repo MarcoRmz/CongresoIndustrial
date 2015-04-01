@@ -14,12 +14,12 @@ header {
 }
 
 header .intro-text {
-    padding-top: 15%;
-    padding-bottom: 40%;
+    padding-top: 10%;
+    padding-bottom: 20%;
 }
 
 header .intro-text .intro-lead-in {
-    margin-bottom: 25px;
+    margin-bottom: 45px;
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 22px;
     font-style: italic;
@@ -35,9 +35,24 @@ header .intro-text .intro-heading {
     line-height: 50px;
 }
 
+section {
+    padding: 100px 0;
+}
+
+.logo {
+    padding-top: 2.5%;
+    padding-bottom: 4%;
+}
+
 body {
     overflow-x: hidden;
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+section h2.section-heading {
+    margin-top: 0px; 
+    margin-bottom: 32px; /* Cambiado de 15px */
+    font-size: 40px;
 }
 
 p {
@@ -91,7 +106,7 @@ h6 {
 .btn-xl {
     padding: 20px 40px;
     border-color: #ff9955;
-    border-radius: 3px;
+    border-radius: 18px;
     text-transform: uppercase;
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 18px;
@@ -108,6 +123,7 @@ h6 {
     border-color: #ee5522;
     color: #fff;
     background-color: #ee5522;
+    text-decoration: none;
 }
 
 .btn-xl:active,

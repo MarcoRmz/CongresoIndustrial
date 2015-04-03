@@ -151,3 +151,17 @@ fieldset[disabled] .btn-xl.active {
     background-color: #ff9955;
 }
 
+/*style secciones con background oscuro */
+.seccion-bg-oscuro{
+    color: #fff;
+}
+
+/*style del mapa de Cento Estudiantil*/
+#texto-mapa-CE{
+    margin-bottom: 2%;
+}
+
+/*style de Magistrales */
+#Magistrales{
+    background-color: #0066bb;
+}

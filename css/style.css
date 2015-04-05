@@ -233,7 +233,7 @@ fieldset[disabled] .btn-xl.active {
     background-color: #0066bb;
 }
 
-@media(min-width: 700px) {
+@media(min-width: 800px) {
     .navbar-default {
         padding: 25px 0;
         border: 0;
@@ -281,7 +281,7 @@ fieldset[disabled] .btn-xl.active {
     }
 }
 
-@media(max-width: 600px) {
+@media(max-width: 780px) {
     .navbar-default {
         padding: 25px 0;
         border: 0;

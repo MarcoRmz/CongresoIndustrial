@@ -721,7 +721,7 @@ body {
     webkit-tap-highlight-color: #662d91;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 780px) {
     .navbar-header {
         float: none;
     }

@@ -55,6 +55,10 @@ h6 {
     margin: 0 auto;
 }
 
+.video {
+    max-width: 80%;
+}
+
 .bg-light {
     /*background-color: #946CB2;*/
     background-color: #662d91;

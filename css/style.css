@@ -4,6 +4,10 @@ body {
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
+.logo {
+    max-width: 70%;
+}
+
 .text-muted {
     color: #c4a1df;
 }

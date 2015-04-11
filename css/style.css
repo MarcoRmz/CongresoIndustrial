@@ -5,7 +5,8 @@ body {
 }
 
 .logo {
-    max-width: 55%;
+    max-width: 35%;
+    max-height: 40%;
 }
 
 .text-muted {

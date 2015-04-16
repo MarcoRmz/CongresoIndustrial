@@ -858,5 +858,11 @@ body {
   display: none;
 }
 
-/* Expanding columns */
+/* Info columns */
+.modal .modal-content {
+    background-color: red;
+}
 
+.modal .modal-header {
+    background-color: #fff;
+}

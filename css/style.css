@@ -866,3 +866,22 @@ body {
 .modal .modal-header {
     background-color: #fff;
 }
+
+
+/* arreglar esto en su lugar */
+
+#collapseMas{
+    margin-top: -1px;
+}
+
+#bg-green{
+    background-color: #b9d332;
+}
+
+#headingOne{
+    background-color: #b9d332;
+}
+
+#panel_Schedule{
+    border: none;
+}

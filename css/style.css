@@ -868,20 +868,49 @@ body {
 }
 
 
-/* arreglar esto en su lugar */
+/* arreglar esto en lugar donde va lo de SCHEDULE*/
 
 #collapseMas{
     margin-top: -1px;
+    border: none;
 }
 
 #bg-green{
     background-color: #b9d332;
 }
 
+#bg-red {
+    background-color: #ed1e24;
+}
+
+#bg-purple {
+    background-color: #95268f;
+}
+
 #headingOne{
     background-color: #b9d332;
 }
 
+#headingTwo{
+    background-color: #ed1e24;
+}
+
+#headingThree{
+    background-color: #95268f;
+}
+
 #panel_Schedule{
     border: none;
+}
+
+#boton_collapse{
+    color: white;
+    width: 100%;
+    height: 39px;
+    outline: none;
+    border: none;
+}
+
+.panel{
+    color: white;
 }

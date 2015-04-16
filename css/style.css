@@ -684,6 +684,10 @@ footer {
     text-align: center;
 }
 
+footer:after {
+    background-color: #000;
+}
+
 footer span.copyright {
     text-transform: uppercase;
     text-transform: none;

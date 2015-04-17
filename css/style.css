@@ -579,9 +579,6 @@ body {
     .collapse.in{
         display:block !important;
     }
-    .big-columns {
-        line-height: 6;
-    }
 }
 
 /*    FAQ    */
@@ -666,8 +663,16 @@ body {
     margin-left: -150px;
 }
 
-.magistrales {
+.col-info {
     line-height: 1;
+}
+
+@media (max-width: 780px) {
+    .big-columns {
+        line-height: 6;
+        width: 109%;
+        margin-left: -15px;
+    }
 }
 /* SCHEDULE */
 

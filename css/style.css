@@ -659,7 +659,7 @@ body {
 
 .big-columns {
     line-height: 17;
-    width: 126.5%;
+    width: 126%;
     margin-left: -150px;
 }
 
@@ -670,7 +670,7 @@ body {
 @media (max-width: 780px) {
     .big-columns {
         line-height: 6;
-        width: 109%;
+        width: 108%;
         margin-left: -15px;
     }
 }
@@ -695,7 +695,6 @@ body {
 
 #panel_Schedule{
     border: none;
-    padding: 20px;
 }
 
 #boton_collapse{

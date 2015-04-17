@@ -678,7 +678,6 @@ body {
 
 #collapseMas{
     margin-top: -1px;
-    border: none;
 }
 
 #headingOne{
@@ -693,10 +692,6 @@ body {
     background-color: #95268f;
 }
 
-#panel_Schedule{
-    border: none;
-}
-
 #boton_collapse{
     color: white;
     width: 100%;
@@ -707,4 +702,5 @@ body {
 
 .panel{
     color: white;
+    border: none;
 }

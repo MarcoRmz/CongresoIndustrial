@@ -657,24 +657,11 @@ body {
     background-color: #fff;
 }
 
-
-/* arreglar esto en lugar donde va lo de SCHEDULE*/
+/* SCHEDULE */
 
 #collapseMas{
     margin-top: -1px;
     border: none;
-}
-
-#bg-green{
-    background-color: #b9d332;
-}
-
-#bg-red {
-    background-color: #ed1e24;
-}
-
-#bg-purple {
-    background-color: #95268f;
 }
 
 #headingOne{

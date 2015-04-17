@@ -695,6 +695,7 @@ body {
 
 #panel_Schedule{
     border: none;
+    padding: 20px;
 }
 
 #boton_collapse{

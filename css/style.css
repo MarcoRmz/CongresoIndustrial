@@ -579,6 +579,9 @@ body {
     .collapse.in{
         display:block !important;
     }
+    .big-columns {
+        line-height: 6;
+    }
 }
 
 /*    FAQ    */
@@ -657,6 +660,15 @@ body {
     background-color: #fff;
 }
 
+.big-columns {
+    line-height: 17;
+    width: 126.5%;
+    margin-left: -150px;
+}
+
+.magistrales {
+    line-height: 1;
+}
 /* SCHEDULE */
 
 #collapseMas{

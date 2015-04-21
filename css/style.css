@@ -428,6 +428,13 @@ section h2.section-heading {
     color: #662d91;
 }
 
+section h2.section-heading-dark-bg{
+    margin-top: 0; 
+    margin-bottom: 42px; /* Cambiado de 15px */
+    font-size: 40px;
+    color: #fff;
+}
+
 section h3.section-subheading {
     margin-bottom: 75px;
     text-transform: none;

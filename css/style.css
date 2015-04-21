@@ -657,11 +657,21 @@ body {
 
 /* Info columns */
 .modal .modal-content {
-    background-color: red;
+    color: #fff;
+    border-radius: 4px;
 }
 
 .modal .modal-header {
-    background-color: #fff;
+    color: #fff;
+    border-radius: 4px;
+}
+
+.modal .modal-title {
+    color: #fff;
+}
+
+.modal .modal-dialog {
+    margin: 10%;
 }
 
 .big-columns {

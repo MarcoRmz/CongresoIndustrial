@@ -704,3 +704,7 @@ body {
     color: white;
     border: none;
 }
+
+#hour{
+    margin-right: 1em;
+}

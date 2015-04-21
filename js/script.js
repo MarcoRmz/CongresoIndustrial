@@ -19,3 +19,17 @@ $('body').scrollspy({
 $('.navbar-collapse ul li a').click(function() {
     $('.navbar-toggle:visible').click();
 });
+
+// Schedule Collapse in Mobile
+$(window).bind('resize load',function(){
+if( $(this).width() < 767 )
+{
+$('.collapse').removeClass('in');
+$('.collapse').addClass('out');
+}
+else
+{
+$('.collapse').removeClass('out');
+$('.collapse').addClass('in');
+}   
+});

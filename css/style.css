@@ -449,7 +449,7 @@ h5 {
     color: #c4a1df;
 }
 
-section h4.darkbkg {
+.dark-bg {
     color: #fff;
 }
 
@@ -722,6 +722,12 @@ body {
     border: none;
 }
 
-#hour{
-    margin-right: 1em;
+/* Tickets */
+#ticketframe1{
+    border: 2px;
+    border-radius: 5px;
+}
+
+.instructions-list{
+    list-style-type: none;
 }

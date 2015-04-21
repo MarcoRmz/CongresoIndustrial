@@ -17,11 +17,11 @@ body {
 }
 
 .text-muted {
-    color: #c4a1df;
+    color: #0a6eb3;
 }
 
 .text-primary {
-    color: #662d91;
+    color: #fff;
 }
 
 p {
@@ -98,12 +98,12 @@ h6 {
 }
 
 .btn-primary {
-    border-color: #662d91;
+    border-color: #ff9955;
     text-transform: uppercase;
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: 700;
     color: #fff;
-    background-color: #662d91;
+    background-color: #ff9955;
 }
 
 .btn-primary:hover,
@@ -111,9 +111,9 @@ h6 {
 .btn-primary:active,
 .btn-primary.active,
 .open .dropdown-toggle.btn-primary {
-    border-color: #0066bb;
+    border-color: #ee5522;
     color: #fff;
-    background-color: #0066bb;
+    background-color: #ee5522;
 }
 
 .btn-primary:active,
@@ -137,12 +137,12 @@ fieldset[disabled] .btn-primary:active,
 .btn-primary.disabled.active,
 .btn-primary[disabled].active,
 fieldset[disabled] .btn-primary.active {
-    border-color: #662d91;
-    background-color: #662d91;
+    border-color: #ff9955;
+    background-color: #ff9955;
 }
 
 .btn-primary .badge {
-    color: #662d91;
+    color: #ff9955;
     background-color: #fff;
 }
 
@@ -194,7 +194,7 @@ fieldset[disabled] .btn-xl.active {
 }
 
 .btn-xl .badge {
-    color: #662d91;
+    color: #ff9955;
     background-color: #fff;
 }
 
@@ -419,23 +419,16 @@ header .intro-text .intro-heading {
 
 section {
     padding: 100px 0;
-}
-
-section h2.section-heading {
-    margin-top: 0; 
-    margin-bottom: 42px; /* Cambiado de 15px */
-    font-size: 40px;
-    color: #662d91;
-}
-
-section h2.section-heading-dark-bg{
-    margin-top: 0; 
-    margin-bottom: 42px; /* Cambiado de 15px */
-    font-size: 40px;
     color: #fff;
 }
 
-section h3.section-subheading {
+.section-heading {
+    margin-top: 0; 
+    margin-bottom: 42px; /* Cambiado de 15px */
+    font-size: 40px;
+}
+
+.section-subheading {
     margin-bottom: 75px;
     text-transform: none;
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
@@ -446,15 +439,11 @@ section h3.section-subheading {
 }
 
 h5 {
-    color: #c4a1df;
-}
-
-.dark-bg {
-    color: #fff;
+    color: #191919;
 }
 
 section h4 {
-    color: #662d91;
+    color: #191919;
 }
 
 section h3 {
@@ -682,6 +671,22 @@ body {
 
 .col-info {
     line-height: 1;
+}
+
+@media (max-width: 320px) {
+    .big-columns {
+        line-height: 4;
+        width: 108%;
+        margin-left: -15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .big-columns {
+        line-height: 5;
+        width: 108%;
+        margin-left: -15px;
+    }
 }
 
 @media (max-width: 780px) {

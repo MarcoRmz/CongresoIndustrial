@@ -669,11 +669,7 @@ body {
 }
 
 br.big-columns {
-    line-height: 8;
-}
-
-.col-info {
-    line-height: 1;
+    line-height: 7.5;
 }
 
 @media (max-width: 768px) {
@@ -683,13 +679,13 @@ br.big-columns {
     }
 
     br.big-columns {
-        line-height: 8;
+        line-height: 3.5;
     }
     
     .section-heading {
     margin-top: 0; 
     margin-bottom: 42px; /* Cambiado de 15px */
-    font-size: 36px;
+    font-size: 40px;
     }
 }
 
@@ -700,7 +696,7 @@ br.big-columns {
     }
 
     br.big-columns {
-        line-height: 8;
+        line-height: 2;
     }
 
     .section-heading {
@@ -717,7 +713,7 @@ br.big-columns {
     }
 
     br.big-columns {
-        line-height: 8;
+        line-height: 2;
     }
 
     .section-heading {

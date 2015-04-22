@@ -211,19 +211,19 @@ fieldset[disabled] .btn-xl.active {
 }
 
 .navbar-default .navbar-toggle {
-    border-color: #0a6eb3;
-    background-color: #0a6eb3;
-    border-radius: 20px;
+    border-color: transparent;
+    background-color: transparent;
 }
 
+/* Hamburger Icon Color */
 .navbar-default .navbar-toggle .icon-bar {
-    background-color: #fff;
+    background-color: #005AA6;
 }
 
 .navbar-default .navbar-toggle:hover,
 .navbar-default .navbar-toggle:focus {
-    background-color: #005AA6;
-    border-color: #005AA6;
+    background-color: transparent;
+    border-color: transparent;
 }
 
 /* Link Text Color */
@@ -232,12 +232,12 @@ fieldset[disabled] .btn-xl.active {
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: 400;
     letter-spacing: 1px;
-    color: #222;
+    color: #0a6eb3;
 }
 
 /* Link Text Color Hover */
 .navbar-default .nav li a:hover {
-    color: #662d91;
+    color: #005AA6;
 }
 
 .navbar-default .nav li a:focus {
@@ -249,7 +249,7 @@ fieldset[disabled] .btn-xl.active {
 .navbar-default .navbar-nav>.active>a {
     border-radius: 0;
     color: #fff;
-    background-color: #662d91;
+    background-color: #005AA6;
 }
 
 /* Active Link BKG Hover */
@@ -283,7 +283,7 @@ fieldset[disabled] .btn-xl.active {
 
     .navbar-default.navbar-shrink {
         padding: 10px 0;
-        background-color: #222;
+        background-color: #ECF0F1;
     }
 
     .navbar-default.navbar-shrink .navbar-brand {
@@ -320,7 +320,7 @@ fieldset[disabled] .btn-xl.active {
 
     .navbar-default.navbar-shrink {
         padding: 10px 0;
-        background-color: #222;
+        background-color: #ECF0F1;
     }
 
     .navbar-default.navbar-shrink .navbar-brand {
@@ -340,8 +340,6 @@ fieldset[disabled] .btn-xl.active {
         font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
         font-size: 18px;
         font-weight: 700;
-        color: #fff;
-        background-color: #662d91;
         margin-right: 0.7%;
         margin-left: 0.7%;
     }

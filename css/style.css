@@ -663,22 +663,40 @@ body {
     margin-top: 10%;
 }
 
-.big-columns {
+.big-columns-mag {
     width: 126.4%;
     margin-left: -150px;
 }
 
-br.big-columns {
+br.big-columns-mag {
+    line-height: 7.5;
+}
+
+.big-columns-conf {
+    width: 168.4%;
+    margin-left: -150px;
+}
+
+br.big-columns-conf {
     line-height: 7.5;
 }
 
 @media (max-width: 768px) {
-    .big-columns {
+    .big-columns-mag {
     width: 106.5%;
     margin-left: -24px;
     }
 
-    br.big-columns {
+    br.big-columns-mag {
+        line-height: 3.5;
+    }
+
+    .big-columns-conf {
+    width: 140%;
+    margin-left: -17px;
+    }
+
+    br.big-columns-conf {
         line-height: 3.5;
     }
     
@@ -690,12 +708,21 @@ br.big-columns {
 }
 
 @media (max-width: 375px) {
-    .big-columns {
+    .big-columns-mag {
     width: 108.6%;
     margin-left: -15px;
     }
 
-    br.big-columns {
+    br.big-columns-mag {
+        line-height: 2;
+    }
+
+    .big-columns-conf {
+    width: 108.6%;
+    margin-left: -15px;
+    }
+
+    br.big-columns-conf {
         line-height: 2;
     }
 
@@ -707,12 +734,21 @@ br.big-columns {
 }
 
 @media (max-width: 320px) {
-    .big-columns {
+    .big-columns-mag {
     width: 110.6%;
     margin-left: -15px;
     }
 
-    br.big-columns {
+    br.big-columns-mag {
+        line-height: 2;
+    }
+
+    .big-columns-conf {
+    width: 110.6%;
+    margin-left: -15px;
+    }
+
+    br.big-columns-conf {
         line-height: 2;
     }
 

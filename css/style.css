@@ -199,18 +199,11 @@ fieldset[disabled] .btn-xl.active {
 
 .navbar-default {
     border-color: transparent;
-    background-color: #222;
+    background-color: #ECF0F1;
 }
 
 .navbar-default .navbar-brand {
     margin-top: -14%;
-}
-
-.navbar-default .navbar-brand:hover,
-.navbar-default .navbar-brand:focus,
-.navbar-default .navbar-brand:active,
-.navbar-default .navbar-brand.active {
-    color: #fff;
 }
 
 .navbar-default .navbar-collapse {
@@ -218,8 +211,9 @@ fieldset[disabled] .btn-xl.active {
 }
 
 .navbar-default .navbar-toggle {
-    border-color: #662d91;
-    background-color: #662d91;
+    border-color: #0a6eb3;
+    background-color: #0a6eb3;
+    border-radius: 20px;
 }
 
 .navbar-default .navbar-toggle .icon-bar {
@@ -228,8 +222,8 @@ fieldset[disabled] .btn-xl.active {
 
 .navbar-default .navbar-toggle:hover,
 .navbar-default .navbar-toggle:focus {
-    background-color: #0066bb;
-    border-color: #0066bb;
+    background-color: #005AA6;
+    border-color: #005AA6;
 }
 
 /* Link Text Color */
@@ -238,7 +232,7 @@ fieldset[disabled] .btn-xl.active {
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: 400;
     letter-spacing: 1px;
-    color: #fff;
+    color: #222;
 }
 
 /* Link Text Color Hover */
@@ -262,7 +256,7 @@ fieldset[disabled] .btn-xl.active {
 .navbar-default .navbar-nav>.active>a:hover,
 .navbar-default .navbar-nav>.active>a:focus {
     color: #fff;
-    background-color: #0066bb;
+    background-color: #005AA6;
 }
 
 @media(min-width: 700px) {
@@ -357,7 +351,7 @@ header {
     text-align: center;
     background-attachment: scroll;
     color: #fff;
-    background-color: #0066bb;
+    background-color: #005AA6;
     /*background-image: url(../img/header-bg.jpg); */
     background-position: center center;
     background-repeat: none;
@@ -431,7 +425,7 @@ section {
     font-size: 16px;
     font-style: italic;
     font-weight: 400;
-    color: #0066bb;
+    color: #005AA6;
 }
 
 h5 {
@@ -495,7 +489,7 @@ ul.social-buttons li a {
     line-height: 40px;
     outline: 0;
     color: #fff;
-    background-color: #0066bb;
+    background-color: #005AA6;
     -webkit-transition: all .3s;
     -moz-transition: all .3s;
     transition: all .3s;
@@ -582,7 +576,7 @@ body {
 .question {
   position: relative;
   background: #fff;
-  color: #0066bb;
+  color: #005AA6;
   margin: 0;
   padding: 10px 10px 10px 50px;
   display: block;
@@ -591,7 +585,7 @@ body {
 }
 
 .answers {
-  background: #0066bb;
+  background: #005AA6;
   color: #fff;
   padding: 0px 15px;
   margin: 5px 0;

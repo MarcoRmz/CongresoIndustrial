@@ -56,7 +56,6 @@ h1,
 h2,
 h3,
 h4,
-h5,
 h6 {
     text-transform: uppercase;
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
@@ -295,9 +294,6 @@ fieldset[disabled] .btn-xl.active {
 
     .navbar-default.navbar-shrink .navbar-brand {
         font-size: 1.5em;
-    }
-    h5 {
-        font-size: 1.2em;
     }
 
     .logo {
@@ -798,4 +794,25 @@ br.big-columns-conf {
 
 .instructions-list{
     list-style-type: none;
+}
+
+/* MAP */
+#map {
+    height:400px;
+    width:80%;
+    margin: 0 auto;
+}
+
+h5.map {
+    font-weight: 400;
+}
+.gm-style-iw * {
+    display: block;
+}
+.gm-style-iw h4, .gm-style-iw p {
+    margin: 0;
+    padding: 0;
+}
+.gm-style-iw a {
+    color: #4272db;
 }

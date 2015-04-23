@@ -456,6 +456,7 @@ section p {
 footer {
     padding: 25px 0;
     text-align: center;
+    background-color: #ECF0F1;
 }
 
 footer span.copyright {
@@ -463,7 +464,7 @@ footer span.copyright {
     text-transform: none;
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
     line-height: 40px;
-    color: #fff;
+    color: #005AA6;
 }
 
 footer ul.quicklinks {
@@ -496,7 +497,7 @@ ul.social-buttons li a {
 ul.social-buttons li a:hover,
 ul.social-buttons li a:focus,
 ul.social-buttons li a:active {
-    background-color: #662d91;
+    background-color: #0a6eb3;
 }
 
 .btn:focus,
@@ -508,12 +509,12 @@ ul.social-buttons li a:active {
 
 ::-moz-selection {
     text-shadow: none;
-    background: #946CB2;
+    background: #005AA6;
 }
 
 ::selection {
     text-shadow: none;
-    background: #946CB2;
+    background: #005AA6;
 }
 
 img::selection {

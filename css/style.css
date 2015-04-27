@@ -349,8 +349,7 @@ header {
     text-align: center;
     background-attachment: scroll;
     color: #fff;
-    background-color: #005AA6;
-    /*background-image: url(../img/header-bg.jpg); */
+    background-image: url(../img/header-bg.png);
     background-position: center center;
     background-repeat: none;
     -webkit-background-size: cover;
@@ -369,6 +368,7 @@ header .intro-text .intro-lead-in {
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 22px;
     font-style: italic;
+    color: #222;
     line-height: 22px;
 }
 

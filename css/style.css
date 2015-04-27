@@ -814,3 +814,8 @@ h5.map {
 #contact{
     margin-bottom: 5em;
 }
+
+#facebook-box{
+    border: 1px solid;
+    border-radius: 5px;
+}

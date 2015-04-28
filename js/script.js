@@ -30,3 +30,12 @@ $(window).bind('resize load',function(){
 		$('.collapse').addClass('in');
 	}   
 });
+
+//Maps
+$(function() {
+   $('#map').initMap({
+        center : [25.648945,-100.289924], // Plain text address, or array of latitude / longitude: [ lat , lng ]
+        type: 'roadmap', // hybrid, roadmap, satellite, terain
+        options: { zoom: 17, scrollwheel: false } // Any property that is defined in google.maps.MapOptions
+    });
+});

@@ -829,3 +829,13 @@ h5.map {
   font-size: 1em;
   margin: 0;
 }
+
+/*Contacto*/
+#contact{
+    margin-bottom: 5em;
+}
+
+#facebook-box{
+    border: 1px solid;
+    border-radius: 5px;
+}

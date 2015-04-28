@@ -182,6 +182,15 @@
     </head>
 
     <body id="page-top" class="index">
+    <!-- Facebook Script - no ponerlo en el .js -->
+    	<div id="fb-root"></div>
+		<script>(function(d, s, id) {
+		  var js, fjs = d.getElementsByTagName(s)[0];
+		  if (d.getElementById(id)) return;
+		  js = d.createElement(s); js.id = id;
+		  js.src = "//connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v2.3";;
+		  fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));</script>
 
         <!-- Navigation -->
         <nav class="navbar navbar-default navbar-fixed-top">
@@ -742,11 +751,21 @@
         <!--Contact -->
         <section id="contacto">
             <div class="container">
+            	<div class="row text-center">
+        			<div class="col-md-12" id="contact">
+	        			<h2 class="section-heading text-muted">Contactanos</h2>
+	                    <h4>Manda un correo con tus preguntas a "CORREO"</h4>
+	                    <a href="mailto:hola@congresoindustrial.com.mx?subject=Congreso Industrial" class="page-scroll btn btn-xl">Mandar Correo</a>
+        			</div>
+        		</div>
                 <div class="row">
                     <div class="col-md-6 col-sm-6 text-center col-md-push-6">
-                        <h2 class="section-heading text-muted">Contactanos</h2>
-                        <h4>Manda un correo con tus preguntas a "CORREO"</h4>
-                        <a href="mailto:hola@congresoindustrial.com.mx?subject=Congreso Industrial" class="page-scroll btn btn-xl">Mandar Correo</a>
+	        			<div id="facebook-box" class="fb-page" data-href="https://www.facebook.com/congresoindustrialmty?fref=ts" data-width="500" data-height="450" data-hide-cover="true" data-show-facepile="false" data-show-posts="true">
+	        				<div class="fb-xfbml-parse-ignore">
+	        					<blockquote cite="https://www.facebook.com/congresoindustrialmty?fref=ts"><a href="https://www.facebook.com/congresoindustrialmty?fref=ts">Congreso Industrial</a>
+	        					</blockquote>
+	        				</div>
+	        			</div>
                     </div>
                     <div class="col-md-6 col-sm-6 text-center col-md-pull-6">
                             <a class="twitter-timeline" href="https://twitter.com/congresoIIS" data-widget-id="588729276586860544" style="width: 100%; padding-top: 1%;">Tweets by @congresoIIS</a>
@@ -754,6 +773,7 @@
                         </script>
                     </div>
                 </div>
+            </div>
             </div>
         </section>
 

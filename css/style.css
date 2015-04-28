@@ -8,7 +8,7 @@ Purple: #95268f
 
 body {
     overflow-x: hidden;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .logo {
@@ -58,7 +58,7 @@ h3,
 h4,
 h6 {
     text-transform: uppercase;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-weight: 700;
 }
 
@@ -99,7 +99,7 @@ h6 {
 .btn-primary {
     border-color: #ff9955;
     text-transform: uppercase;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-weight: 700;
     color: #fff;
     background-color: #ff9955;
@@ -150,7 +150,7 @@ fieldset[disabled] .btn-primary.active {
     border-color: #ff9955;
     border-radius: 3px;
     text-transform: uppercase;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-size: 18px;
     font-weight: 700;
     color: #fff;
@@ -229,7 +229,7 @@ fieldset[disabled] .btn-xl.active {
 /* Link Text Color */
 .navbar-default .nav li a {
     text-transform: uppercase;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-weight: 400;
     letter-spacing: 1px;
     color: #0a6eb3;
@@ -337,7 +337,7 @@ fieldset[disabled] .btn-xl.active {
         border-color: #662d91;
         border-radius: 3px;
         text-transform: uppercase;
-        font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+        font-family: 'Open Sans', sans-serif;
         font-size: 18px;
         font-weight: 700;
         margin-right: 0.7%;
@@ -365,7 +365,7 @@ header .intro-text {
 
 header .intro-text .intro-lead-in {
     margin-bottom: 25px;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-size: 22px;
     font-style: italic;
     color: #222;
@@ -375,7 +375,7 @@ header .intro-text .intro-lead-in {
 header .intro-text .intro-heading {
     margin-bottom: 25px;
     text-transform: uppercase;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-size: 50px;
     font-weight: 700;
     line-height: 50px;
@@ -389,7 +389,7 @@ header .intro-text .intro-heading {
 
     header .intro-text .intro-lead-in {
         margin-bottom: 25px;
-        font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+        font-family: 'Open Sans', sans-serif;
         font-size: 22px;
         font-style: italic;
         line-height: 40px;
@@ -398,7 +398,7 @@ header .intro-text .intro-heading {
     header .intro-text .intro-heading {
         margin-bottom: 50px;
         text-transform: uppercase;
-        font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+        font-family: 'Open Sans', sans-serif;
         font-size: 75px;
         font-weight: 700;
         line-height: 75px;
@@ -419,7 +419,7 @@ section {
 .section-subheading {
     margin-bottom: 75px;
     text-transform: none;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-size: 16px;
     font-style: italic;
     font-weight: 400;
@@ -462,7 +462,7 @@ footer {
 footer span.copyright {
     text-transform: uppercase;
     text-transform: none;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: 'Open Sans', sans-serif;
     line-height: 40px;
     color: #005AA6;
 }
@@ -471,7 +471,7 @@ footer ul.quicklinks {
     margin-bottom: 0;
     text-transform: uppercase;
     text-transform: none;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: 'Open Sans', sans-serif;
     line-height: 40px;
 }
 

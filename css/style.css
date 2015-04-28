@@ -800,35 +800,14 @@ h5.map {
     font-weight: 400;
 }
 .gm-style-iw * {
-    display: block;
+    color: #000;
 }
 .gm-style-iw h4, .gm-style-iw p {
     margin: 0;
-    padding: 0;
 }
 .gm-style-iw a {
     color: #4272db;
 }
-/*
-.map img {
-  max-width: none;
-}
-
-.map .content {
-  padding: 0 0.5em 1em 0.5em;
-}
-
-.map .firstHeading {
-  font-size: 1em;
-  line-height: 1em;
-  font-weight: bold;
-  margin: 0;
-}
-
-.map #bodyContent p {
-  font-size: 1em;
-  margin: 0;
-} */
 
 /*Contacto*/
 #contact{

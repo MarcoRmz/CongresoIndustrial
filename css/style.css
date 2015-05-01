@@ -298,6 +298,8 @@ fieldset[disabled] .btn-xl.active {
     .logo {
         padding-top: 2%;
         padding-bottom: 3%;
+        height: 100%
+        width: 100%;
     }
 }
 
@@ -797,4 +799,29 @@ h5.map {
 #facebook-box{
     border: 1px solid;
     border-radius: 5px;
+}
+
+/* Countdown */
+#countdown_wrap{
+  border: 1px solid;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+}
+
+#count-down{
+    font-size: 5em;
+    text-align: center;
+
+}
+
+#count-down li{
+    list-style-type: none;
+}
+
+#count-down div:after {
+  content: " " attr(data-interval-text);
+  /*display: inline;
+  position: relative;*/
+  font-size: .25em;
 }

@@ -24,7 +24,8 @@ body {
     margin: 0 auto;
     max-height: 250px;
     display: block;
-    height: auto
+    height: auto;
+    border-radius: 6px;
 }
 
 .text-muted {

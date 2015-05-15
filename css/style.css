@@ -682,6 +682,14 @@ br.big-columns-conf {
     margin-left: -24px;
     }
 
+    .conf {
+        margin-bottom: -11%;
+    }
+
+    .caso {
+        margin-bottom: -7%;
+    }
+
     br.big-columns-mag {
         line-height: 3.5;
     }

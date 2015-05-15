@@ -623,6 +623,14 @@ body {
 } */
 
 /* Info columns */
+.conf {
+    margin-bottom: -11%;
+}
+
+.caso {
+    margin-bottom: -7%;
+}
+
 .modal .modal-content {
     color: #fff;
     border-radius: 4px;
@@ -682,14 +690,6 @@ br.big-columns-conf {
     margin-left: -24px;
     }
 
-    .conf {
-        margin-bottom: -11%;
-    }
-
-    .caso {
-        margin-bottom: -7%;
-    }
-
     br.big-columns-mag {
         line-height: 3.5;
     }
@@ -701,6 +701,14 @@ br.big-columns-conf {
 
     br.big-columns-conf {
         line-height: 3.5;
+    }
+
+    .conf {
+        margin-bottom: -40%;
+    }
+
+    .caso {
+        margin-bottom: -32%;
     }
 }
 
@@ -726,6 +734,14 @@ br.big-columns-conf {
     .section-heading {
     font-size: 32px;
     }
+
+    .conf {
+        margin-bottom: -30%;
+    }
+
+    .caso {
+        margin-bottom: -32%;
+    }
 }
 
 @media (max-width: 320px) {
@@ -749,6 +765,14 @@ br.big-columns-conf {
 
     .section-heading {
     font-size: 30px;
+    }
+
+    .conf {
+        margin-bottom: -40%;
+    }
+
+    .caso {
+        margin-bottom: -32%;
     }
 }
 

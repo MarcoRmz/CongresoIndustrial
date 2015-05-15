@@ -667,6 +667,122 @@ br.big-columns-conf {
     line-height: 7.5;
 }
 
+@media (max-width: 1600px) {
+
+    .big-columns-mag {
+    width: 106.5%;
+    margin-left: -24px;
+    }
+
+    br.big-columns-mag {
+        line-height: 3.5;
+    }
+
+    .big-columns-conf {
+    width: 213%;
+    margin-left: -24px;
+    }
+
+    br.big-columns-conf {
+        line-height: 3.5;
+    }
+
+    .conf {
+        margin-bottom: -15%;
+    }
+
+    .caso {
+        margin-bottom: -14%;
+    }
+}
+
+@media (max-width: 1366px) {
+
+    .big-columns-mag {
+    width: 106.5%;
+    margin-left: -24px;
+    }
+
+    br.big-columns-mag {
+        line-height: 3.5;
+    }
+
+    .big-columns-conf {
+    width: 213%;
+    margin-left: -24px;
+    }
+
+    br.big-columns-conf {
+        line-height: 3.5;
+    }
+
+    .conf {
+        margin-bottom: -15%;
+    }
+
+    .caso {
+        margin-bottom: -14%;
+    }
+}
+
+@media (max-width: 1280px) {
+
+    .big-columns-mag {
+    width: 106.5%;
+    margin-left: -24px;
+    }
+
+    br.big-columns-mag {
+        line-height: 3.5;
+    }
+
+    .big-columns-conf {
+    width: 213%;
+    margin-left: -24px;
+    }
+
+    br.big-columns-conf {
+        line-height: 3.5;
+    }
+
+    .conf {
+        margin-bottom: -15%;
+    }
+
+    .caso {
+        margin-bottom: -14%;
+    }
+}
+
+@media (max-width: 1024px) {
+
+    .big-columns-mag {
+    width: 106.5%;
+    margin-left: -24px;
+    }
+
+    br.big-columns-mag {
+        line-height: 3.5;
+    }
+
+    .big-columns-conf {
+    width: 213%;
+    margin-left: -24px;
+    }
+
+    br.big-columns-conf {
+        line-height: 3.5;
+    }
+
+    .conf {
+        margin-bottom: -15%;
+    }
+
+    .caso {
+        margin-bottom: -14%;
+    }
+}
+
 @media (max-width: 768px) {
 
     header .intro-text {
@@ -709,6 +825,38 @@ br.big-columns-conf {
 
     .caso {
         margin-bottom: -14%;
+    }
+}
+
+@media (max-width: 480px) {
+    .big-columns-mag {
+    width: 108.6%;
+    margin-left: -15px;
+    }
+
+    br.big-columns-mag {
+        line-height: 2;
+    }
+
+    .big-columns-conf {
+    width: 108.6%;
+    margin-left: -15px;
+    }
+
+    br.big-columns-conf {
+        line-height: 2;
+    }
+
+    .section-heading {
+    font-size: 32px;
+    }
+
+    .conf {
+        margin-bottom: -30%;
+    }
+
+    .caso {
+        margin-bottom: -30%;
     }
 }
 

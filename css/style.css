@@ -20,7 +20,15 @@ body {
     max-height: 40%;
 }
 
-.conf {
+.imgCaso {
+    margin: 0 auto;
+    max-height: 300px;
+    display: block;
+    height: auto;
+    border-radius: 6px;
+}
+
+.imgModal {
     margin: 0 auto;
     max-height: 250px;
     display: block;
@@ -643,7 +651,7 @@ br.big-columns-mag {
 }
 
 .big-columns-conf {
-    width: 168.4%;
+    width: 253%;
     margin-left: -150px;
 }
 

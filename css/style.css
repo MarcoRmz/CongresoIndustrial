@@ -36,6 +36,10 @@ body {
     border-radius: 6px;
 }
 
+.img-responsive {
+    max-height: 350px;
+}
+
 .text-muted {
     color: #0a6eb3;
 }

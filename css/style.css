@@ -53,7 +53,7 @@ p.large {
     font-size: 16px;
     font-weight: 700;
     margin-top: -20px;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
 }
 
 a,
@@ -411,6 +411,7 @@ section {
 
 .section-subheading {
     margin-bottom: 25px; /* Cambiado de 75px */
+    margin-top: -15px;
     text-transform: none;
     font-family: 'Open Sans', sans-serif;
     font-size: 16px;

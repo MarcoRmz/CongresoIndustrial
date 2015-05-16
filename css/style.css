@@ -405,18 +405,18 @@ section {
 
 .section-heading {
     margin-top: 0;
-    margin-bottom: 30px; /* Cambiado de 42px */
+    margin-bottom: 35px; /* Cambiado de 42px */
     font-size: 40px;
 }
 
 .section-subheading {
-    margin-bottom: 25px; /* Cambiado de 75px */
-    margin-top: -15px;
+    margin-bottom: 30px; /* Cambiado de 75px */
+    margin-top: 10px;
     text-transform: none;
     font-family: 'Open Sans', sans-serif;
     font-size: 16px;
     font-style: italic;
-    font-weight: 400;
+    font-weight: 500;
     color: #005AA6;
 }
 

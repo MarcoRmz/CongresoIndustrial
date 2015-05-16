@@ -403,12 +403,12 @@ section {
 
 .section-heading {
     margin-top: 0;
-    margin-bottom: 42px; /* Cambiado de 15px */
+    margin-bottom: 30px; /* Cambiado de 42px */
     font-size: 40px;
 }
 
 .section-subheading {
-    margin-bottom: 75px;
+    margin-bottom: 40px; /* Cambiado de 75px */
     text-transform: none;
     font-family: 'Open Sans', sans-serif;
     font-size: 16px;

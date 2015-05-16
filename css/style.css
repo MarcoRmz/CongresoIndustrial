@@ -36,8 +36,12 @@ body {
     border-radius: 6px;
 }
 
-.img-responsive {
+.img-visit {
+    margin: 0 auto;
     max-height: 350px;
+    display: block;
+    height: auto;
+    border-radius: 6px;
 }
 
 .text-muted {

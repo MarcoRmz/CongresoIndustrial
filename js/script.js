@@ -54,6 +54,6 @@ $(function() {
 
 //FB scroll fixed
 function ChangeScrollState (select) {            
-    var iframe = document.getElementById ("facebook-box");
+    var iframe = document.getElementsByName ("f18cc688c4")[0];
     iframe.scrolling = true;
 }

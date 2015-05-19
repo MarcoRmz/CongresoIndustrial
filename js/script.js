@@ -51,9 +51,3 @@ $(function() {
         }
     });
 });
-
-//FB scroll fixed
-function ChangeScrollState () {            
-    var iframe = document.getElementById ("fb_xdm_frame_https");
-    iframe.scrolling = true;
-}

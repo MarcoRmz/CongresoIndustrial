@@ -51,3 +51,9 @@ $(function() {
         }
     });
 });
+
+//FB scroll fixed
+function ChangeScrollState (select) {            
+    var iframe = document.getElementById ("facebook-box");
+    iframe.scrolling = true;
+}

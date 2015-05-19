@@ -929,6 +929,16 @@ br.big-columns-conf {
     }
 }
 
+/* Visitas */
+#text_visits{
+    margin-top: 15%;
+}
+
+#visit_rows{
+    margin-bottom: 5px;
+}
+
+
 /* SCHEDULE */
 
 #collapseMas{

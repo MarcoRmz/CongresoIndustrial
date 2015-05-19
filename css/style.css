@@ -376,7 +376,7 @@ header {
     color: #fff;
     background-image: url(../img/header-bg.png);
     background-position: center center;
-    background-repeat: none;
+    background-repeat: no-repeat;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;

@@ -1013,7 +1013,6 @@ h5.map {
     width: 100%;
     border: 1px solid;
     border-radius: 5px;
-<<<<<<< HEAD
 }
 
 /* Talleres */
@@ -1035,8 +1034,10 @@ h5.map {
   max-width: 100%;
   opacity: .3;
   -webkit-transform: scale(.8, .8);
+  -moz-transform: scale(.8, .8);
   transform: scale(.8, .8);
   -webkit-transition: all 0.3s 0s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  -moz-transition: all 0.3s 0s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   transition: all 0.3s 0s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
@@ -1045,14 +1046,13 @@ h5.map {
 .nav.nav-justified > li:focus > a > img {
   opacity: 1;
   -webkit-transform: none;
+  -moz-transform: none;
   transform: none;
   -webkit-transition: all 0.3s 0s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  -moz-transition: all 0.3s 0s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   transition: all 0.3s 0s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .tab-pane .tab-inner {
   padding: 20px 0 20px;
 }
-=======
-}
->>>>>>> 35e9ab85a77c8584a6c641d9f6052866de557861

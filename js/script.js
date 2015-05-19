@@ -53,7 +53,7 @@ $(function() {
 });
 
 //FB scroll fixed
-function ChangeScrollState (select) {            
-    var iframe = document.getElementsByName ("f18cc688c4")[0];
+function ChangeScrollState () {            
+    var iframe = document.getElementById ("fb_xdm_frame_https");
     iframe.scrolling = true;
 }

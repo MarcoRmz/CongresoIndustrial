@@ -1005,10 +1005,15 @@ h5.map {
     margin-bottom: 5em;
 }
 
+#u_0_0 > div{
+    width: 100% !important;
+}
+
 #facebook-box{
     width: 100%;
     border: 1px solid;
     border-radius: 5px;
+<<<<<<< HEAD
 }
 
 /* Talleres */
@@ -1048,3 +1053,6 @@ h5.map {
 .tab-pane .tab-inner {
   padding: 20px 0 20px;
 }
+=======
+}
+>>>>>>> 35e9ab85a77c8584a6c641d9f6052866de557861

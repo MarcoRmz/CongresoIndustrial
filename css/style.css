@@ -1015,7 +1015,7 @@ h5.map {
         margin-bottom: -30%;
     }
 
-    .tab-content {
+    .tab-inner {
         padding-top: 50%;
     }
 }
@@ -1051,7 +1051,7 @@ h5.map {
         margin-bottom: -30%;
     }
 
-    .tab-content {
+    .tab-inner {
         padding-top: 50%;
     }
 }
@@ -1087,7 +1087,7 @@ h5.map {
         margin-bottom: -32%;
     }
 
-    .tab-content {
+    .tab-inner {
         padding-top: 50%;
     }
 }

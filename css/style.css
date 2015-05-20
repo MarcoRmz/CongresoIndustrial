@@ -692,6 +692,137 @@ br.big-columns-conf {
     line-height: 7.5;
 }
 
+/* Visitas */
+#text_visits{
+    font-size: 25px;
+    font-weight: bolder;
+    margin-top: 15%;
+}
+
+#visit_rows{
+    margin-bottom: 5px;
+}
+
+
+/* SCHEDULE */
+
+#collapseMas{
+    margin-top: -1px;
+}
+
+#headingOne{
+    background-color: #b9d332;
+}
+
+#headingTwo{
+    background-color: #ed1e24;
+}
+
+#headingThree{
+    background-color: #95268f;
+}
+
+#boton_collapse{
+    color: white;
+    width: 100%;
+    height: 39px;
+    outline: none;
+    border: none;
+}
+
+.panel{
+    color: white;
+    border: none;
+}
+
+/* Tickets */
+#ticketframe1{
+    border: 2px;
+    border-radius: 5px;
+}
+
+.instructions-list{
+    list-style-type: none;
+}
+
+/* MAP */
+#map {
+    height: 400px;
+    width: 85%;
+    margin: 0 auto;
+}
+
+h5.map {
+    font-weight: 400;
+}
+.gm-style-iw * {
+    color: #000;
+}
+.gm-style-iw h4, .gm-style-iw p {
+    margin: 0;
+}
+.gm-style-iw a {
+    color: #4272db;
+}
+
+/*Contacto*/
+#contact{
+    margin-bottom: 5em;
+}
+
+#u_0_0 > div{
+    width: 100% !important;
+}
+
+#facebook-box{
+    width: 100%;
+    border: 1px solid;
+    border-radius: 5px;
+}
+
+/* Talleres */
+.nav.nav-justified > li > a {
+  position: relative;
+}
+
+.nav.nav-justified > li > a:hover,
+.nav.nav-justified > li > a:focus {
+  background-color: transparent;
+}
+
+.nav.nav-justified > li > a > img {
+  /* Border Color */
+  box-shadow: 0 0 0 4px #0a6eb3;
+}
+
+.nav.nav-justified > li > a > img {
+  max-width: 100%;
+  opacity: .3;
+  -webkit-transform: scale(.8, .8);
+  -moz-transform: scale(.8, .8);
+  transform: scale(.8, .8);
+  -webkit-transition: all 0.3s 0s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  -moz-transition: all 0.3s 0s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: all 0.3s 0s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.nav.nav-justified > li.active > a > img,
+.nav.nav-justified > li:hover > a > img,
+.nav.nav-justified > li:focus > a > img {
+  opacity: 1;
+  -webkit-transform: none;
+  -moz-transform: none;
+  transform: none;
+  -webkit-transition: all 0.3s 0s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  -moz-transition: all 0.3s 0s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: all 0.3s 0s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.tab-pane .tab-inner {
+  padding: 20px 0 20px;
+}
+
+/* MEDIA QUERIES */
 @media (max-width: 1600px) {
 
     .big-columns-mag {
@@ -883,6 +1014,10 @@ br.big-columns-conf {
     .caso {
         margin-bottom: -30%;
     }
+
+    .tab-pane {
+        padding-top: 50%;
+    }
 }
 
 @media (max-width: 375px) {
@@ -914,6 +1049,10 @@ br.big-columns-conf {
 
     .caso {
         margin-bottom: -30%;
+    }
+
+    .tab-pane {
+        padding-top: 50%;
     }
 }
 
@@ -947,134 +1086,8 @@ br.big-columns-conf {
     .caso {
         margin-bottom: -32%;
     }
-}
 
-/* Visitas */
-#text_visits{
-    font-size: 25px;
-    font-weight: bolder;
-    margin-top: 15%;
-}
-
-#visit_rows{
-    margin-bottom: 5px;
-}
-
-
-/* SCHEDULE */
-
-#collapseMas{
-    margin-top: -1px;
-}
-
-#headingOne{
-    background-color: #b9d332;
-}
-
-#headingTwo{
-    background-color: #ed1e24;
-}
-
-#headingThree{
-    background-color: #95268f;
-}
-
-#boton_collapse{
-    color: white;
-    width: 100%;
-    height: 39px;
-    outline: none;
-    border: none;
-}
-
-.panel{
-    color: white;
-    border: none;
-}
-
-/* Tickets */
-#ticketframe1{
-    border: 2px;
-    border-radius: 5px;
-}
-
-.instructions-list{
-    list-style-type: none;
-}
-
-/* MAP */
-#map {
-    height: 400px;
-    width: 85%;
-    margin: 0 auto;
-}
-
-h5.map {
-    font-weight: 400;
-}
-.gm-style-iw * {
-    color: #000;
-}
-.gm-style-iw h4, .gm-style-iw p {
-    margin: 0;
-}
-.gm-style-iw a {
-    color: #4272db;
-}
-
-/*Contacto*/
-#contact{
-    margin-bottom: 5em;
-}
-
-#u_0_0 > div{
-    width: 100% !important;
-}
-
-#facebook-box{
-    width: 100%;
-    border: 1px solid;
-    border-radius: 5px;
-}
-
-/* Talleres */
-.nav.nav-justified > li > a {
-  position: relative;
-}
-
-.nav.nav-justified > li > a:hover,
-.nav.nav-justified > li > a:focus {
-  background-color: transparent;
-}
-
-.nav.nav-justified > li > a > img {
-  /* Border Color */
-  box-shadow: 0 0 0 4px #0a6eb3;
-}
-
-.nav.nav-justified > li > a > img {
-  max-width: 100%;
-  opacity: .3;
-  -webkit-transform: scale(.8, .8);
-  -moz-transform: scale(.8, .8);
-  transform: scale(.8, .8);
-  -webkit-transition: all 0.3s 0s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  -moz-transition: all 0.3s 0s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  transition: all 0.3s 0s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-.nav.nav-justified > li.active > a > img,
-.nav.nav-justified > li:hover > a > img,
-.nav.nav-justified > li:focus > a > img {
-  opacity: 1;
-  -webkit-transform: none;
-  -moz-transform: none;
-  transform: none;
-  -webkit-transition: all 0.3s 0s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  -moz-transition: all 0.3s 0s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  transition: all 0.3s 0s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-.tab-pane .tab-inner {
-  padding: 20px 0 20px;
+    .tab-pane {
+        padding-top: 50%;
+    }
 }

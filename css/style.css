@@ -15,6 +15,10 @@ body {
     font-family: 'Corbel', sans-serif;
 }
 
+td {
+    text-align: center;
+}
+
 .logo {
     max-width: 20%;
     max-height: 40%;

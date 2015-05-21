@@ -443,6 +443,12 @@ header .intro-text .intro-heading {
     line-height: 50px;
 }
 
+@media (max-width: 375){
+    header .intro-text .intro-lead-in{
+        font-size: 2.0vw;
+    }
+}
+
 /* Countdown */
 *, *:before, *:after {
   -moz-box-sizing: border-box;
@@ -1063,7 +1069,7 @@ h5.map {
 
     header .intro-text .intro-lead-in {
         margin-bottom: 25px;
-        line-height: 40px;
+        /*line-height: 40px;*/
     }
 
     header .intro-text .intro-heading {

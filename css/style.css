@@ -425,10 +425,13 @@ header .intro-text {
 header .intro-text .intro-lead-in {
     margin-bottom: 20px;
     font-family: 'Open Sans', sans-serif;
+    font-size: 22px; /*En caso de no tener la funcionalidad de vw */
     font-size: 1.7vw;
     font-weight: 700;
     color: #222;
-    line-height: 22px;
+    line-height: 22px; /*En caso de no tener la funcionalidad de vw */
+    line-height: 22px; /*En caso de no tener la funcionalidad de vw */
+    line-height: 1.7vw;
 }
 
 header .intro-text .intro-heading {

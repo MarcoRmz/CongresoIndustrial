@@ -455,15 +455,15 @@ header .intro-text .intro-heading {
   font-size: 10em;
 }
 
-#count-down ul {
+/*#count-down ul {
   display: block;
   margin-right: 7%;
   margin-left: 38.5%;
   padding: 0;
-} 
+} */
 
 #count-down li {
-  float: right;
+  display: inline-block;
   padding: 0 10px;
   position: relative;
   text-align: center;

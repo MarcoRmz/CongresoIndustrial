@@ -349,7 +349,7 @@ fieldset[disabled] .btn-xl.active {
     #count-down ul {
       display: block;
       margin-right: 7%;
-      margin-left: 38.5%;
+      margin-left: 43%;
       padding: 0;
     }
 }
@@ -895,6 +895,13 @@ h5.map {
     .caso {
         margin-bottom: -14%;
     }
+
+    #count-down ul {
+      display: block;
+      margin-right: 1%;
+      margin-left: 50%;
+      padding: 0;
+    }
 }
 
 @media (max-width: 1366px) {
@@ -923,6 +930,13 @@ h5.map {
 
     .caso {
         margin-bottom: -14%;
+    }
+
+    #count-down ul {
+      display: block;
+      margin-right: 0%;
+      margin-left: 50%;
+      padding: 0;
     }
 }
 
@@ -953,6 +967,13 @@ h5.map {
     .caso {
         margin-bottom: -14%;
     }
+
+    #count-down ul {
+      display: block;
+      margin-right: 0%;
+      margin-left: 50%;
+      padding: 0;
+    }
 }
 
 @media (max-width: 1024px) {
@@ -981,6 +1002,13 @@ h5.map {
 
     .caso {
         margin-bottom: -14%;
+    }
+
+    #count-down ul {
+      display: block;
+      margin-right: 1%;
+      margin-left: 38%;
+      padding: 0;
     }
 }
 
@@ -1027,6 +1055,13 @@ h5.map {
     .caso {
         margin-bottom: -14%;
     }
+
+    #count-down ul {
+      display: block;
+      margin-right: 0%;
+      margin-left: 25%;
+      padding: 0;
+    }
 }
 
 @media (max-width: 480px) {
@@ -1062,6 +1097,17 @@ h5.map {
 
     .tab-inner {
         padding-top: 50%;
+    }
+
+    #count-down ul {
+      display: block;
+      margin-right: -5px;
+      margin-left: -70px;
+      padding: 0;
+    }
+
+    #count-down {
+        font-size: 1.5em;
     }
 }
 

@@ -395,6 +395,13 @@ fieldset[disabled] .btn-xl.active {
         margin-right: 0.7%;
         margin-left: 0.7%;
     }
+
+    #count-down ul {
+      display: block;
+      margin-right: -326px;
+      margin-left: 20px;
+      padding: 0;
+    }
 }
 
 header {
@@ -418,7 +425,7 @@ header .intro-text {
 header .intro-text .intro-lead-in {
     margin-bottom: 20px;
     font-family: 'Open Sans', sans-serif;
-    font-size: 22px;
+    font-size: 1.7vw;
     font-weight: 700;
     color: #222;
     line-height: 22px;
@@ -1158,6 +1165,10 @@ h5.map {
 
     .tab-inner {
         padding-top: 50%;
+    }
+
+    .wrapper{
+        visibility: hidden;
     }
 }
 

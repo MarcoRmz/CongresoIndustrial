@@ -450,9 +450,6 @@ header .intro-text .intro-heading {
   box-sizing: border-box;
 }
 
-.wrapper{
-    float: right;
-}
 
 #count-down {
   font-size: 10em;

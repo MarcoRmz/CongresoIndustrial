@@ -405,7 +405,8 @@ header {
 
 header .intro-text {
     padding-top: 15%;
-    padding-bottom: 40%;
+    padding-bottom: 37%;
+    margin-bottom: -2px;
 }
 
 header .intro-text .intro-lead-in {

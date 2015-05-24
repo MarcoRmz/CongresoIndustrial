@@ -53,12 +53,12 @@ $(document).ready(function(){
     seconds = 0;
    }    
    if(settings["wordFormat"] == "full"){
-    days == 1 ? $days.attr("data-interval-text", "day"):$days.attr("data-interval-text", "dias");
+    days == 1 ? $days.attr("data-interval-text", "day"):$days.attr("data-interval-text", "días");
     hours == 1 ? $hours.attr("data-interval-text", "hour"):$hours.attr("data-interval-text", "horas");
     minutes == 1 ? $minutes.attr("data-interval-text", "minute"):$minutes.attr("data-interval-text", "minutos");
     seconds == 1 ? $seconds.attr("data-interval-text", "second"):$seconds.attr("data-interval-text", "segundos"); 
    }else{
-    days == 1 ? $days.attr("data-interval-text", "day"):$days.attr("data-interval-text", "dias");
+    days == 1 ? $days.attr("data-interval-text", "day"):$days.attr("data-interval-text", "días");
     hours == 1 ? $hours.attr("data-interval-text", "hr"):$hours.attr("data-interval-text", "hrs");
     minutes == 1 ? $minutes.attr("data-interval-text", "min"):$minutes.attr("data-interval-text", "mins");
     seconds == 1 ? $seconds.attr("data-interval-text", "sec"):$seconds.attr("data-interval-text", "segs"); 

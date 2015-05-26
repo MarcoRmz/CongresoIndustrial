@@ -76,6 +76,7 @@ p {
 p.large {
     font-size: 18px;
     font-weight: 700;
+    margin-bottom: 25px;
 }
 
 p.medium{

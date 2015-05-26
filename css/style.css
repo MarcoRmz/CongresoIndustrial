@@ -867,6 +867,10 @@ h5.map {
   padding-bottom: 20px;
 }
 
+.img-red{
+  box-shadow: 0 0 0 4px #ed1e24 !important;
+}
+
 /* MEDIA QUERIES */
 @media (max-width: 1600px) {
 

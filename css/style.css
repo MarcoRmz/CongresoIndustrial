@@ -780,6 +780,11 @@ br.big-columns-conf {
     border-radius: 5px;
 }
 
+#ticketframe0{
+    border: 2px;
+    border-radius: 5px;
+}
+
 .instructions-list{
     list-style-type: none;
 }

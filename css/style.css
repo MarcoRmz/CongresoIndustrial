@@ -738,7 +738,8 @@ br.big-columns-conf {
 }
 
 #visit_rows{
-    margin-bottom: 5px;
+    margin-bottom: 3em;
+    margin-bottom: 10vh;
 }
 
 

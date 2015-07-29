@@ -29,11 +29,8 @@
         <!-- Bootstrap Core CSS -->
         <link href="css/bootstrap.min.css" rel="stylesheet">
 
-        <!-- Custom CSS -->
+        <!-- CSS -->
         <link href="css/style.css" rel="stylesheet">
-
-        <!-- Prettify CSS -->
-        <link href="css/prettify.css" rel="stylesheet">
 
         <!-- Custom Fonts -->
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
@@ -183,33 +180,31 @@
                     </div>
                 </div>
 
-                <div id="tabsleft" class="tabbable tabs-left">
+                <div id="form" class="tabbable tabs-left">
                     <ul>
-                        <li><a href="#tabsleft-tab1" data-toggle="tab">First</a></li>
-                        <li><a href="#tabsleft-tab2" data-toggle="tab">Second</a></li>
-                        <li><a href="#tabsleft-tab3" data-toggle="tab">Third</a></li>
-                        <li><a href="#tabsleft-tab4" data-toggle="tab">Forth</a></li>
-                        <li><a href="#tabsleft-tab5" data-toggle="tab">Fifth</a></li>
-                        <li><a href="#tabsleft-tab6" data-toggle="tab">Sixth</a></li>
-                        <li><a href="#tabsleft-tab7" data-toggle="tab">Seventh</a></li>
+                        <li><a href="#form-tab1" data-toggle="tab">First</a></li>
+                        <li><a href="#form-tab2" data-toggle="tab">Second</a></li>
+                        <li><a href="#form-tab3" data-toggle="tab">Third</a></li>
+                        <li><a href="#form-tab4" data-toggle="tab">Forth</a></li>
+                        <li><a href="#form-tab5" data-toggle="tab">Fifth</a></li>
                     </ul>
                     <div id="bar" class="progress progress-info progress-striped">
                       <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%;"></div>
                     </div>
                     <div class="tab-content">
-                        <div class="tab-pane" id="tabsleft-tab1">
+                        <div class="tab-pane" id="form-tab1">
                           <p>I'm in Section 1.</p>
                         </div>
-                        <div class="tab-pane" id="tabsleft-tab2">
+                        <div class="tab-pane" id="form-tab2">
                           <p>Howdy, I'm in Section 2.</p>
                         </div>
-                        <div class="tab-pane" id="tabsleft-tab3">
+                        <div class="tab-pane" id="form-tab3">
                             3
                         </div>
-                        <div class="tab-pane" id="tabsleft-tab4">
+                        <div class="tab-pane" id="form-tab4">
                             4
                         </div>
-                        <div class="tab-pane" id="tabsleft-tab5">
+                        <div class="tab-pane" id="form-tab5">
                             5
                         </div>
                         <ul class="pager wizard">
@@ -237,50 +232,47 @@
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
         <script src="js/jquery.bootstrap.wizard.min.js"></script>
-        <script src="js/prettify.js"></script>
         <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
         <script src="js/classie.js"></script>
         <script src="js/cbpAnimatedHeader.js"></script>
         <script src="js/script.js"></script>
         <script>
-    $(document).ready(function() {
+            $(document).ready(function() {
+                $('#form').bootstrapWizard({'tabClass': 'bwizard-steps', 'debug': false, onShow: function(tab, navigation, index) {
+                            console.log('onShow');
+                        }, onNext: function(tab, navigation, index) {
+                            console.log('onNext');
+                        }, onPrevious: function(tab, navigation, index) {
+                            console.log('onPrevious');
+                        }, onLast: function(tab, navigation, index) {
+                            console.log('onLast');
+                            return false;
+                        }, onTabClick: function(tab, navigation, index) {
+                            console.log('onTabClick');
+                            return false;
+                        }, onTabShow: function(tab, navigation, index) {
+                            console.log('onTabShow');
+                            var $total = navigation.find('li').length;
+                            var $current = index+1;
+                            var $percent = ($current/$total) * 100;
+                            $('#form .progress-bar').css({width:$percent+'%'});
 
-            $('#tabsleft').bootstrapWizard({'tabClass': 'nav nav-tabs', 'debug': false, onShow: function(tab, navigation, index) {
-                        console.log('onShow');
-                    }, onNext: function(tab, navigation, index) {
-                        console.log('onNext');
-                    }, onPrevious: function(tab, navigation, index) {
-                        console.log('onPrevious');
-                    }, onLast: function(tab, navigation, index) {
-                        console.log('onLast');
-                    }, onTabClick: function(tab, navigation, index) {
-                        console.log('onTabClick');
-                    }, onTabShow: function(tab, navigation, index) {
-                        console.log('onTabShow');
-                        var $total = navigation.find('li').length;
-                        var $current = index+1;
-                        var $percent = ($current/$total) * 100;
-                        $('#tabsleft .progress-bar').css({width:$percent+'%'});
+                            // If it's the last tab then hide the last button and show the finish instead
+                            if($current >= $total) {
+                                $('#form').find('.pager .next').hide();
+                                $('#form').find('.pager .finish').show();
+                                $('#form').find('.pager .finish').removeClass('disabled');
+                            } else {
+                                $('#form').find('.pager .next').show();
+                                $('#form').find('.pager .finish').hide();
+                            }
+                        }});
 
-                        // If it's the last tab then hide the last button and show the finish instead
-                        if($current >= $total) {
-                            $('#tabsleft').find('.pager .next').hide();
-                            $('#tabsleft').find('.pager .finish').show();
-                            $('#tabsleft').find('.pager .finish').removeClass('disabled');
-                        } else {
-                            $('#tabsleft').find('.pager .next').show();
-                            $('#tabsleft').find('.pager .finish').hide();
-                        }
-
-                    }});
-
-                $('#tabsleft .finish').click(function() {
-                    alert('Finished!, Starting over!');
-                    $('#tabsleft').find("a[href*='tabsleft-tab1']").trigger('click');
-                });
-
-        });
-
+                    $('#form .finish').click(function() {
+                        alert('Registro Completo!');
+                        window.location="http://www.congresoindustrial.com.mx";
+                    });
+            });
     </script>
     </body>
 </html>

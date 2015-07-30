@@ -265,14 +265,6 @@
                     </div>
                   </div>
                 </div>
-                <div class="row text-center">
-                    <div class="col-md-6">
-                        <a href="" class="page-scroll btn btn-xl" style="margin-bottom: 20px;">Paso Anterior</a>
-                    </div>
-                    <div class="col-md-6">
-                        <a href="" class="page-scroll btn btn-xl" style="margin-bottom: 20px;">Confirmar</a>
-                    </div>
-                </div>
             </div>
         </section>
 
@@ -286,10 +278,10 @@
 
                 <div id="form" class="tabbable tabs-left">
                     <ul>
-                        <li><a href="#form-tab1" data-toggle="tab">First</a></li>
-                        <li><a href="#form-tab2" data-toggle="tab">Second</a></li>
-                        <li><a href="#form-tab3" data-toggle="tab">Third</a></li>
-                        <li><a href="#form-tab4" data-toggle="tab">Forth</a></li>
+                        <li><a href="#form-tab1" data-toggle="tab">Verificación</a></li>
+                        <li><a href="#form-tab2" data-toggle="tab">Talleres</a></li>
+                        <li><a href="#form-tab3" data-toggle="tab">Visitas</a></li>
+                        <li><a href="#form-tab4" data-toggle="tab">Confirmación</a></li>
                         <li><a href="#form-tab5" data-toggle="tab">Fifth</a></li>
                     </ul>
                     <div id="bar" class="progress progress-info progress-striped">
@@ -297,24 +289,179 @@
                     </div>
                     <div class="tab-content">
                         <div class="tab-pane" id="form-tab1">
-                          <p>I'm in Section 1.</p>
+                            <!-- Info General -->
+                            <div class="container">
+                                <div class="row text-center">
+                                    <div class="col-md-12">
+                                        <h2 class="section-heading">Registro Talleres y Visitas</h2>
+                                    </div>
+                                </div>
+                                <div class="row text-justified">
+                                  <div class="col-md-12">
+                                      <h3 class="text-primary">Importante</h3>
+                                      <h4 class="text-primary">- Ingresar el mismo correo con el que se registro al comprar boleto</h4>
+                                      <h4 class="text-primary">- Tu Taller/Visita solo se registrará si terminas el proceso completo</h4>
+                                      <h4 class="text-primary">- No se guardarán los datos si sales de la pagina a mediados del proceso</h4>
+                                  </div> 
+                                </div>
+                                <br>
+                                <div class="row text-center">
+                                    <div class="col-md-12">
+                                        <div class="input-group">
+                                            <span class="input-group-addon" id="basic-addon1">Correo</span>
+                                            <input type="text" class="form-control" placeholder="Correo Electronico" aria-describedby="basic-addon1">
+                                        </div>
+                                        <div class="input-group">
+                                            <span class="input-group-addon" id="basic-addon2">Folio</span>
+                                            <input type="text" class="form-control" placeholder="Folio" aria-describedby="basic-addon2">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div class="tab-pane" id="form-tab2">
-                          <p>Howdy, I'm in Section 2.</p>
+                          <div class="container">
+                            <div class="row text-center">
+                                <div class="col-md-12">
+                                    <h2>Elige el Taller</h2>
+                                </div>
+                            </div>
+                            <div class="row text-center">
+                                <h3>Recuerda que solo se puede seleccionar 1 taller de los 16 disponibles</h3>
+                            </div>
+                            <div class="row text-center">
+                                <div class="col-md-6">
+                                    <h3 class="text-primary">Jueves 3:30 PM</h3>
+                                </div>
+                                <div class="col-md-6">
+                                    <h3 class="text-primary">Viernes 3:30 PM</h3>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row text-center">
+                                <div class="col-lg-6">
+                                    <form>
+                                        <div class="col-md-6">
+                                            <input type="radio" name="talleres" value="Taller1" checked><div> <img class="image_registro" src="img/edgardo.jpg"/>
+                                            <h4 class="text-primary">Texto</h4><h5 class="text-primary">Texto 2</h5></div>
+                                        <br>
+                                            <input type="radio" name="talleres" value="Taller2"><div> <img class="image_registro" src="img/edgardo.jpg"/>
+                                            <h4 class="text-primary">Texto</h4><h5 class="text-primary">Texto 2</h5></div>
+                                        <br>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <input type="radio" name="talleres" value="Taller3"><div> <img class="image_registro" src="img/edgardo.jpg"/>
+                                            <h4 class="text-primary">Texto</h4><h5 class="text-primary">Texto 2</h5></div>
+                                        <br>
+                                            <input type="radio" name="talleres" value="Taller4"><div> <img class="image_registro" src="img/edgardo.jpg"/>
+                                            <h4 class="text-primary">Texto</h4><h5 class="text-primary">Texto 2</h5></div>
+                                        <br>
+                                        </div>
+                                    <br>
+                                </div><!-- /.col-lg-6 -->
+                                <div class="col-lg-6">
+                                        <div class="col-md-6">
+                                            <input type="radio" name="talleres" value="Taller9"><div> <img class="image_registro" src="img/edgardo.jpg"/>
+                                            <h4 class="text-primary">Texto</h4><h5 class="text-primary">Texto 2</h5></div>
+                                        <br>
+                                            <input type="radio" name="talleres" value="Taller10"><div> <img class="image_registro" src="img/edgardo.jpg"/>
+                                            <h4 class="text-primary">Texto</h4><h5 class="text-primary">Texto 2</h5></div>
+                                        <br>
+                                            <input type="radio" name="talleres" value="Taller11"><div> <img class="image_registro" src="img/edgardo.jpg"/>
+                                            <h4 class="text-primary">Texto</h4><h5 class="text-primary">Texto 2</h5></div>
+                                        <br>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <input type="radio" name="talleres" value="Taller12"><div> <img class="image_registro" src="img/edgardo.jpg"/>
+                                            <h4 class="text-primary">Texto</h4><h5 class="text-primary">Texto 2</h5></div>
+                                        <br>
+                                            <input type="radio" name="talleres" value="Taller13"><div> <img class="image_registro" src="img/edgardo.jpg"/>
+                                            <h4 class="text-primary">Texto</h4><h5 class="text-primary">Texto 2</h5></div>
+                                        <br>
+                                        </div>
+                                    <br>
+                                </div><!-- /.col-lg-6 -->
+                            </div>
+                            <div class="row text-center">
+                                <div class="col-md-6">
+                                    <h3 class="text-primary">Jueves 5:00</h3>
+                                </div>
+                                <div class="col-md-6">
+                                    <h3 class="text-primary">Viernes 5:00</h3>
+                                </div>
+                            </div>
+                            <div class="row text-center">
+                                <div class="col-lg-6">
+                                        <div class="col-md-6">
+                                            <input type="radio" name="talleres" value="Taller5"><div> <img class="image_registro" src="img/edgardo.jpg"/>
+                                            <h4 class="text-primary">Texto 1</h4><h5 class="text-primary">Texto 2</h5></div>
+                                        <br>
+                                            <input type="radio" name="talleres" value="Taller6"><div> <img class="image_registro" src="img/edgardo.jpg"/>
+                                            <h4 class="text-primary">Texto</h4><h5 class="text-primary">Texto 2</h5></div>
+                                        <br>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <input type="radio" name="talleres" value="Taller7"><div> <img class="image_registro" src="img/edgardo.jpg"/>
+                                            <h4 class="text-primary">Texto</h4><h5 class="text-primary">Texto 2</h5></div>
+                                        <br>
+                                            <input type="radio" name="talleres" value="Taller8"><div> <img class="image_registro" src="img/edgardo.jpg"/>
+                                            <h4 class="text-primary">Texto</h4><h5 class="text-primary">Texto 2</h5></div>
+                                        <br>
+                                        </div>
+                                    <br>
+                                </div><!-- /.col-lg-6 -->
+                                <div class="col-lg-6">
+                                        <div class="col-md-6">
+                                            <input type="radio" name="talleres" value="Taller14"><div> <img class="image_registro" src="img/edgardo.jpg"/>
+                                            <h4 class="text-primary">Texto</h4><h5 class="text-primary">Texto 2</h5></div>
+                                        <br>
+                                            <input type="radio" name="talleres" value="Taller15"><div> <img class="image_registro" src="img/edgardo.jpg"/>
+                                            <h4 class="text-primary">Texto</h4><h5 class="text-primary">Texto 2</h5></div>
+                                        <br>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <input type="radio" name="talleres" value="Taller16"><div> <img class="image_registro" src="img/edgardo.jpg"/>
+                                            <h4 class="text-primary">Texto</h4><h5 class="text-primary">Texto 2</h5></div>
+                                        <br>
+                                        </div>
+                                    </form>
+                                    <br>
+                                </div><!-- /.col-lg-6 -->
+                            </div>
+                        </div>
                         </div>
                         <div class="tab-pane" id="form-tab3">
                             3
                         </div>
                         <div class="tab-pane" id="form-tab4">
-                            4
+                            <div class="container">
+                                <div class="row text-center">
+                                    <div class="col-md-12">
+                                        <h2 class="section-heading">Confirmar Elecciones</h2>
+                                    </div>
+                                </div>
+                                <div class="row text-center">
+                                  <div class="col-md-12">
+                                    <div class="input-group">
+                                      <span class="input-group-addon" id="basic-addon1">Correo</span>
+                                      <input type="text" class="form-control" placeholder="Correo Electronico" aria-describedby="basic-addon1">
+                                    </div>
+
+                                    <div class="input-group">
+                                      <span class="input-group-addon" id="basic-addon2">Folio</span>
+                                      <input type="text" class="form-control" placeholder="Folio" aria-describedby="basic-addon2">
+                                    </div>
+                                  </div>
+                                </div>
+                            </div>
                         </div>
                         <div class="tab-pane" id="form-tab5">
                             5
                         </div>
                         <ul class="pager wizard">
-                            <li class="previous"><a href="javascript:;">Previous</a></li>
-                            <li class="next"><a href="javascript:;">Next</a></li>
-                            <li class="next finish" style="display:none;"><a href="javascript:;">Finish</a></li>
+                            <li class="previous"><a href="javascript:;">Anterior</a></li>
+                            <li class="next"><a href="javascript:;">Siguiente</a></li>
+                            <li class="next finish" style="display:none;"><a href="javascript:;">Terminar</a></li>
                         </ul>
                     </div>
                 </div>

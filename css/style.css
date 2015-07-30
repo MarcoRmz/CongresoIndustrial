@@ -1209,7 +1209,7 @@ h5.map {
 }
 
 /* Form Registro */
-.pager li>a, .pager li>span {
+.pager li>a, .pager li>span, .pager li>a:focus {
   background-color: #ff9955;
   border: 1px solid #ff9955;
   border-radius: 4px;
@@ -1219,9 +1219,17 @@ h5.map {
   font-weight: 700;
 }
 
+.pager .disabled>a, .pager .disabled>a:hover, .pager .disabled>a:focus, .pager .disabled>span {
+    color: #777;
+    cursor: not-allowed;
+    background-color: #fff;
+    border-color: #777;
+}
+
 .pager li>a:hover {
-  background-color: #fff;
-  border: 1px solid #fff;
+  border-color: #ee5522;
+  color: #fff;
+  background-color: #ee5522;
 }
 
 .bwizard-steps {
@@ -1311,6 +1319,10 @@ h5.map {
 
 .bwizard-steps a {
   color: #333;
+  text-transform: uppercase;
+  font-family: 'Corbel', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
 }
 
 .bwizard-steps a:hover {

@@ -1209,6 +1209,9 @@ h5.map {
 }
 
 /* Form Registro */
+.progress-bar {
+  background-color: #ff9955;
+}
 .pager li>a, .pager li>span, .pager li>a:focus {
   background-color: #ff9955;
   border: 1px solid #ff9955;
@@ -1234,17 +1237,18 @@ h5.map {
 
 .bwizard-steps {
   display: inline-block;
-  margin: 0; padding: 0;
-  background: #fff;
+  padding: 0;
+  background: transparent;
+  margin-top: 1%;
 }
 
 .bwizard-steps .active {
   color: #fff;
-  background: #007ACC;
+  background: #ff9955;
 }
 
 .bwizard-steps .active:after {
-  border-left-color: #007ACC;
+  border-left-color: #ff9955;
 }
 
 .bwizard-steps .active a {
@@ -1301,7 +1305,7 @@ h5.map {
   left: 0; top: 0;
   height: 0; width: 0;
   border-bottom: 20px inset transparent;
-  border-left: 20px solid #fff;
+  border-left: 20px solid #95268f;
   border-top: 20px inset transparent;
   content: "";
 }

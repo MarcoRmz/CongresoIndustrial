@@ -1369,5 +1369,20 @@ h5.map {
 .image_registro{
   height:70px; 
   width:70px; 
-  margin-left: 5px;"
+  margin-left: 5px;
+  /* h v blur spread color */
+  box-shadow: 5px 5px 15px #191919;
+  border-radius: 6px;
+}
+
+.image_visitas{
+    height: 80px;
+    width: 80px;
+    /* h v blur spread color */
+    box-shadow: 5px 5px 15px #191919;
+    border-radius: 6px;
+}
+
+.shadow-edge{
+    box-shadow: 0px 0px 15px  1px #191919;
 }

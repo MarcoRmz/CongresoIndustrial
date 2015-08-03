@@ -1268,8 +1268,8 @@ h5.map {
 
 .bwizard-steps li {
   display: inline-block; position: relative;
-  margin-right: 5px;
-  padding: 12px 17px 10px 30px;
+  margin-right: 2px;
+  padding: 7px 10px 7px 25px;
   *display: inline;
   *padding-left: 17px;
   background: #efefef;
@@ -1304,9 +1304,9 @@ h5.map {
   position: absolute;
   left: 0; top: 0;
   height: 0; width: 0;
-  border-bottom: 20px inset transparent;
+  border-bottom: 16px inset transparent;
   border-left: 20px solid #95268f;
-  border-top: 20px inset transparent;
+  border-top: 16px inset transparent;
   content: "";
 }
 
@@ -1314,9 +1314,9 @@ h5.map {
   position: absolute;
   right: -20px; top: 0;
   height: 0; width: 0;
-  border-bottom: 20px inset transparent;
+  border-bottom: 16px inset transparent;
   border-left: 20px solid #efefef;
-  border-top: 20px inset transparent;
+  border-top: 16px inset transparent;
   content: "";
   z-index: 2;
 }
@@ -1349,7 +1349,7 @@ h5.map {
   color: #08c;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 318px) {
   /* badges only on small screens */
   .bwizard-steps li:after,
   .bwizard-steps li:before {
@@ -1363,6 +1363,13 @@ h5.map {
     margin-right: 0;
     padding: 0;
     background-color: transparent;
+  }
+}
+
+@media (max-width: 360px) {
+  .bwizard-steps a {
+    font-size: 10px;
+    font-weight: 500;
   }
 }
 

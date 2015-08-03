@@ -1371,6 +1371,9 @@ h5.map {
     font-size: 10px;
     font-weight: 500;
   }
+  .bwizard-steps li {
+    line-height: 17px;
+  }
 }
 
 .image_registro{

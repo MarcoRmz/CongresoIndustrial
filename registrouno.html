@@ -306,19 +306,16 @@
         <script>
             $(document).ready(function() {
                 $('#form').bootstrapWizard({'tabClass': 'bwizard-steps', 'debug': false, onShow: function(tab, navigation, index) {
-                            console.log('onShow');
+                            
                         }, onNext: function(tab, navigation, index) {
-                            console.log('onNext');
+                            
                         }, onPrevious: function(tab, navigation, index) {
-                            console.log('onPrevious');
+                            
                         }, onLast: function(tab, navigation, index) {
-                            console.log('onLast');
                             return false;
                         }, onTabClick: function(tab, navigation, index) {
-                            console.log('onTabClick');
                             return false;
                         }, onTabShow: function(tab, navigation, index) {
-                            console.log('onTabShow');
                             var $total = navigation.find('li').length;
                             var $current = index+1;
                             var $percent = ($current/$total) * 100;

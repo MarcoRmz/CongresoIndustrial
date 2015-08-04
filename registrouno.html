@@ -322,7 +322,9 @@
                 $('#form').bootstrapWizard({'tabClass': 'bwizard-steps', 'debug': false, onShow: function(tab, navigation, index) {
                             
                         }, onNext: function(tab, navigation, index) {
-                            
+                            var powerXML = new XMLHttpRequest();
+                            powerXML.open("GET", "https://api.eventjoy.com/v1/events/mine", "5c27f9e1de27081311a387dd938cf19d27e6");
+                            powerXML.send();
                         }, onPrevious: function(tab, navigation, index) {
                             
                         }, onLast: function(tab, navigation, index) {

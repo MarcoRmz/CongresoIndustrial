@@ -157,8 +157,6 @@ h6 {
 
 .btn-primary:hover,
 .btn-primary:focus,
-.btn-primary:active,
-.btn-primary.active,
 .open .dropdown-toggle.btn-primary {
     border-color: #ee5522;
     color: #fff;
@@ -169,6 +167,8 @@ h6 {
 .btn-primary.active,
 .open .dropdown-toggle.btn-primary {
     background-image: none;
+    border-color: #ff9955;
+    background-color: #ff9955;
 }
 
 .btn-primary.disabled,
@@ -209,8 +209,6 @@ fieldset[disabled] .btn-primary.active {
 
 .btn-xl:hover,
 .btn-xl:focus,
-.btn-xl:active,
-.btn-xl.active,
 .open .dropdown-toggle.btn-xl {
     border-color: #ee5522;
     color: #fff;
@@ -221,6 +219,8 @@ fieldset[disabled] .btn-primary.active {
 .btn-xl.active,
 .open .dropdown-toggle.btn-xl {
     background-image: none;
+    border-color: #ff9955;
+    background-color: #ff9955;
 }
 
 .btn-xl.disabled,

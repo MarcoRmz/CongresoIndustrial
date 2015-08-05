@@ -206,6 +206,9 @@
                                     <br>
                                 </div><!-- /.col-lg-6 -->
                             </div>
+                            <!-- <div class="row text-center">
+                                <button onClick="get_checked_radio('talleres')">Guardar Respuesta</button>
+                            </div> -->
                         </div>
                         </div>
                         <div class="tab-pane" id="form-tab3">
@@ -322,6 +325,14 @@
                 $('#form').bootstrapWizard({'tabClass': 'bwizard-steps', 'debug': false, onShow: function(tab, navigation, index) {
                             
                         }, onNext: function(tab, navigation, index) {
+                            
+                            if (index == 2){
+                                get_checked_radio('talleres', index);
+                            }
+                            else if (index == 3){
+                                get_checked_radio('visitas', index)
+                            }
+
                             var request = new XMLHttpRequest();
                             var url = 'https://api.eventjoy.com/v1/oauth/token';
 
@@ -383,6 +394,27 @@
                         window.location="http://www.congresoindustrial.com.mx";
                     });
             });
+    </script>
+    <script type="text/javascript">
+        function get_checked_radio(name, index)
+        {
+            var $VisitaValue = 0;
+            var $TallerValue = 0;
+            var radioElements = document.getElementsByName(name);
+
+            for(var i=0; i < radioElements.length; i++)
+            {
+                if(radioElements[i].checked) 
+                {
+                    if(index == 2){
+                        $TallerValue = i;
+                    }
+                    else if (index == 3){
+                        $VisitaValue = i;
+                    }
+                }
+            }
+        }
     </script>
     </body>
 </html>

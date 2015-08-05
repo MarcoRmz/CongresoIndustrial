@@ -322,17 +322,34 @@
                 $('#form').bootstrapWizard({'tabClass': 'bwizard-steps', 'debug': false, onShow: function(tab, navigation, index) {
                             
                         }, onNext: function(tab, navigation, index) {
+                            var request = new XMLHttpRequest();
                             var url = 'https://api.eventjoy.com/v1/oauth/token';
-                            var xhr = createCORSRequest('PUT', url);
-                            xhr.setRequestHeader(
+
+                            // Create the XHR object.
+                            function createCORSRequest('PUT', url) {
+                              var xhr = new XMLHttpRequest();
+                              xhr.setRequestHeader(
                                 'X-Custom-Header', 'value');
-                            xhr.setRequestHeader(
+                              xhr.setRequestHeader(
                                 'Content-Type', 'application/json');
-                            xhr.setRequestHeader(
+                              xhr.setRequestHeader(
                                 'X-API-KEY', '5c27f9e1de27081311a387dd938cf19d27e6');
-                            xhr.setRequestHeader(
+                              xhr.setRequestHeader(
                                 'X-REQUEST-TOKEN', 'IiivMq%2FeoVxYaEKHGcp92m%2FIG2WJ8WKiMdg6g816qCz2k3lB8GI%2Benwy0qoDHFDYktW5gqLwBvcu%2FQksfj9%2FaMDRLl1niFJ%2BY07L1j%2FyYgJilytuCUOJLW520YS9xgWX');
-                            xhr.send();
+                              xhr.send();
+                              if ("withCredentials" in xhr) {
+                                // XHR for Chrome/Firefox/Opera/Safari.
+                                xhr.open(method, url, true);
+                              } else if (typeof XDomainRequest != "undefined") {
+                                // XDomainRequest for IE.
+                                xhr = new XDomainRequest();
+                                xhr.open(method, url);
+                              } else {
+                                // CORS not supported.
+                                xhr = null;
+                              }
+                              return xhr;
+                            }
                         }, onPrevious: function(tab, navigation, index) {
                             
                         }, onLast: function(tab, navigation, index) {

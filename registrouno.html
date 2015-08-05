@@ -339,13 +339,16 @@
                               xhr.send();
                               if ("withCredentials" in xhr) {
                                 // XHR for Chrome/Firefox/Opera/Safari.
+                                console.log("ok?");
                                 xhr.open(method, url, true);
                               } else if (typeof XDomainRequest != "undefined") {
                                 // XDomainRequest for IE.
+                                console.log("Cors undefined");
                                 xhr = new XDomainRequest();
                                 xhr.open(method, url);
                               } else {
                                 // CORS not supported.
+                                console.log("Cors not supported");
                                 xhr = null;
                               }
                               return xhr;

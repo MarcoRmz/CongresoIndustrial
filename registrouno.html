@@ -326,7 +326,7 @@
                             var url = 'https://api.eventjoy.com/v1/oauth/token';
 
                             // Create the XHR object.
-                            function createCORSRequest('PUT', url) {
+                            function createCORSRequest(method, url) {
                               var xhr = new XMLHttpRequest();
                               xhr.setRequestHeader(
                                 'X-Custom-Header', 'value');

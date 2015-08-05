@@ -322,22 +322,20 @@
                 $('#form').bootstrapWizard({'tabClass': 'bwizard-steps', 'debug': false, onShow: function(tab, navigation, index) {
                             
                         }, onNext: function(tab, navigation, index) {
-                            var data = null;
-
-                            var xhr = new XMLHttpRequest();
-                            xhr.withCredentials = true;
-
-                            xhr.addEventListener("readystatechange", function () {
-                              if (this.readyState === this.DONE) {
-                                console.log(this.responseText);
+                            var settings = {
+                              "async": true,
+                              "crossDomain": true,
+                              "url": "https://api.eventjoy.com/v1/events/3451277",
+                              "method": "GET",
+                              "headers": {
+                                "content-type": "application/json",
+                                "x-api-key": "5c27f9e1de27081311a387dd938cf19d27e6"
                               }
+                            }
+
+                            $.ajax(settings).done(function (response) {
+                              console.log(response);
                             });
-
-                            xhr.open("GET", "https://api.eventjoy.com/v1/events/3451277");
-                            xhr.setRequestHeader("content-type", "application/json");
-                            xhr.setRequestHeader("x-api-key", "5c27f9e1de27081311a387dd938cf19d27e6");
-
-                            xhr.send(data);
                         }, onPrevious: function(tab, navigation, index) {
                             
                         }, onLast: function(tab, navigation, index) {

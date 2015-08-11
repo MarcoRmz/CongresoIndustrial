@@ -228,7 +228,7 @@
                                         <h3 class="text-primary">Jueves</h3>
                                         <form>
                                             <div class="col-md-6 col-xs-6">
-                                                <input type="radio" name="visitas" value="Visita1"><div> <img class="image_visitas" src="img/default-placeholder.png"/>
+                                                <input type="radio" name="visitas" value="Visita1" checked><div> <img class="image_visitas" src="img/default-placeholder.png"/>
                                                 <h4 class="text-primary">Visita 1</h4><h5 class="text-primary">Texto</h5></div>
                                                 <br>
                                                 <input type="radio" name="visitas" value="Visita2"><div> <img class="image_visitas" src="img/default-placeholder.png"/>
@@ -272,6 +272,26 @@
                                     <div class="col-md-12">
                                         <h2 class="section-heading">Confirmar Elecciones</h2>
                                     </div>
+                                </div>
+                                <div class="row text-center">
+                                    <div class="col-md-6 col-md-push-6">
+                                        <ul class="text-primary instructions-list text-left">
+                                            <li>1. Hacer click en "Enter a Code"</li>
+                                            <li>2. Utilizar el codigo de Taller: <p class="text-primary" id="codigoTaller"></p></li>
+                                            <li>3. Esperar a que la opcion del boleto aparezca</li>
+                                            <li>4. Registrar el Taller con tus datos</li>
+                                            <li>5. Recuerda registrar solo un Taller</li>
+                                            <br>
+                                            <li>En caso de tener dudas, mandar correo a &#99;&#111;&#110;&#116;&#97;&#99;&#116;&#111;&#64;&#99;&#111;&#110;&#103;&#114;&#101;&#115;&#111;&#105;&#110;&#100;&#117;&#115;&#116;&#114;&#105;&#97;&#108;&#46;&#99;&#111;&#109;&#46;&#109;&#120;</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-6 col-md-pull-6">
+                                        <div id="event-joy"><script type="text/javascript" src="https://www.eventjoy.com/w/ticket-embed.min.js?id=3451277"></script><a href="https://www.eventjoy.com?ref=ejw" target="_blank" style="display:block;font-size:10px;opacity:0.5;padding:0 5px 5px 5px;">Online ticketing powered by Eventjoy</a></div>
+                                    </div>
+                                </div>
+                                <div class="row text-center">
+                                    <div class="col-md-6">
+                                    </div>    
                                 </div>
                                 <div class="row text-center">
                                   <div class="col-md-12">
@@ -321,6 +341,9 @@
         <script src="js/cbpAnimatedHeader.js"></script>
         <script src="js/script.js"></script>
         <script>
+        var TallerValue;
+        var VisitaValue;
+
             $(document).ready(function() {
                 $('#form').bootstrapWizard({'tabClass': 'bwizard-steps', 'debug': false, onShow: function(tab, navigation, index) {
                             
@@ -329,7 +352,8 @@
                                 get_checked_radio('talleres', index);
                             }
                             else if (index == 3){
-                                get_checked_radio('visitas', index)
+                                get_checked_radio('visitas', index);
+                                document.getElementById("codigoTaller").innerHTML = "Taller" + TallerValue;
                             }
                         }, onPrevious: function(tab, navigation, index) {
                             
@@ -359,27 +383,24 @@
                         window.location="http://www.congresoindustrial.com.mx";
                     });
             });
-    </script>
-    <script type="text/javascript">
-        function get_checked_radio(name, index)
-        {
-            var $VisitaValue = 0;
-            var $TallerValue = 0;
-            var radioElements = document.getElementsByName(name);
-
-            for(var i=0; i < radioElements.length; i++)
+                
+            function get_checked_radio(name, index)
             {
-                if(radioElements[i].checked) 
+                var radioElements = document.getElementsByName(name);
+
+                for(var i=0; i < radioElements.length; i++)
                 {
-                    if(index == 2){
-                        $TallerValue = i;
-                    }
-                    else if (index == 3){
-                        $VisitaValue = i;
+                    if(radioElements[i].checked) 
+                    {
+                        if(index == 2){
+                            TallerValue = i+1;
+                        }
+                        else if (index == 3){
+                            VisitaValue = i+1;
+                        }
                     }
                 }
             }
-        }
     </script>
     </body>
 </html>

@@ -1397,3 +1397,7 @@ h5.map {
 .shadow-edge{
     box-shadow: 0px 0px 4px  1px #191919;
 }
+
+#codigoTaller{
+    font-size: 14pt;
+}

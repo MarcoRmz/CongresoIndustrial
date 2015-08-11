@@ -339,6 +339,7 @@
         <script>
         var TallerValue;
         var VisitaValue;
+        var Encrypt;
 
             $(document).ready(function() {
                 $('#form').bootstrapWizard({'tabClass': 'bwizard-steps', 'debug': false, onShow: function(tab, navigation, index) {
@@ -349,7 +350,7 @@
                             }
                             else if (index == 3){
                                 get_checked_radio('visitas', index);
-                                document.getElementById("codigoTaller").innerHTML = "Taller" + TallerValue;
+                                document.getElementById("codigoTaller").innerHTML = "Taller" + TallerValue + Encrypt;
                             }
                         }, onPrevious: function(tab, navigation, index) {
                             
@@ -390,6 +391,7 @@
                     {
                         if(index == 2){
                             TallerValue = i+1;
+                            Encrypt = (i+1+253)/3;
                         }
                         else if (index == 3){
                             VisitaValue = i+1;

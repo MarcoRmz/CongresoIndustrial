@@ -470,69 +470,6 @@
               console.log('login closed');
             });
         }
-
-        $(document).ready(function() {
-
-            // if eventID is passed in, it should be grabbed here.(Dropdown)
-            function getSpecificEvent(event_id) {
-                eventjoy.events(event_id, {}, function(success, events) {
-                    if ( success && events ) {
-                        if ( events.data ) {
-                            // console.log(events.data);
-                            event_id_for_orders = events.data.ID;
-                            $("event-footer").attr("eventname", events.data.name);
-                            $("event-footer").attr("eventdate", moment(events.data.startdate).format('MMMM D, YYYY'));
-                            if(events.data && events.data.images && events.data.images.bodybg && events.data.images.bodybg[0]) {
-                                $("main-card.incoming").attr("headerimage", events.data.images.bodybg[0]);
-                            }
-                        }
-                    }
-                });
-            }
-
-            function getTicketName(ticket_id, ticketData) {
-                // console.log(ticket_id);
-                // console.log(ticketData);
-                for(var x in ticketData.data) {
-                    if(ticket_id == ticketData.data[x].id) {
-                        return ticketData.data[x].name; 
-                    }
-                }
-                return "";
-        }
-        function addPrimaryCard(event_id, ticketData, attendeeData, order, discountcodes, promoter) {
-            // console.log(ticketData);
-            // console.log(order.ID);
-            // console.log(order.ID);
-            var attendees = [];
-            for(x in attendeeData.data) {
-                // console.log(attendeeData.data[x]);
-                var ticketName = getTicketName(attendeeData.data[x].ticket_id, ticketData);
-                var attendeeDetail = {
-                    "name" : attendeeData.data[x].attendee.name,
-                    "ticket_name" : ticketName
-                };
-                attendees.push(attendeeDetail);
-            }
-            console.log('Added primary card');
-            // console.log(attendees);
-            $("main-card.incoming").attr("attendeenames", JSON.stringify(attendees));
-            //$("main-card.incoming").attr("registrationcount", order.num_of_attendees);
-            $("main-card.incoming").attr("registrationcount", attendeeData.data.length);
-            $("main-card.incoming").attr("ordertotal", order.total.slice(0, -3));
-            $("main-card.incoming").attr("discountcode", discountcode);
-            $("main-card.incoming").attr("promoter", promoter);
-            $("main-card.incoming").show();
-            $('#main-card').removeClass('very-hidden');
-            $('#main-card-emptystate').addClass('very-hidden');
-                    localStorage.setItem("last_completed", order.completed);
-        }
-        function fetchAttendeeData(idx, order, done) {
-            eventjoy.order_attendees(order.ID, {}, function(status, attendeeData) {
-              if ( done ) done(idx, order, attendeeData);
-            });
-        }
-    }
     </script>
     </body>
 </html>

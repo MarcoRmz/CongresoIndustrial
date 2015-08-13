@@ -344,6 +344,7 @@
         var TallerValue;
         var VisitaValue;
         var Encrypt;
+        var URL_complete;
 
             $(document).ready(function() {
                 $('#form').bootstrapWizard({'tabClass': 'bwizard-steps', 'debug': false, onShow: function(tab, navigation, index) {
@@ -351,6 +352,7 @@
                         }, onNext: function(tab, navigation, index) {
                             if (index == 2){
                                 get_checked_radio('talleres', index);
+                                get_URL_code();
                             }
                             else if (index == 3){
                                 get_checked_radio('visitas', index);
@@ -425,9 +427,18 @@
               if ( callback ) callback( false );
             }
         }
+        
+        function get_URL_code ()
+            {
+                URL_complete = window.location.href;
+                point = URL_complete.lastIndexOf("=");
+                URL_Code = URL_complete.substr(point);
+                alert(URL_Code);
+            }
 
         function processAuth() {
             initialiseDB();
+            get_URL_code();
 
             isAuthorized( function( authorized ) {
               if ( authorized ) {

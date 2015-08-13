@@ -92,6 +92,7 @@
                                       <h4 class="text-primary">- Ingresar el mismo correo con el que se registro al comprar boleto</h4>
                                       <h4 class="text-primary">- Tu Taller/Visita solo se registrará si terminas el proceso completo</h4>
                                       <h4 class="text-primary">- No se guardarán los datos si sales de la pagina a mediados del proceso</h4>
+                                      <button class="btn-xl" onClick="startLogin()">Login</button>
                                   </div> 
                                 </div>
                                 <br>
@@ -332,6 +333,9 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
         <script src="js/jquery.bootstrap.wizard.min.js"></script>
+        <script src="js/eventjoy.storage.js"></script>
+        <script src="js/moment.js"></script>
+        <script type="text/javascript" src="js/eventjoy.js"></script>
         <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
         <script src="js/classie.js"></script>
         <script src="js/cbpAnimatedHeader.js"></script>
@@ -399,6 +403,134 @@
                     }
                 }
             }
+    </script>
+    <script type="text/javascript">
+        eventjoy.setApiKey('5c27f9e1de27081311a387dd938cf19d27e6');
+
+        function isAuthorized(callback) {
+            if ( localStorage.getItem( 'eventjoy_access_token' ) ) {
+              // We aleady have an access token
+              console.log('found access token: '+localStorage.getItem('eventjoy_access_token'));
+              eventjoy.setAccessToken( localStorage.getItem('eventjoy_access_token') );
+              if ( callback ) callback( true );
+            } else if ( localStorage.getItem( 'eventjoy_oauth_token' ) ) {
+              // No, but we we do have a oauth request token
+              console.log('found oauth token: '+localStorage.getItem('eventjoy_oauth_token'));
+              eventjoy.auth( localStorage.getItem('eventjoy_oauth_token'), function(success, response) {
+                localStorage.setItem( 'eventjoy_access_token', response.access_token);
+                if ( callback ) callback( true );
+              });
+            } else {
+              console.log('no auth found');
+              if ( callback ) callback( false );
+            }
+        }
+
+        function processAuth() {
+            initialiseDB();
+
+            isAuthorized( function( authorized ) {
+              if ( authorized ) {
+                // Once authorized, fetch all available events
+                eventjoy.events("", {"page[size]" : -1}, function(success, events) {
+                  $('onboarding-view #starting').addClass('hidden');
+                  $('onboarding-view #authenticate').addClass('hidden');
+                  $('onboarding-view #onboarding').addClass('hidden');
+                  $('onboarding-view #noevents').addClass('hidden');
+
+                  if ( success && events && events.data.length && events.data[0].ID ) {
+                    $('onboarding-view #onboarding').removeClass('hidden');
+                    // Create event of array and pass it to dropdown
+                    var eventArrays = [];
+                    events.data.forEach(function(order) {
+                      eventArrays.push({"eventName": order.name, "eventId" : order.ID});
+                    });
+
+                    $('onboarding-view').attr("event-array", JSON.stringify(eventArrays));
+                    $('settings-view').attr("event-array-settings", JSON.stringify(eventArrays));
+                  } else {
+                    $('onboarding-view #noevents').removeClass('hidden');
+                  }
+                });
+              } else {
+                $('onboarding-view #starting').addClass('hidden');
+                $('onboarding-view #onboarding').addClass('hidden');
+                $('onboarding-view #noevents').addClass('hidden');
+                $('onboarding-view #authenticate').removeClass('hidden');
+                /*console.log('triggering login');
+                */
+              }
+            });
+        }
+
+        function startLogin() {
+            eventjoy.login(function() {
+              processAuth();
+              console.log('login closed');
+            });
+        }
+
+        $(document).ready(function() {
+
+            // if eventID is passed in, it should be grabbed here.(Dropdown)
+            function getSpecificEvent(event_id) {
+                eventjoy.events(event_id, {}, function(success, events) {
+                    if ( success && events ) {
+                        if ( events.data ) {
+                            // console.log(events.data);
+                            event_id_for_orders = events.data.ID;
+                            $("event-footer").attr("eventname", events.data.name);
+                            $("event-footer").attr("eventdate", moment(events.data.startdate).format('MMMM D, YYYY'));
+                            if(events.data && events.data.images && events.data.images.bodybg && events.data.images.bodybg[0]) {
+                                $("main-card.incoming").attr("headerimage", events.data.images.bodybg[0]);
+                            }
+                        }
+                    }
+                });
+            }
+
+            function getTicketName(ticket_id, ticketData) {
+                // console.log(ticket_id);
+                // console.log(ticketData);
+                for(var x in ticketData.data) {
+                    if(ticket_id == ticketData.data[x].id) {
+                        return ticketData.data[x].name; 
+                    }
+                }
+                return "";
+        }
+        function addPrimaryCard(event_id, ticketData, attendeeData, order, discountcodes, promoter) {
+            // console.log(ticketData);
+            // console.log(order.ID);
+            // console.log(order.ID);
+            var attendees = [];
+            for(x in attendeeData.data) {
+                // console.log(attendeeData.data[x]);
+                var ticketName = getTicketName(attendeeData.data[x].ticket_id, ticketData);
+                var attendeeDetail = {
+                    "name" : attendeeData.data[x].attendee.name,
+                    "ticket_name" : ticketName
+                };
+                attendees.push(attendeeDetail);
+            }
+            console.log('Added primary card');
+            // console.log(attendees);
+            $("main-card.incoming").attr("attendeenames", JSON.stringify(attendees));
+            //$("main-card.incoming").attr("registrationcount", order.num_of_attendees);
+            $("main-card.incoming").attr("registrationcount", attendeeData.data.length);
+            $("main-card.incoming").attr("ordertotal", order.total.slice(0, -3));
+            $("main-card.incoming").attr("discountcode", discountcode);
+            $("main-card.incoming").attr("promoter", promoter);
+            $("main-card.incoming").show();
+            $('#main-card').removeClass('very-hidden');
+            $('#main-card-emptystate').addClass('very-hidden');
+                    localStorage.setItem("last_completed", order.completed);
+        }
+        function fetchAttendeeData(idx, order, done) {
+            eventjoy.order_attendees(order.ID, {}, function(status, attendeeData) {
+              if ( done ) done(idx, order, attendeeData);
+            });
+        }
     </script>
     </body>
 </html>

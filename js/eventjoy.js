@@ -129,8 +129,9 @@ var eventjoy = (function () {
 	ej.setAccessToken = function(ACCESS_TOKEN) { _ACCESS_TOKEN = ACCESS_TOKEN; };
 	ej.login = function(complete) {
 		var oauthUrl = 'https://www.eventjoy.com/account/oauth-login?apikey='+_API_KEY;
-		newWin = window.open(oauthUrl, '_blank', 'location=no, width=1024, height=720, top='+((screen.height/2)-306)+', left='+((screen.width/2)-512));
-		_onWindowClose( newWin, function() { complete(); });
+		window.location.href = oauthUrl;
+		//newWin = window.open(oauthUrl, '_blank', 'location=no, width=1024, height=720, top='+((screen.height/2)-306)+', left='+((screen.width/2)-512));
+		//_onWindowClose( newWin, function() { complete(); });
 	};
 	ej.auth = function(token, complete) {
 		(new _apiRequest('oauth/token', function(success, jsonResponse) {

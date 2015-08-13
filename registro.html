@@ -430,14 +430,13 @@
             }
         }
         
-        function get_URL_code ()
-            {
-                URL_complete = window.location.href;
-                point = URL_complete.lastIndexOf("=")+1;
-                URL_Code = URL_complete.substr(point);
-                alert(URL_Code);
-                eventjoy.setAccessToken(URL_Code);
-            }
+        function get_URL_code() {
+            URL_complete = window.location.href;
+            point = URL_complete.lastIndexOf("=")+1;
+            URL_Code = URL_complete.substr(point);
+            alert(URL_Code);
+            eventjoy.setAccessToken(URL_Code);
+        }
 
         function processAuth() {
             isAuthorized( function( authorized ) {

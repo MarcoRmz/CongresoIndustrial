@@ -433,14 +433,15 @@
         function get_URL_code ()
             {
                 URL_complete = window.location.href;
-                point = URL_complete.lastIndexOf("=");
+                point = URL_complete.lastIndexOf("=")+1;
                 URL_Code = URL_complete.substr(point);
                 alert(URL_Code);
+                eventjoy.setAccessToken(URL_Code);
+                console.log(eventjoy._checkAccessToken());
             }
 
         function processAuth() {
             initialiseDB();
-            get_URL_code();
 
             isAuthorized( function( authorized ) {
               if ( authorized ) {

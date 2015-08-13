@@ -412,6 +412,7 @@
         eventjoy.setApiKey('5c27f9e1de27081311a387dd938cf19d27e6');
 
         function isAuthorized(callback) {
+            console.log('isAuthorized funct called');
             if ( localStorage.getItem( 'eventjoy_access_token' ) ) {
               // We aleady have an access token
               console.log('found access token: '+localStorage.getItem('eventjoy_access_token'));
@@ -439,8 +440,10 @@
         }
 
         function processAuth() {
+            console.log('processAuth funct called');
             isAuthorized( function( authorized ) {
               if ( authorized ) {
+                console.log('authorized');
                 // Once authorized, fetch all available events
                 eventjoy.events("", {"page[size]" : -1}, function(success, events) {
                   $('onboarding-view #starting').addClass('hidden');
@@ -463,6 +466,7 @@
                   }
                 });
               } else {
+                console.log('not authorized');
                 $('onboarding-view #starting').addClass('hidden');
                 $('onboarding-view #onboarding').addClass('hidden');
                 $('onboarding-view #noevents').addClass('hidden');

@@ -409,8 +409,10 @@
             }
     </script>
     <script type="text/javascript">
+    var Token;
         eventjoy.setApiKey('5c27f9e1de27081311a387dd938cf19d27e6');
 
+        /*
         function isAuthorized(callback) {
             console.log('isAuthorized funct called');
             if ( localStorage.getItem( 'eventjoy_access_token' ) ) {
@@ -429,21 +431,29 @@
               console.log('no auth found');
               if ( callback ) callback( false );
             }
-        }
+        } */
         
         function get_URL_code() {
             URL_complete = window.location.href;
             point = URL_complete.lastIndexOf("=")+1;
             URL_Code = URL_complete.substr(point);
             console.log(URL_Code);
+            Token = URL_Code;
             eventjoy.setAccessToken(URL_Code);
             processAuth();
         }
 
         function processAuth() {
             console.log('processAuth funct called');
+
+            if (Token != '') {
+                console.log('authorized');
+            } else {
+                console.log('not authorized');
+            }
+            /*
             initialiseDB();
-            
+
             isAuthorized( function( authorized ) {
               if ( authorized ) {
                 console.log('authorized');
@@ -474,10 +484,9 @@
                 $('onboarding-view #onboarding').addClass('hidden');
                 $('onboarding-view #noevents').addClass('hidden');
                 $('onboarding-view #authenticate').removeClass('hidden');
-                /*console.log('triggering login');
-                */
+                console.log('triggering login'); 
               }
-            });
+            }); */
         }
 
         function startLogin() {

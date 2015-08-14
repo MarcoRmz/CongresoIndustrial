@@ -456,7 +456,7 @@
                 console.log(document.getElementById("email").value);
 
                 //CHANGE EVENT ID !!!!!!! ----------------------------
-                eventjoy.event_attendee(3671625, document.getElementById("email").value, {}, function(success, events_tickets) {
+                eventjoy.event_attendee(3671625, document.getElementById("email").value, {}, function(success, event_attendee) {
                     //Parse Attendee Response
                     console.log(event_attendee.data);
                 });

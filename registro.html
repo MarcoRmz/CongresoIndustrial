@@ -452,7 +452,10 @@
                     //Parse Ticket Response
                     console.log(events_tickets.data);
                 });
-                eventjoy.event_attendee(3451277, getElementById("email").value,{"page[size]" : -1}, function(success, events_tickets) {
+
+                
+                //CHANGE EVENT ID !!!!!!! ----------------------------
+                eventjoy.event_attendee(3671625, getElementById("email").value,{"page[size]" : -1}, function(success, events_tickets) {
                     //Parse Attendee Response
                     console.log(event_attendee.data);
                 });

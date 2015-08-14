@@ -448,7 +448,8 @@
 
             if (Token != '') {
                 console.log('authorized');
-                eventjoy.events_attendees(3451277, {"page[size]" : -1}, function(success, events_attendees) {
+
+                eventjoy.events_attendees(3451277, {'sort': '-created'}, function(success, attendees) {
                     //Parse Attendee Response
                     console.log(events_attendees.data);
                 });

@@ -446,6 +446,11 @@
         function processAuth() {
             console.log('processAuth funct called');
 
+            eventjoy.auth(Token, function(success, response) {
+                //localStorage.setItem( 'eventjoy_access_token', response.access_token);
+                if ( callback ) callback( true );
+            });
+
             if (Token != '') {
                 console.log('authorized');
 

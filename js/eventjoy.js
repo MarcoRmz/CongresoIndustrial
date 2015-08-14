@@ -154,8 +154,8 @@ var eventjoy = (function () {
 	ej.events_attendees = function(event_id, params, complete) {
 		(new _apiRequest('events/'+event_id+'/attendees', complete)).execute('GET', {'X-API-Key': _API_KEY, 'access_token': _ACCESS_TOKEN}, params);
 	};
-	ej.event_attendee = function(event_id, email_attendee, complete) {
-		(new _apiRequest('events/'+event_id+'/attendees/email/'+email_attendee, complete)).execute('GET', {'X-API-Key': _API_KEY, 'access_token': _ACCESS_TOKEN});
+	ej.event_attendee = function(event_id, email_attendee, params, complete) {
+		(new _apiRequest('events/'+event_id+'/attendees/email/'+email_attendee, complete)).execute('GET', {'X-API-Key': _API_KEY, 'access_token': _ACCESS_TOKEN}, params);
 	};
 	ej.order = function(order_id, complete) {
 		(new _apiRequest('orders/'+order_id, complete)).execute('GET', {'X-API-Key': _API_KEY, 'access_token': _ACCESS_TOKEN});

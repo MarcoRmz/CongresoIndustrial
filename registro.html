@@ -100,11 +100,11 @@
                                     <div class="col-md-12" style="width: 97.5%;">
                                         <div class="input-group">
                                             <span class="input-group-addon" id="basic-addon1">Correo</span>
-                                            <input type="text" class="form-control" placeholder="Correo Electronico" aria-describedby="basic-addon1">
+                                            <input type="text" id="email" class="form-control" placeholder="Correo Electronico" aria-describedby="basic-addon1">
                                         </div>
                                         <div class="input-group">
                                             <span class="input-group-addon" id="basic-addon2">Folio</span>
-                                            <input type="text" class="form-control" placeholder="Folio" aria-describedby="basic-addon2">
+                                            <input type="text" id="folio" class="form-control" placeholder="Folio" aria-describedby="basic-addon2">
                                         </div>
                                     </div>
                                 </div>
@@ -453,10 +453,10 @@
                     console.log(events_tickets.data);
                 });
 
-                console.log(document.getElementById("basic-addon1").value);
+                console.log(document.getElementById("email").value);
 
                 //CHANGE EVENT ID !!!!!!! ----------------------------
-                eventjoy.event_attendee(3671625, document.getElementById("basic-addon1").value, {"page[size]" : -1}, function(success, events_tickets) {
+                eventjoy.event_attendee(3671625, document.getElementById("email").value, {"page[size]" : -1}, function(success, events_tickets) {
                     //Parse Attendee Response
                     console.log(event_attendee.data);
                 });

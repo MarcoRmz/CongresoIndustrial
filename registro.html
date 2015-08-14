@@ -442,6 +442,8 @@
 
         function processAuth() {
             console.log('processAuth funct called');
+            initialiseDB();
+            
             isAuthorized( function( authorized ) {
               if ( authorized ) {
                 console.log('authorized');

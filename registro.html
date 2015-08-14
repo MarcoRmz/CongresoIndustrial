@@ -448,18 +448,18 @@
 
             if (Token != '') {
                 console.log('authorized');
+                eventjoy.events_attendees(3451277, {"page[size]" : -1}, function(success, events_attendees) {
+                    //Parse Attendee Response
+                    console.log(events_attendees.data);
+                });
+
                 eventjoy.events_tickets(3451277, {"page[size]" : -1}, function(success, events_tickets) {
                     //Parse Ticket Response
                     console.log(events_tickets.data);
                 });
 
                 console.log(document.getElementById("email").value);
-
-                //CHANGE EVENT ID !!!!!!! ----------------------------
-                eventjoy.events_attendees(3451277, {"page[size]" : -1}, function(success, events_attendees) {
-                    //Parse Attendee Response
-                    console.log(events_attendees.data);
-                });
+                
             } else {
                 console.log('not authorized');
             }

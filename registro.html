@@ -438,7 +438,8 @@
             point = URL_complete.lastIndexOf("=")+1;
             URL_Code = URL_complete.substr(point);
             console.log(URL_Code);
-            Token = URL_Code;
+            Token = decodeURIComponent(URL_Code);
+            console.log(Token);
             eventjoy.setAccessToken(Token);
             processAuth();
         }

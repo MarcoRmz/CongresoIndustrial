@@ -471,6 +471,8 @@
                         console.log("events success");
                         fetch.innerHTML = JSON.stringify(events, null, 2);
                         console.log(events.data);
+                    } else {
+                        console.log("events failed");
                     }
                 });
 
@@ -480,6 +482,8 @@
                         console.log("order success");
                         fetch.innerHTML = JSON.stringify(order, null, 2);
                         console.log(order.data);
+                    } else {
+                        console.log("order failed");
                     }
                 });
 
@@ -489,6 +493,8 @@
                         console.log("orders success");
                         fetch.innerHTML = JSON.stringify(orders, null, 2);
                         console.log(orders.data);
+                    } else {
+                        console.log("orders failed");
                     }
                 });
 

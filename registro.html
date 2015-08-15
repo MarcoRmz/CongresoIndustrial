@@ -460,9 +460,14 @@
             if (Token != '') {
                 console.log('authorized');
 
+                eventjoy.events_orders(3451277, {}, function(success, orders) {
+                    //Parse Attendee Response
+                    console.log(orders.data);
+                });
+
                 eventjoy.events_attendees(3451277, {}, function(success, attendees) {
                     //Parse Attendee Response
-                    console.log(events_attendees.data);
+                    console.log(attendees.data);
                 });
 
                 /*

@@ -450,8 +450,8 @@
             eventjoy.auth(Token, function(success, response) {
                 //localStorage.setItem( 'eventjoy_access_token', response.access_token);
                 AccessToken = response.access_token;
-                eventjoy.setAccessToken(AccessToken.substr(AccessToken.length - 2));
-                console.log(AccessToken.substr(AccessToken.length - 2));
+                eventjoy.setAccessToken(AccessToken.substr(0, AccessToken.length - 2));
+                console.log(AccessToken.substr(0, AccessToken.length - 2));
                 //if ( callback ) callback( true );
             });
 

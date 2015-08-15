@@ -467,15 +467,20 @@
 
                 eventjoy.events(3451277, {}, function(success, events) {
                     //Parse Attendee Response
-                    console.log(events.data);
+                    if ( success && events ) {
+                        console.log("events success");
+                        fetch.innerHTML = JSON.stringify(events, null, 2);
+                        console.log(events.data);
+                    }
                 });
 
                 eventjoy.events_orders(3451277, {}, function(success, orders) {
                     //Parse Attendee Response
                     if ( success && orders ) {
+                        console.log("orders success");
                         fetch.innerHTML = JSON.stringify(orders, null, 2);
+                        console.log(orders.data);
                     }
-                    console.log(orders.data);
                 });
 
                 eventjoy.events_attendees(3451277, {}, function(success, attendees) {

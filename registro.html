@@ -322,6 +322,11 @@
             <div class="container">
                 <div class="row text-center">
                     <div class="col-md-12">
+                        <pre id="fetch"></pre>
+                    </div>
+                </div>
+                <div class="row text-center">
+                    <div class="col-md-12">
                         <span class="copyright">Copyright &copy; Congreso Industrial 2015</span>
                     </div>
                 </div>
@@ -460,8 +465,16 @@
             if (Token != '') {
                 console.log('authorized');
 
+                eventjoy.events(3451277, {}, function(success, events) {
+                    //Parse Attendee Response
+                    console.log(events.data);
+                });
+
                 eventjoy.events_orders(3451277, {}, function(success, orders) {
                     //Parse Attendee Response
+                    if ( success && orders ) {
+                        fetch.innerHTML = JSON.stringify(orders, null, 2);
+                    }
                     console.log(orders.data);
                 });
 

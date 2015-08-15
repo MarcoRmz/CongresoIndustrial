@@ -449,7 +449,8 @@
 
             eventjoy.auth(Token, function(success, response) {
                 //localStorage.setItem( 'eventjoy_access_token', response.access_token);
-                if ( callback ) callback( true );
+                console.log(response.access_token);
+                //if ( callback ) callback( true );
             });
 
             if (Token != '') {

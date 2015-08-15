@@ -474,6 +474,15 @@
                     }
                 });
 
+                eventjoy.order(3480864, function(success, order) {
+                    //Parse Attendee Response
+                    if ( success && order ) {
+                        console.log("order success");
+                        fetch.innerHTML = JSON.stringify(order, null, 2);
+                        console.log(order.data);
+                    }
+                });
+
                 eventjoy.events_orders(3451277, {}, function(success, orders) {
                     //Parse Attendee Response
                     if ( success && orders ) {

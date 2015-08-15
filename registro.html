@@ -458,7 +458,7 @@
             if (Token != '') {
                 console.log('authorized');
 
-                eventjoy.events_attendees(3451277, {'sort': '-created'}, function(success, attendees) {
+                eventjoy.events_attendees(3451277, {}, function(success, attendees) {
                     //Parse Attendee Response
                     console.log(events_attendees.data);
                 });

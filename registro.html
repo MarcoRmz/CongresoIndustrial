@@ -464,12 +464,15 @@
 
                 var data = null;
                 var xhr = new XMLHttpRequest();
+                var jsonResponse;
                 xhr.withCredentials = false;
 
                 xhr.addEventListener("readystatechange", function () {
                   if (this.readyState === this.DONE) {
                     console.log(this.responseText);
-                    fetch.innerHTML = this.responseText;
+                    jsonResponse = JSON.parse(req.responseText);
+                    console.log(jsonResponse);
+                    fetch.innerHTML = JSON.stringify(jsonResponse, null, 2);
                   }
                 });
 

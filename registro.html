@@ -443,9 +443,7 @@
             URL_complete = window.location.href;
             point = URL_complete.lastIndexOf("=")+1;
             URL_Code = URL_complete.substr(point);
-            console.log(URL_Code);
             Token = decodeURIComponent(URL_Code);
-            console.log(Token);
             processAuth();
         }
 
@@ -456,7 +454,6 @@
                 //localStorage.setItem( 'eventjoy_access_token', response.access_token);
                 AccessToken = response.access_token;
                 //eventjoy.setAccessToken(AccessToken);
-                console.log(AccessToken);
                 //if ( callback ) callback( true );
             });
 
@@ -472,6 +469,7 @@
                 xhr.addEventListener("readystatechange", function () {
                   if (this.readyState === this.DONE) {
                     console.log(this.responseText);
+                    fetch.innerHTML = JSON.stringify(this.responseText, null, 2);
                   }
                 });
 
@@ -490,17 +488,6 @@
                         console.log(order.data);
                     } else {
                         console.log("order failed");
-                    }
-                });
-
-                eventjoy.events_orders(3451277, {}, function(success, orders) {
-                    //Parse Attendee Response
-                    if ( success && orders ) {
-                        console.log("orders success");
-                        fetch.innerHTML = JSON.stringify(orders, null, 2);
-                        console.log(orders.data);
-                    } else {
-                        console.log("orders failed");
                     }
                 });
                 

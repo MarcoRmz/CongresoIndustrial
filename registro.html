@@ -469,7 +469,7 @@
                 xhr.addEventListener("readystatechange", function () {
                   if (this.readyState === this.DONE) {
                     console.log(this.responseText);
-                    fetch.innerHTML = JSON.stringify(this.responseText, null, 2);
+                    fetch.innerHTML = this.responseText;
                   }
                 });
 
@@ -494,42 +494,6 @@
             } else {
                 console.log('not authorized');
             }
-            /*
-            initialiseDB();
-
-            isAuthorized( function( authorized ) {
-              if ( authorized ) {
-                console.log('authorized');
-                // Once authorized, fetch all available events
-                eventjoy.events("", {"page[size]" : -1}, function(success, events) {
-                  $('onboarding-view #starting').addClass('hidden');
-                  $('onboarding-view #authenticate').addClass('hidden');
-                  $('onboarding-view #onboarding').addClass('hidden');
-                  $('onboarding-view #noevents').addClass('hidden');
-
-                  if ( success && events && events.data.length && events.data[0].ID ) {
-                    $('onboarding-view #onboarding').removeClass('hidden');
-                    // Create event of array and pass it to dropdown
-                    var eventArrays = [];
-                    events.data.forEach(function(order) {
-                      eventArrays.push({"eventName": order.name, "eventId" : order.ID});
-                    });
-
-                    $('onboarding-view').attr("event-array", JSON.stringify(eventArrays));
-                    $('settings-view').attr("event-array-settings", JSON.stringify(eventArrays));
-                  } else {
-                    $('onboarding-view #noevents').removeClass('hidden');
-                  }
-                });
-              } else {
-                console.log('not authorized');
-                $('onboarding-view #starting').addClass('hidden');
-                $('onboarding-view #onboarding').addClass('hidden');
-                $('onboarding-view #noevents').addClass('hidden');
-                $('onboarding-view #authenticate').removeClass('hidden');
-                console.log('triggering login'); 
-              }
-            }); */
         }
 
         function startLogin() {

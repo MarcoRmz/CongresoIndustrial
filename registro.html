@@ -465,6 +465,26 @@
             if (Token != '') {
                 console.log('authorized');
 
+                var data = null;
+
+                var xhr = new XMLHttpRequest();
+                xhr.withCredentials = true;
+
+                xhr.addEventListener("readystatechange", function () {
+                  if (this.readyState === this.DONE) {
+                    console.log(this.responseText);
+                  }
+                });
+
+                xhr.open("GET", "https://api.eventjoy.com/v1/attendees/3480855");
+                xhr.setRequestHeader("content-type", "application/json");
+                xhr.setRequestHeader("x-api-key", "5c27f9e1de27081311a387dd938cf19d27e6");
+                xhr.setRequestHeader("access_token", "83aaKha3glwxhU5fhFqtMkfqg1f3FLL948ZYYC9cQmHqzzNTOWUQZhOARaJoblVgjNHFKdZN01GCV0oHsvwwmw77KA==");
+
+                xhr.send(data);
+
+                console.log("xhr response");
+
                 eventjoy.events(3451277, {}, function(success, events) {
                     //Parse Attendee Response
                     if ( success && events ) {

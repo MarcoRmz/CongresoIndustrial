@@ -460,13 +460,12 @@
                 //if ( callback ) callback( true );
             });
 
-            eventjoy.setAccessToken('AccessToken');
+            eventjoy.setAccessToken(AccessToken);
 
             if (Token != '') {
                 console.log('authorized');
 
                 var data = null;
-
                 var xhr = new XMLHttpRequest();
                 xhr.withCredentials = false;
 
@@ -476,25 +475,12 @@
                   }
                 });
 
-                xhr.open("GET", "https://api.eventjoy.com/v1/attendees/3480855");
+                xhr.open("GET", "https://api.eventjoy.com/v1/events/3451277/attendees/email/" + document.getElementById("email").value);
                 xhr.setRequestHeader("content-type", "application/json");
                 xhr.setRequestHeader("x-api-key", "5c27f9e1de27081311a387dd938cf19d27e6");
                 xhr.setRequestHeader("access_token", "83aaKha3glwxhU5fhFqtMkfqg1f3FLL948ZYYC9cQmHqzzNTOWUQZhOARaJoblVgjNHFKdZN01GCV0oHsvwwmw77KA==");
 
                 xhr.send(data);
-
-                console.log("xhr response");
-
-                eventjoy.events(3451277, {}, function(success, events) {
-                    //Parse Attendee Response
-                    if ( success && events ) {
-                        console.log("events success");
-                        fetch.innerHTML = JSON.stringify(events, null, 2);
-                        console.log(events.data);
-                    } else {
-                        console.log("events failed");
-                    }
-                });
 
                 eventjoy.order(3480864, function(success, order) {
                     //Parse Attendee Response
@@ -517,19 +503,6 @@
                         console.log("orders failed");
                     }
                 });
-
-                eventjoy.events_attendees(3451277, {}, function(success, attendees) {
-                    //Parse Attendee Response
-                    console.log(attendees.data);
-                });
-
-                /*
-                eventjoy.events_tickets(3451277, {"page[size]" : -1}, function(success, events_tickets) {
-                    //Parse Ticket Response
-                    console.log(events_tickets.data);
-                }); */
-
-                console.log(document.getElementById("email").value);
                 
             } else {
                 console.log('not authorized');

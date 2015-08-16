@@ -463,7 +463,7 @@
                 console.log('authorized');
 
                 var data = null;
-                var xhr = new XMLHttpRequest();
+                var xhr = new JSONHttpRequest();
                 var jsonResponse;
                 xhr.withCredentials = false;
 
@@ -472,6 +472,7 @@
                     console.log(this.responseText);
                     jsonResponse = JSON.parse(xhr.responseText);
                     console.log(jsonResponse);
+                    console.log(jsonResponse.ID);
                     fetch.innerHTML = JSON.stringify(jsonResponse, null, 2);
                   }
                 });

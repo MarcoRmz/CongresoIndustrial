@@ -470,7 +470,7 @@
                 xhr.addEventListener("readystatechange", function () {
                   if (this.readyState === this.DONE) {
                     console.log(this.responseText);
-                    jsonResponse = JSON.parse(req.responseText);
+                    jsonResponse = JSON.parse(xhr.responseText);
                     console.log(jsonResponse);
                     fetch.innerHTML = JSON.stringify(jsonResponse, null, 2);
                   }

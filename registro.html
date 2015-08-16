@@ -472,7 +472,7 @@
                     console.log(this.responseText);
                     jsonResponse = JSON.parse(xhr.responseText);
                     console.log(jsonResponse);
-                    console.log(jsonResponse.data[0].ID);
+                    console.log(jsonResponse.substring(jsonResponse.indexOf("ID") + 2, jsonResponse.indexOf("type") - 2);
                     fetch.innerHTML = JSON.stringify(jsonResponse, null, 2);
                   }
                 });

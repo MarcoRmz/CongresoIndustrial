@@ -135,9 +135,9 @@ function getFolio(attendeeID) {
 
     xhr2.addEventListener("readystatechange", function () {
       if (this.readyState === this.DONE) {
-        //console.log(this.responseText);
+        console.log(this.responseText);
         jsonResponse2 = JSON.parse(xhr2.responseText);
-        //console.log(jsonResponse2);
+        console.log(jsonResponse2);
         console.log("Folio: "+ xhr2.responseText.substring(xhr2.responseText.indexOf("Folio") + 9, xhr2.responseText.indexOf("}]}}") - 1));
         folio = xhr2.responseText.substring(xhr2.responseText.indexOf("Folio") + 9, xhr2.responseText.indexOf("}]}}") - 1);
 
@@ -183,9 +183,9 @@ function processAuth() {
 
         xhr.addEventListener("readystatechange", function () {
           if (this.readyState === this.DONE) {
-            //console.log(this.responseText);
+            console.log(this.responseText);
             jsonResponse = JSON.parse(xhr.responseText);
-            //console.log(jsonResponse);
+            console.log(jsonResponse);
             console.log("Attendee ID: " + xhr.responseText.substring(xhr.responseText.indexOf("ID") + 4, xhr.responseText.indexOf("type") - 2));
             getFolio(xhr.responseText.substring(xhr.responseText.indexOf("ID") + 4, xhr.responseText.indexOf("type") - 2));
           }

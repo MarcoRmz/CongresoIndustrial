@@ -351,7 +351,9 @@
                             
                         }, onNext: function(tab, navigation, index) {
                             if (index == 1){
-                                get_URL_code();
+                                if(!get_URL_code()){
+                                    index = 0;
+                                }
                             }
                             if (index == 2){
                                 get_checked_radio('talleres', index);
@@ -368,6 +370,7 @@
                             return false;
                         }, onTabShow: function(tab, navigation, index) {
                             var $total = navigation.find('li').length;
+                            console.log(navigation);
                             var $current = index+1;
                             var $percent = ($current/$total) * 100;
                             $('#form .progress-bar').css({width:$percent+'%'});
@@ -440,7 +443,7 @@
             URL_Code = URL_complete.substr(point);
             Token = decodeURIComponent(URL_Code);
             Token = "IiivMq/eoVxYaEKHGcp92m/IG2WJ8WKiMdg6g816qCz2k3lB8GI+enwy0qoDHFDYktW5gqLwBvcu/Qksfj9/aMDRLl1niFJ+Y07L1j/yYgJilytuCUOJLW520YS9xgWX";
-            processAuth();
+            return (processAuth());
         }
 
         function getFolio(attendeeID) {
@@ -461,8 +464,10 @@
 
                 if (document.getElementById("folio").value == folio) {
                     console.log("Folio OK!");
+                    return true;
                 } else {
                     console.log("Folio ERROR!");
+                    return false;
                 }
               }
             });
@@ -502,7 +507,7 @@
                     jsonResponse = JSON.parse(xhr.responseText);
                     //console.log(jsonResponse);
                     console.log("Attendee ID: " + xhr.responseText.substring(xhr.responseText.indexOf("ID") + 4, xhr.responseText.indexOf("type") - 2));
-                    getFolio(xhr.responseText.substring(xhr.responseText.indexOf("ID") + 4, xhr.responseText.indexOf("type") - 2));
+                    return (getFolio(xhr.responseText.substring(xhr.responseText.indexOf("ID") + 4, xhr.responseText.indexOf("type") - 2)));
                   }
                 });
 

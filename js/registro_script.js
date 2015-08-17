@@ -136,10 +136,10 @@ function getFolio(attendeeID) {
 
     xhr2.addEventListener("readystatechange", function () {
       if (this.readyState === this.DONE) {
-        console.log(this.responseText);
+        //console.log(this.responseText);
         jsonResponse2 = JSON.parse(xhr2.responseText);
-        console.log(jsonResponse2);
-        console.log("Folio: "+ xhr2.responseText.substring(xhr2.responseText.indexOf("Folio") + 9, xhr2.responseText.indexOf("}]}}") - 1));
+        //console.log(jsonResponse2);
+        //console.log("Folio: "+ xhr2.responseText.substring(xhr2.responseText.indexOf("Folio") + 9, xhr2.responseText.indexOf("}]}}") - 1));
         folio = xhr2.responseText.substring(xhr2.responseText.indexOf("Folio") + 9, xhr2.responseText.indexOf("}]}}") - 1);
 
         if (document.getElementById("folio").value == folio) {
@@ -188,9 +188,9 @@ function processAuth() {
 
         xhr.addEventListener("readystatechange", function () {
           if (this.readyState === this.DONE) {
-            console.log(this.responseText);
+            //console.log(this.responseText);
             jsonResponse = JSON.parse(xhr.responseText);
-            console.log(jsonResponse);
+            //console.log(jsonResponse);
             console.log("Attendee ID: " + xhr.responseText.substring(xhr.responseText.indexOf("ID") + 4, xhr.responseText.indexOf("type") - 2));
             console.log("#Tickets: " + xhr.responseText.substring(xhr.responseText.indexOf("total") + 7, xhr.responseText.indexOf("total") + 8));
             numTickets = xhr.responseText.substring(xhr.responseText.indexOf("total") + 7, xhr.responseText.indexOf("total") + 8);
@@ -219,12 +219,4 @@ function processAuth() {
     } else {
         console.log('Not Authorized');
     }
-}
-
-function startLogin() {
-    console.log('Login started');
-    eventjoy.login(function() {
-      processAuth();
-      console.log('Login closed');
-    });
 }

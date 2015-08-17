@@ -4,6 +4,7 @@ var Encrypt_Taller;
 var Encrypt_Visita;
 var URL_complete;
 var checkValue = false;
+var numTickets;
 
 $(document).ready(function() {
     $('#form').bootstrapWizard({'tabClass': 'bwizard-steps', 'debug': false, onShow: function(tab, navigation, index) {
@@ -25,8 +26,12 @@ $(document).ready(function() {
 
                     if ($('#email').val() && $('#folio').val()) {
                         get_URL_code();
-                        if (checkValue){
+                        if (checkValue && numTickets == 1){
                             return true;
+                        } else if(checkValue && numTickets > 1) {
+                            alert("Ya registraste tu taller y visita");
+                        } else {
+                            alert("Tu correo o folio no coinciden");
                         }
                     } 
                 }
@@ -187,6 +192,8 @@ function processAuth() {
             jsonResponse = JSON.parse(xhr.responseText);
             console.log(jsonResponse);
             console.log("Attendee ID: " + xhr.responseText.substring(xhr.responseText.indexOf("ID") + 4, xhr.responseText.indexOf("type") - 2));
+            console.log("#Tickets: " + xhr.responseText.substring(xhr.responseText.indexOf("total") + 7, 1));
+            numTickets = xhr.responseText.substring(xhr.responseText.indexOf("total") + 7, 1);
             getFolio(xhr.responseText.substring(xhr.responseText.indexOf("ID") + 4, xhr.responseText.indexOf("type") - 2));
           }
         });

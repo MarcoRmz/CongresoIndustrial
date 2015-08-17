@@ -454,7 +454,7 @@
                 console.log(this.responseText);
                 jsonResponse2 = JSON.parse(xhr2.responseText);
                 console.log(jsonResponse2);
-                console.log(jsonResponse2.data.questions[0].Folio);
+                console.log(jsonResponse2.data.questions[0].value);
                 console.log(xhr2.responseText.substring(xhr2.responseText.indexOf("Folio") + 9, xhr2.responseText.indexOf("}]}}") - 1));
               }
             });

@@ -25,8 +25,8 @@ $(document).ready(function() {
 
                     if ($('#email').val() && $('#folio').val()) {
                         get_URL_code();
+                        document.getElementById("validate").innerHTML = "Siguiente";
                         if (checkValue){
-                            document.getElementById("validate").innerHTML = "Siguiente";
                             return true;
                         }
                     } 

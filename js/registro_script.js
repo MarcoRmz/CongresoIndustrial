@@ -5,93 +5,102 @@ var Encrypt_Visita;
 var URL_complete;
 var checkValue = false;
 
-    $(document).ready(function() {
-        $('#form').bootstrapWizard({'tabClass': 'bwizard-steps', 'debug': false, onShow: function(tab, navigation, index) {
-                    
-                }, onNext: function(tab, navigation, index) {
-                    if (index == 1){
-                                        // Make sure we entered the name
-                        if(!$('#email').val()) {
-                            alert('Debes de escribir tu email');
-                            $('#email').focus();
-                            return false;
+$(document).ready(function() {
+    $('#form').bootstrapWizard({'tabClass': 'bwizard-steps', 'debug': false, onShow: function(tab, navigation, index) {
+                
+            }, onNext: function(tab, navigation, index) {
+                if (index == 1){
+                                    // Make sure we entered the name
+                    if(!$('#email').val()) {
+                        alert('Debes de escribir tu email');
+                        $('#email').focus();
+                        return false;
+                    }
+
+                    if(!$('#folio').val()) {
+                        alert('Debes de escribir tu folio');
+                        $('#folio').focus();
+                        return false;
+                    }
+
+                    if ($('#email').val() && $('#folio').val()) {
+                        get_URL_code();
+                        sleep(2500);
+                        if (checkValue){
+                            return true;
                         }
-
-                        if(!$('#folio').val()) {
-                            alert('Debes de escribir tu folio');
-                            $('#folio').focus();
-                            return false;
-                        }
-
-                        if ($('#email').val() && $('#folio').val())
-                            get_URL_code();
-                            setTimeout(function(){ 
-                                if (checkValue){
-                                    return true;
-                                }
-                            }, 1500); 
-                    }
-                    if (index == 2){
-                        get_checked_radio('talleres', index);
-                        return true;
-                    }
-                    else if (index == 3){
-                        get_checked_radio('visitas', index);
-                        document.getElementById("codigoTaller").innerHTML = "Taller" + TallerValue + Encrypt_Taller;
-                        document.getElementById("codigoVisita").innerHTML = "Visita" + VisitaValue + Encrypt_Visita;
-                        return true;
-                    }
-                    return false;
-                }, onPrevious: function(tab, navigation, index) {
-                    
-                }, onLast: function(tab, navigation, index) {
-                    return false;
-                }, onTabClick: function(tab, navigation, index) {
-                    return false;
-                }, onTabShow: function(tab, navigation, index) {
-                    console.log("tab: " + tab + " " + index + " 2 ");
-                    var $total = navigation.find('li').length;
-                    var $current = index+1;
-                    var $percent = ($current/$total) * 100;
-                    $('#form .progress-bar').css({width:$percent+'%'});
-
-                    // If it's the last tab then hide the last button and show the finish instead
-                    if($current >= $total) {
-                        $('#form').find('.pager .next').hide();
-                        $('#form').find('.pager .finish').show();
-                        $('#form').find('.pager .finish').removeClass('disabled');
-                    } else {
-                        $('#form').find('.pager .next').show();
-                        $('#form').find('.pager .finish').hide();
-                    }
-                }});
-
-            $('#form .finish').click(function() {
-                alert('Registro Completo!');
-                window.location="http://www.congresoindustrial.com.mx";
-            });
-
-    });
-        
-    function get_checked_radio(name, index)
-    {
-        var radioElements = document.getElementsByName(name);
-
-        for(var i=0; i < radioElements.length; i++)
-        {
-            if(radioElements[i].checked) 
-            {
-                if(index == 2){
-                    TallerValue = i+1;
-                    Encrypt_Taller = Math.round((i+1+253)/2);
+                    } 
+                }
+                if (index == 2){
+                    get_checked_radio('talleres', index);
+                    return true;
                 }
                 else if (index == 3){
-                    VisitaValue = i+1;
-                    Encrypt_Visita = Math.round(((i+1+254)*2)/3);
+                    get_checked_radio('visitas', index);
+                    document.getElementById("codigoTaller").innerHTML = "Taller" + TallerValue + Encrypt_Taller;
+                    document.getElementById("codigoVisita").innerHTML = "Visita" + VisitaValue + Encrypt_Visita;
+                    return true;
                 }
+                return false;
+            }, onPrevious: function(tab, navigation, index) {
+                
+            }, onLast: function(tab, navigation, index) {
+                return false;
+            }, onTabClick: function(tab, navigation, index) {
+                return false;
+            }, onTabShow: function(tab, navigation, index) {
+                console.log("tab: " + tab + " " + index + " 2 ");
+                var $total = navigation.find('li').length;
+                var $current = index+1;
+                var $percent = ($current/$total) * 100;
+                $('#form .progress-bar').css({width:$percent+'%'});
+
+                // If it's the last tab then hide the last button and show the finish instead
+                if($current >= $total) {
+                    $('#form').find('.pager .next').hide();
+                    $('#form').find('.pager .finish').show();
+                    $('#form').find('.pager .finish').removeClass('disabled');
+                } else {
+                    $('#form').find('.pager .next').show();
+                    $('#form').find('.pager .finish').hide();
+                }
+            }});
+
+        $('#form .finish').click(function() {
+            alert('Registro Completo!');
+            window.location="http://www.congresoindustrial.com.mx";
+        });
+
+});
+        
+function get_checked_radio(name, index)
+{
+    var radioElements = document.getElementsByName(name);
+
+    for(var i=0; i < radioElements.length; i++)
+    {
+        if(radioElements[i].checked) 
+        {
+            if(index == 2){
+                TallerValue = i+1;
+                Encrypt_Taller = Math.round((i+1+253)/2);
+            }
+            else if (index == 3){
+                VisitaValue = i+1;
+                Encrypt_Visita = Math.round(((i+1+254)*2)/3);
             }
         }
     }
+}
+
+function sleep(milliseconds) {
+  var start = new Date().getTime();
+  for (var i = 0; i < 1e7; i++) {
+    if ((new Date().getTime() - start) > milliseconds){
+      break;
+    }
+  }
+}
 
 var Token;
 var AccessToken;

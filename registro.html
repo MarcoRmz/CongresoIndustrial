@@ -352,8 +352,7 @@
                         }, onNext: function(tab, navigation, index) {
                             if (index == 1){
                                 get_URL_code();
-                                console.log(tab + " " + index);
-                                index = 0;
+                                return false;
                             }
                             if (index == 2){
                                 get_checked_radio('talleres', index);

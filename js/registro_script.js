@@ -147,6 +147,7 @@ function getFolio(attendeeID) {
             console.log("Folio OK!");
             checkValue = true;
         } else {
+            document.getElementById("validate").innerHTML = "Validar";
             console.log("Folio ERROR!");
         }
       }

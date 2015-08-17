@@ -28,10 +28,6 @@ $(document).ready(function() {
                         get_URL_code();
                         if (checkValue && numTickets == 1){
                             return true;
-                        } else if(checkValue && numTickets > 1) {
-                            alert("Ya registraste tu taller y visita");
-                        } else {
-                            alert("Tu correo o folio no coinciden");
                         }
                     } 
                 }
@@ -150,8 +146,12 @@ function getFolio(attendeeID) {
             document.getElementById("validate").innerHTML = "Siguiente";
             console.log("Folio OK!");
             checkValue = true;
+            if(checkValue && numTickets > 1) {
+                alert("Ya registraste tu taller y visita");
+            }
         } else {
             document.getElementById("validate").innerHTML = "Validar";
+            alert("Tu correo o folio no coinciden");
             console.log("Folio ERROR!");
         }
       }

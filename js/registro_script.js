@@ -9,10 +9,23 @@ var checkValue = false;
                     
                 }, onNext: function(tab, navigation, index) {
                     if (index == 1){
+                                        // Make sure we entered the name
+                    if(!$('#email').val()) {
+                        alert('Debes de escribir tu email');
+                        $('#email').focus();
+                        return false;
+                    }
+
+                    if(!$('#folio').val()) {
+                        alert('Debes de escribir tu folio');
+                        $('#folio').focus();
+                        return false;
+                    }
+
+                    if ($('#email').val() && $('#folio').val())
                         get_URL_code();
-                        console.log(checkValue);
                         if (checkValue){
-                        	return false;
+                            return false;
                         }
                     }
                     if (index == 2){

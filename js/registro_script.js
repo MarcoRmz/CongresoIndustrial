@@ -25,9 +25,11 @@ var checkValue = false;
 
                         if ($('#email').val() && $('#folio').val())
                             get_URL_code();
-                            if (checkValue){
-                                return true;
-                            }
+                            setTimeout(function(){ 
+                                if (checkValue){
+                                    return true;
+                                }
+                            }, 1500); 
                     }
                     if (index == 2){
                         get_checked_radio('talleres', index);

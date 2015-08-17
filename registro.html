@@ -352,6 +352,7 @@
                         }, onNext: function(tab, navigation, index) {
                             if (index == 1){
                                 get_URL_code();
+                                console.log("yes");
                             }
                             if (index == 2){
                                 get_checked_radio('talleres', index);
@@ -464,8 +465,8 @@
                     console.log("Folio OK!");
                 } else {
                     console.log("Folio ERROR!");
-                    document.getElementById("form-tab1").className += " active";
-                    document.getElementById("form-tab2").className = "tab-pane";
+                    /*document.getElementById("form-tab1").className += " active";
+                    document.getElementById("form-tab2").className = "tab-pane"; */
                 }
               }
             });

@@ -25,7 +25,6 @@ $(document).ready(function() {
 
                     if ($('#email').val() && $('#folio').val()) {
                         get_URL_code();
-                        document.getElementById("validate").innerHTML = "Siguiente";
                         if (checkValue){
                             return true;
                         }
@@ -144,6 +143,7 @@ function getFolio(attendeeID) {
         folio = xhr2.responseText.substring(xhr2.responseText.indexOf("Folio") + 9, xhr2.responseText.indexOf("}]}}") - 1);
 
         if (document.getElementById("folio").value == folio) {
+            document.getElementById("validate").innerHTML = "Siguiente";
             console.log("Folio OK!");
             checkValue = true;
         } else {

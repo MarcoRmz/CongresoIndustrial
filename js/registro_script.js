@@ -48,7 +48,6 @@ $(document).ready(function() {
             }, onTabClick: function(tab, navigation, index) {
                 return false;
             }, onTabShow: function(tab, navigation, index) {
-                console.log("tab: " + tab + " " + index + " 2 ");
                 var $total = navigation.find('li').length;
                 var $current = index+1;
                 var $percent = ($current/$total) * 100;

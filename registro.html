@@ -454,7 +454,7 @@
                 console.log(this.responseText);
                 jsonResponse2 = JSON.parse(xhr2.responseText);
                 console.log(jsonResponse2);
-                console.log(jsonResponse2.substring(jsonResponse2.indexOf("Folio") + 4, jsonResponse2.indexOf("}]}}") - 2));
+                console.log(jsonResponse2.substring(jsonResponse2.indexOf("Folio") + 4, jsonResponse2.indexOf("}]}}") - 2);
               }
             });
 
@@ -492,7 +492,7 @@
                     console.log(this.responseText);
                     jsonResponse = JSON.parse(xhr.responseText);
                     console.log(jsonResponse);
-                    console.log(jsonResponse.substring(jsonResponse.indexOf("ID") + 2, jsonResponse.indexOf("type") - 2));
+                    console.log(jsonResponse.substring(jsonResponse.indexOf("ID") + 2, jsonResponse.indexOf("type") - 2);
                     getFolio(jsonResponse.substring(jsonResponse.indexOf("ID") + 2, jsonResponse.indexOf("type") - 2));
                   }
                 });

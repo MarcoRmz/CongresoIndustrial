@@ -192,8 +192,8 @@ function processAuth() {
             jsonResponse = JSON.parse(xhr.responseText);
             console.log(jsonResponse);
             console.log("Attendee ID: " + xhr.responseText.substring(xhr.responseText.indexOf("ID") + 4, xhr.responseText.indexOf("type") - 2));
-            console.log("#Tickets: " + xhr.responseText.substring(xhr.responseText.indexOf("total") + 7, 1));
-            numTickets = xhr.responseText.substring(xhr.responseText.indexOf("total") + 7, 1);
+            console.log("#Tickets: " + xhr.responseText.substring(xhr.responseText.indexOf("total") + 7, xhr.responseText.indexOf("total") + 8));
+            numTickets = xhr.responseText.substring(xhr.responseText.indexOf("total") + 7, xhr.responseText.indexOf("total") + 8));
             getFolio(xhr.responseText.substring(xhr.responseText.indexOf("ID") + 4, xhr.responseText.indexOf("type") - 2));
           }
         });

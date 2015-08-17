@@ -10,8 +10,8 @@ var checkValue = false;
                 }, onNext: function(tab, navigation, index) {
                     if (index == 1){
                         get_URL_code();
+                        console.log(checkValue);
                         if (checkValue){
-                            console.log("this is working");
                         	return false;
                         }
                     }

@@ -322,11 +322,6 @@
             <div class="container">
                 <div class="row text-center">
                     <div class="col-md-12">
-                        <pre id="fetch"></pre>
-                    </div>
-                </div>
-                <div class="row text-center">
-                    <div class="col-md-12">
                         <span class="copyright">Copyright &copy; Congreso Industrial 2015</span>
                     </div>
                 </div>
@@ -465,6 +460,8 @@
                 var data = null;
                 var xhr = new XMLHttpRequest();
                 var jsonResponse;
+                var attendeeID;
+
                 xhr.withCredentials = false;
 
                 xhr.addEventListener("readystatechange", function () {
@@ -472,8 +469,8 @@
                     console.log(this.responseText);
                     jsonResponse = JSON.parse(xhr.responseText);
                     console.log(jsonResponse);
-                    console.log(jsonResponse.substring(jsonResponse.indexOf("ID") + 2, jsonResponse.indexOf("type") - 2);
-                    fetch.innerHTML = JSON.stringify(jsonResponse, null, 2);
+                    console.log(jsonResponse.substring(jsonResponse.indexOf("ID") + 2, jsonResponse.indexOf("type") - 2));
+                    attendeeID = jsonResponse.substring(jsonResponse.indexOf("ID") + 2, jsonResponse.indexOf("type") - 2);
                   }
                 });
 
@@ -484,6 +481,29 @@
 
                 xhr.send(data);
 
+                var data2 = null;
+                var xhr2 = new XMLHttpRequest();
+                var jsonResponse2;
+
+                xhr2.withCredentials = false;
+
+                xhr2.addEventListener("readystatechange", function () {
+                  if (this.readyState === this.DONE) {
+                    console.log(this.responseText);
+                    jsonResponse2 = JSON.parse(xhr2.responseText);
+                    console.log(jsonResponse2);
+                    console.log(jsonResponse2.substring(jsonResponse2.indexOf("Folio") + 4, jsonResponse2.indexOf("}]}}") - 2));
+                  }
+                });
+
+                xhr2.open("GET", "https://api.eventjoy.com/v1/attendees/" + attendeeID);
+                xhr2.setRequestHeader("content-type", "application/json");
+                xhr2.setRequestHeader("x-api-key", "5c27f9e1de27081311a387dd938cf19d27e6");
+                xhr2.setRequestHeader("access_token", "83aaKha3glwxhU5fhFqtMkfqg1f3FLL948ZYYC9cQmHqzzNTOWUQZhOARaJoblVgjNHFKdZN01GCV0oHsvwwmw77KA==");
+
+                xhr2.send(data2);
+
+                /*
                 eventjoy.order(3480864, function(success, order) {
                     //Parse Attendee Response
                     if ( success && order ) {
@@ -493,7 +513,7 @@
                     } else {
                         console.log("order failed");
                     }
-                });
+                }); */
                 
             } else {
                 console.log('not authorized');

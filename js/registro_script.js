@@ -9,7 +9,7 @@ var checkValue = false;
         $('#form').bootstrapWizard({'tabClass': 'bwizard-steps', 'debug': false, onShow: function(tab, navigation, index) {
                     
                 }, onNext: function(tab, navigation, index) {
-                    if (index == 1){
+                    /*if (index == 1){
                                         // Make sure we entered the name
                         if(!$('#email').val()) {
                             alert('Debes de escribir tu email');
@@ -28,7 +28,7 @@ var checkValue = false;
                             if (checkValue){
                                 return false;
                             }
-                    }
+                    } */
                     if (index == 2){
                         get_checked_radio('talleres', index);
                     }
@@ -84,7 +84,7 @@ var checkValue = false;
                     if ($('#email').val() && $('#folio').val()) {
                         get_URL_code();
                         if (checkValue) {
-                            $('#form').bootstrapWizard('show',1);
+                            $('#form').bootstrapWizard('show',2);
                         };
                     }
                 }

@@ -9,7 +9,7 @@ var checkValue = false;
         $('#form').bootstrapWizard({'tabClass': 'bwizard-steps', 'debug': false, onShow: function(tab, navigation, index) {
                     
                 }, onNext: function(tab, navigation, index) {
-                    /*if (index == 1){
+                    if (index == 1){
                                         // Make sure we entered the name
                         if(!$('#email').val()) {
                             alert('Debes de escribir tu email');
@@ -28,7 +28,7 @@ var checkValue = false;
                             if (checkValue){
                                 return false;
                             }
-                    } */
+                    }
                     if (index == 2){
                         get_checked_radio('talleres', index);
                     }
@@ -37,6 +37,7 @@ var checkValue = false;
                         document.getElementById("codigoTaller").innerHTML = "Taller" + TallerValue + Encrypt_Taller;
                         document.getElementById("codigoVisita").innerHTML = "Visita" + VisitaValue + Encrypt_Visita;
                     }
+                    return false;
                 }, onPrevious: function(tab, navigation, index) {
                     
                 }, onLast: function(tab, navigation, index) {
@@ -55,12 +56,9 @@ var checkValue = false;
                         $('#form').find('.pager .next').hide();
                         $('#form').find('.pager .finish').show();
                         $('#form').find('.pager .finish').removeClass('disabled');
-                    } else if ($current > 1) {
+                    } else {
                         $('#form').find('.pager .next').show();
                         $('#form').find('.pager .finish').hide();
-                    } else {
-                        $('#form').find('.pager .next').hide();
-                        $('#form').find('.pager .first').show();
                     }
                 }});
 

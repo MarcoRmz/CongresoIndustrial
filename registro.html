@@ -492,8 +492,8 @@
                     console.log(this.responseText);
                     jsonResponse = JSON.parse(xhr.responseText);
                     console.log(jsonResponse);
-                    console.log(xhr.responseText.substring(xhr.responseText.indexOf("ID") + 2, xhr.responseText.indexOf("type") - 2));
-                    getFolio(xhr.responseText.substring(xhr.responseText.indexOf("ID") + 2, xhr.responseText.indexOf("type") - 2));
+                    console.log(xhr.responseText.substring(xhr.responseText.indexOf("ID") + 4, xhr.responseText.indexOf("type") - 2));
+                    getFolio(xhr.responseText.substring(xhr.responseText.indexOf("ID") + 4, xhr.responseText.indexOf("type") - 2));
                   }
                 });
 

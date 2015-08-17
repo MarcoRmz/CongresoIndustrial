@@ -26,16 +26,18 @@ var checkValue = false;
                         if ($('#email').val() && $('#folio').val())
                             get_URL_code();
                             if (checkValue){
-                                return false;
+                                return true;
                             }
                     }
                     if (index == 2){
                         get_checked_radio('talleres', index);
+                        return true;
                     }
                     else if (index == 3){
                         get_checked_radio('visitas', index);
                         document.getElementById("codigoTaller").innerHTML = "Taller" + TallerValue + Encrypt_Taller;
                         document.getElementById("codigoVisita").innerHTML = "Visita" + VisitaValue + Encrypt_Visita;
+                        return true;
                     }
                     return false;
                 }, onPrevious: function(tab, navigation, index) {
@@ -67,29 +69,6 @@ var checkValue = false;
                 window.location="http://www.congresoindustrial.com.mx";
             });
 
-            function validate() {
-                if (index == 1){
-                    // Make sure we entered the name
-                    if(!$('#email').val()) {
-                        alert('Debes de escribir tu email');
-                        $('#email').focus();
-                        return false;
-                    }
-
-                    if(!$('#folio').val()) {
-                        alert('Debes de escribir tu folio');
-                        $('#folio').focus();
-                        return false;
-                    }
-
-                    if ($('#email').val() && $('#folio').val()) {
-                        get_URL_code();
-                        if (checkValue) {
-                            $('#form').bootstrapWizard('show',2);
-                        };
-                    }
-                }
-            }
     });
         
     function get_checked_radio(name, index)

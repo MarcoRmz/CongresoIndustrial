@@ -452,16 +452,16 @@
 
             xhr2.addEventListener("readystatechange", function () {
               if (this.readyState === this.DONE) {
-                console.log(this.responseText);
+                //console.log(this.responseText);
                 jsonResponse2 = JSON.parse(xhr2.responseText);
-                console.log(jsonResponse2);
-                console.log(xhr2.responseText.substring(xhr2.responseText.indexOf("Folio") + 9, xhr2.responseText.indexOf("}]}}") - 1));
+                //console.log(jsonResponse2);
+                //console.log(xhr2.responseText.substring(xhr2.responseText.indexOf("Folio") + 9, xhr2.responseText.indexOf("}]}}") - 1));
                 folio = xhr2.responseText.substring(xhr2.responseText.indexOf("Folio") + 9, xhr2.responseText.indexOf("}]}}") - 1);
 
                 if (document.getElementById("folio").value != folio) {
-                    console.log("folio no es igual");
+                    console.log("Folio OK!");
                 } else {
-                    console.log("folio si es igual");
+                    console.log("Folio ERROR!");
                 }
               }
             });
@@ -475,7 +475,7 @@
         }
 
         function processAuth() {
-            console.log('processAuth funct called');
+            console.log('processAuth');
 
             eventjoy.auth(Token, function(success, response) {
                 //localStorage.setItem( 'eventjoy_access_token', response.access_token);
@@ -487,7 +487,7 @@
             eventjoy.setAccessToken(AccessToken);
 
             if (Token != '') {
-                console.log('authorized');
+                console.log('Authorized');
 
                 var data = null;
                 var xhr = new XMLHttpRequest();
@@ -497,10 +497,10 @@
 
                 xhr.addEventListener("readystatechange", function () {
                   if (this.readyState === this.DONE) {
-                    console.log(this.responseText);
+                    //console.log(this.responseText);
                     jsonResponse = JSON.parse(xhr.responseText);
-                    console.log(jsonResponse);
-                    console.log(xhr.responseText.substring(xhr.responseText.indexOf("ID") + 4, xhr.responseText.indexOf("type") - 2));
+                    //console.log(jsonResponse);
+                    //console.log(xhr.responseText.substring(xhr.responseText.indexOf("ID") + 4, xhr.responseText.indexOf("type") - 2));
                     getFolio(xhr.responseText.substring(xhr.responseText.indexOf("ID") + 4, xhr.responseText.indexOf("type") - 2));
                   }
                 });
@@ -524,15 +524,15 @@
                 }); */
                 
             } else {
-                console.log('not authorized');
+                console.log('Not Authorized');
             }
         }
 
         function startLogin() {
-            console.log('login funct called');
+            console.log('Login started');
             eventjoy.login(function() {
               processAuth();
-              console.log('login closed');
+              console.log('Login closed');
             });
         }
     </script>

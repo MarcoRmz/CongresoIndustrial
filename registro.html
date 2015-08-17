@@ -352,7 +352,7 @@
                         }, onNext: function(tab, navigation, index) {
                             if (index == 1){
                                 get_URL_code();
-                                console.log("yes");
+                                console.log(tab + " " + index);
                             }
                             if (index == 2){
                                 get_checked_radio('talleres', index);
@@ -368,8 +368,8 @@
                         }, onTabClick: function(tab, navigation, index) {
                             return false;
                         }, onTabShow: function(tab, navigation, index) {
+                            console.log(tab + " " + index + " 2 ");
                             var $total = navigation.find('li').length;
-                            console.log(navigation);
                             var $current = index+1;
                             var $percent = ($current/$total) * 100;
                             $('#form .progress-bar').css({width:$percent+'%'});

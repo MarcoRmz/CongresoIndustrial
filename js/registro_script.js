@@ -2,7 +2,7 @@ var TallerValue;
 var VisitaValue;
 var Encrypt;
 var URL_complete;
-var checkValue;
+var checkValue = false;
 
     $(document).ready(function() {
         $('#form').bootstrapWizard({'tabClass': 'bwizard-steps', 'debug': false, onShow: function(tab, navigation, index) {
@@ -10,7 +10,8 @@ var checkValue;
                 }, onNext: function(tab, navigation, index) {
                     if (index == 1){
                         get_URL_code();
-                        if (!checkValue){
+                        if (checkValue){
+                            console.log("this is working");
                         	return false;
                         }
                     }
@@ -124,7 +125,7 @@ function getFolio(attendeeID) {
             console.log("Folio OK!");
         } else {
             console.log("Folio ERROR!");
-            checkValue = false;
+            checkValue = true;
         }
       }
     });

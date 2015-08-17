@@ -58,6 +58,9 @@ var checkValue = false;
                     } else if ($current > 1) {
                         $('#form').find('.pager .next').show();
                         $('#form').find('.pager .finish').hide();
+                    } else {
+                        $('#form').find('.pager .next').hide();
+                        $('#form').find('.pager .first').show();
                     }
                 }});
 

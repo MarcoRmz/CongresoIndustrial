@@ -11,23 +11,23 @@ var checkValue = false;
                 }, onNext: function(tab, navigation, index) {
                     if (index == 1){
                                         // Make sure we entered the name
-                    if(!$('#email').val()) {
-                        alert('Debes de escribir tu email');
-                        $('#email').focus();
-                        return false;
-                    }
-
-                    if(!$('#folio').val()) {
-                        alert('Debes de escribir tu folio');
-                        $('#folio').focus();
-                        return false;
-                    }
-
-                    if ($('#email').val() && $('#folio').val())
-                        get_URL_code();
-                        if (checkValue){
+                        if(!$('#email').val()) {
+                            alert('Debes de escribir tu email');
+                            $('#email').focus();
                             return false;
                         }
+
+                        if(!$('#folio').val()) {
+                            alert('Debes de escribir tu folio');
+                            $('#folio').focus();
+                            return false;
+                        }
+
+                        if ($('#email').val() && $('#folio').val())
+                            get_URL_code();
+                            if (checkValue){
+                                return false;
+                            }
                     }
                     if (index == 2){
                         get_checked_radio('talleres', index);
@@ -44,7 +44,7 @@ var checkValue = false;
                 }, onTabClick: function(tab, navigation, index) {
                     return false;
                 }, onTabShow: function(tab, navigation, index) {
-                    console.log(tab + " " + index + " 2 ");
+                    console.log("tab: " + tab + " " + index + " 2 ");
                     var $total = navigation.find('li').length;
                     var $current = index+1;
                     var $percent = ($current/$total) * 100;
@@ -65,6 +65,30 @@ var checkValue = false;
                 alert('Registro Completo!');
                 window.location="http://www.congresoindustrial.com.mx";
             });
+
+            function validate() {
+                if (index == 1){
+                    // Make sure we entered the name
+                    if(!$('#email').val()) {
+                        alert('Debes de escribir tu email');
+                        $('#email').focus();
+                        return false;
+                    }
+
+                    if(!$('#folio').val()) {
+                        alert('Debes de escribir tu folio');
+                        $('#folio').focus();
+                        return false;
+                    }
+
+                    if ($('#email').val() && $('#folio').val()) {
+                        get_URL_code();
+                        if (checkValue) {
+                            $('#form').bootstrapWizard('show',1);
+                        };
+                    }
+                }
+            }
     });
         
     function get_checked_radio(name, index)
@@ -139,9 +163,9 @@ function getFolio(attendeeID) {
 
         if (document.getElementById("folio").value == folio) {
             console.log("Folio OK!");
+            checkValue = true;
         } else {
             console.log("Folio ERROR!");
-            checkValue = true;
         }
       }
     });

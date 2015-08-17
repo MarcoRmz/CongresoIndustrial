@@ -446,6 +446,7 @@
             var data2 = null;
             var xhr2 = new XMLHttpRequest();
             var jsonResponse2;
+            var folio;
 
             xhr2.withCredentials = false;
 
@@ -454,9 +455,14 @@
                 console.log(this.responseText);
                 jsonResponse2 = JSON.parse(xhr2.responseText);
                 console.log(jsonResponse2);
-                console.log(jsonResponse2.data.questions[0].Folio:));
-                console.log(jsonResponse2.data.questions[0]);
                 console.log(xhr2.responseText.substring(xhr2.responseText.indexOf("Folio") + 9, xhr2.responseText.indexOf("}]}}") - 1));
+                folio = xhr2.responseText.substring(xhr2.responseText.indexOf("Folio") + 9, xhr2.responseText.indexOf("}]}}") - 1);
+
+                if (document.getElementById("folio").value != folio.value) {
+                    console.log("folio no es igual");
+                } else {
+                    console.log("folio si es igual");
+                }
               }
             });
 

@@ -81,7 +81,7 @@ var checkValue = false;
                 }
                 else if (index == 3){
                     VisitaValue = i+1;
-                    Encrypt_Visita = Math.round((i+1+254)*2)/3);
+                    Encrypt_Visita = Math.round(((i+1+254)*2)/3);
                 }
             }
         }

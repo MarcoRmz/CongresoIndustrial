@@ -25,7 +25,6 @@ $(document).ready(function() {
 
                     if ($('#email').val() && $('#folio').val()) {
                         get_URL_code();
-                        sleep(5000);
                         if (checkValue){
                             return true;
                         }
@@ -91,15 +90,6 @@ function get_checked_radio(name, index)
             }
         }
     }
-}
-
-function sleep(milliseconds) {
-  var start = new Date().getTime();
-  for (var i = 0; i < 1e7; i++) {
-    if ((new Date().getTime() - start) > milliseconds){
-      break;
-    }
-  }
 }
 
 var Token;

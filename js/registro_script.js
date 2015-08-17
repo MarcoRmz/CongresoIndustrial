@@ -1,6 +1,7 @@
 var TallerValue;
 var VisitaValue;
-var Encrypt;
+var Encrypt_Taller;
+var Encrypt_Visita;
 var URL_complete;
 var checkValue = false;
 
@@ -33,7 +34,8 @@ var checkValue = false;
                     }
                     else if (index == 3){
                         get_checked_radio('visitas', index);
-                        document.getElementById("codigoTaller").innerHTML = "Taller" + TallerValue + Encrypt;
+                        document.getElementById("codigoTaller").innerHTML = "Taller" + TallerValue + Encrypt_Taller;
+                        document.getElementById("codigoVisita").innerHTML = "Visita" + VisitaValue + Encrypt_Visita;
                     }
                 }, onPrevious: function(tab, navigation, index) {
                     
@@ -75,10 +77,11 @@ var checkValue = false;
             {
                 if(index == 2){
                     TallerValue = i+1;
-                    Encrypt = Math.round((i+1+253)/2);
+                    Encrypt_Taller = Math.round((i+1+253)/2);
                 }
                 else if (index == 3){
                     VisitaValue = i+1;
+                    Encrypt_Visita = Math.round((i+1+254)*2)/3);
                 }
             }
         }

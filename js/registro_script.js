@@ -55,7 +55,7 @@ var checkValue = false;
                         $('#form').find('.pager .next').hide();
                         $('#form').find('.pager .finish').show();
                         $('#form').find('.pager .finish').removeClass('disabled');
-                    } else {
+                    } else if ($current > 1) {
                         $('#form').find('.pager .next').show();
                         $('#form').find('.pager .finish').hide();
                     }

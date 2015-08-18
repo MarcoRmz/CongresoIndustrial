@@ -50,6 +50,7 @@ $(document).ready(function() {
                         document.getElementById("codigoVisita").innerHTML = "Visita" + VisitaValue + Encrypt_Visita;
                         return true;
                     }
+                    return true;
                 }
                 return false;
             }, onPrevious: function(tab, navigation, index) {

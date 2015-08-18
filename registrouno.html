@@ -376,6 +376,10 @@
             eventjoy.order('3480864', function(success, orders) {
                 console.log(JSON.stringify(orders, null, 2));
             });
+            
+            eventjoy.event_attendee('3451277', 'mitv@live.com', function(success, event_attendee) {
+                console.log(JSON.stringify(event_attendee, null, 2));
+            });
         </script>
 
         <!-- Scripts -->

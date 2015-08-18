@@ -19,8 +19,8 @@
         <meta name="description" content="Congreso Industrial es un evento con sede en el Tec de Monterrey el 10, 11, y 12 de Septiembre. Conferencias magistrales, además de talleres y visitas a empresas.">
 
         <!-- Meta tags -->
-        <meta property="og:url" content="http://congresoindustrial.com.mx/" />
-        <meta property="og:image" content="http://congresoindustrial.com.mx/img/logo.png" />
+        <meta property="og:url" content="http://www.congresoindustrial.com.mx/" />
+        <meta property="og:image" content="http://www.congresoindustrial.com.mx/img/logo.png" />
         <meta property="og:site_name" content="Congreso Industrial" />
         <meta property="og:title" content="CI 22 Registro Talleres y Visitas" />
         <meta property="og:description" content="Congreso Industrial es un evento con sede en el Tec de Monterrey el 10, 11, y 12 de Septiembre. Conferencias magistrales, además de talleres y visitas a empresas." />
@@ -92,7 +92,7 @@
                                       <h4 class="text-primary">- Ingresar el mismo correo con el que se registro al comprar boleto</h4>
                                       <h4 class="text-primary">- Tu Taller/Visita solo se registrará si terminas el proceso completo</h4>
                                       <h4 class="text-primary">- No se guardarán los datos si sales de la pagina a mediados del proceso</h4>
-                                      <button class="btn" onClick="startLogin()">Login</button>
+                                      <!-- <button class="btn" onClick="startLogin()">Login</button> -->
                                   </div> 
                                 </div>
                                 <br>
@@ -100,11 +100,11 @@
                                     <div class="col-md-12" style="width: 97.5%;">
                                         <div class="input-group">
                                             <span class="input-group-addon" id="basic-addon1">Correo</span>
-                                            <input type="text" class="form-control" placeholder="Correo Electronico" aria-describedby="basic-addon1">
+                                            <input type="text" id="email" class="form-control" placeholder="Correo Electronico" aria-describedby="basic-addon1">
                                         </div>
                                         <div class="input-group">
                                             <span class="input-group-addon" id="basic-addon2">Folio</span>
-                                            <input type="text" class="form-control" placeholder="Folio" aria-describedby="basic-addon2">
+                                            <input type="text" id="folio" class="form-control" placeholder="Folio" aria-describedby="basic-addon2">
                                         </div>
                                     </div>
                                 </div>
@@ -229,38 +229,74 @@
                                         <h3 class="text-primary">Jueves</h3>
                                         <form>
                                             <div class="col-md-6 col-xs-6">
-                                                <input type="radio" name="visitas" value="Visita1" checked><div> <img class="image_visitas" src="img/default-placeholder.png"/>
-                                                <h4 class="text-primary">Visita 1</h4><h5 class="text-primary">Texto</h5></div>
+                                                <input type="radio" name="visitas" value="Visita1" checked><div> <img class="image_visitas" src="img/arca.jpg"/>
+                                                <h4 class="text-primary">Arca Continental</h4><h5 class="text-primary">12:30 PM</h5></div>
                                                 <br>
-                                                <input type="radio" name="visitas" value="Visita2"><div> <img class="image_visitas" src="img/default-placeholder.png"/>
-                                                <h4 class="text-primary">Visita 2</h4><h5 class="text-primary">Texto</h5></div>
+                                                <input type="radio" name="visitas" value="Visita2"><div> <img class="image_visitas" src="img/bydsa.jpg"/>
+                                                <h4 class="text-primary">Bydsa</h4><h5 class="text-primary">1:30 PM</h5></div>
+                                                <br>
+                                                <input type="radio" name="visitas" value="Visita3"><div> <img class="image_visitas" src="img/viakon.jpg"/>
+                                                <h4 class="text-primary">Viakon</h4><h5 class="text-primary">2:00 PM</h5></div>
+                                                <br>
+                                                <input type="radio" name="visitas" value="Visita4"><div> <img class="image_visitas" src="img/vitro.jpg"/>
+                                                <h4 class="text-primary">Vitro</h4><h5 class="text-primary">2:30 PM</h5></div>
+                                                <br>
+                                                <input type="radio" name="visitas" value="Visita5"><div> <img class="image_visitas" src="img/graftech.jpg"/>
+                                                <h4 class="text-primary">Graftech</h4><h5 class="text-primary">Pendiente</h5></div>
                                             </div>
                                             <div class="col-md-6 col-xs-6">
-                                                <input type="radio" name="visitas" value="Visita3"><div> <img class="image_visitas" src="img/default-placeholder.png"/>
-                                                <h4 class="text-primary">Visita 3</h4><h5 class="text-primary">Texto</h5></div>
+                                                <input type="radio" name="visitas" value="Visita6"><div> <img class="image_visitas" src="img/cerveceria.jpg"/>
+                                                <h4 class="text-primary">Cervecería CM (1)</h4><h5 class="text-primary">2:00 PM</h5></div>
                                                 <br>
-                                                <input type="radio" name="visitas" value="Visita4"><div> <img class="image_visitas" src="img/default-placeholder.png"/>
-                                                <h4 class="text-primary">Visita 4</h4><h5 class="text-primary">Texto</h5></div>
+                                                <input type="radio" name="visitas" value="Visita7"><div> <img class="image_visitas" src="img/cerveceria.jpg"/>
+                                                <h4 class="text-primary">Cervecería CM (2)</h4><h5 class="text-primary">3:00 PM</h5></div>
                                                 <br>
-                                                <input type="radio" name="visitas" value="Visita5"><div> <img class="image_visitas" src="img/default-placeholder.png"/>
-                                                <h4 class="text-primary">Visita 5</h4><h5 class="text-primary">Texto</h5></div>
+                                                <input type="radio" name="visitas" value="Visita8"><div> <img class="image_visitas" src="img/lamosa.jpg"/>
+                                                <h4 class="text-primary">Grupo Lamosa</h4><h5 class="text-primary">Pendiente</h5></div>
+                                                <br>
+                                                <input type="radio" name="visitas" value="Visita9"><div> <img class="image_visitas" src="img/bimbo.jpg"/>
+                                                <h4 class="text-primary">Bimbo (1)</h4><h5 class="text-primary">2:00 PM</h5></div>
+                                                <br>
+                                                <input type="radio" name="visitas" value="Visita10"><div> <img class="image_visitas" src="img/bimbo.jpg"/>
+                                                <h4 class="text-primary">Bimbo (2)</h4><h5 class="text-primary">3:00 PM</h5></div>
                                             </div>
                                     </div><!-- /.col-lg-6 -->
                                     <div class="col-lg-6">
                                         <h3 class="text-primary">Viernes</h3>
                                             <div class="col-md-6 col-xs-6">
-                                                <input type="radio" name="visitas" value="Visita6"><div> <img class="image_visitas" src="img/default-placeholder.png"/>
-                                                <h4 class="text-primary">Visita 6</h4><h5 class="text-primary">Texto</h5></div>
+                                                <input type="radio" name="visitas" value="Visita11" checked><div> <img class="image_visitas" src="img/arca.jpg"/>
+                                                <h4 class="text-primary">Arca Continental</h4><h5 class="text-primary">12:30 PM</h5></div>
                                                 <br>
-                                                <input type="radio" name="visitas" value="Visita7"><div> <img class="image_visitas" src="img/default-placeholder.png"/>
-                                                <h4 class="text-primary">Visita 7</h4><h5 class="text-primary">Texto</h5></div>
+                                                <input type="radio" name="visitas" value="Visita12"><div> <img class="image_visitas" src="img/bydsa.jpg"/>
+                                                <h4 class="text-primary">Bydsa</h4><h5 class="text-primary">1:30 PM</h5></div>
+                                                <br>
+                                                <input type="radio" name="visitas" value="Visita13"><div> <img class="image_visitas" src="img/viakon.jpg"/>
+                                                <h4 class="text-primary">Viakon</h4><h5 class="text-primary">2:00 PM</h5></div>
+                                                <br>
+                                                <input type="radio" name="visitas" value="Visita14"><div> <img class="image_visitas" src="img/vitro.jpg"/>
+                                                <h4 class="text-primary">Vitro</h4><h5 class="text-primary">2:30 PM</h5></div>
+                                                <br>
+                                                <input type="radio" name="visitas" value="Visita15"><div> <img class="image_visitas" src="img/graftech.jpg"/>
+                                                <h4 class="text-primary">Graftech</h4><h5 class="text-primary">Pendiente</h5></div>
                                             </div>
                                             <div class="col-md-6 col-xs-6">
-                                                <input type="radio" name="visitas" value="Visita8"><div> <img class="image_visitas" src="img/default-placeholder.png"/>
-                                                <h4 class="text-primary">Visita 8</h4><h5 class="text-primary">Texto</h5></div>
+                                                <input type="radio" name="visitas" value="Visita16"><div> <img class="image_visitas" src="img/cerveceria.jpg"/>
+                                                <h4 class="text-primary">Cervecería CM (1)</h4><h5 class="text-primary">2:00 PM</h5></div>
                                                 <br>
-                                                <input type="radio" name="visitas" value="Visita9"><div> <img class="image_visitas" src="img/default-placeholder.png"/>
-                                                <h4 class="text-primary">Visita 9</h4><h5 class="text-primary">Texto</h5></div>
+                                                <input type="radio" name="visitas" value="Visita17"><div> <img class="image_visitas" src="img/cerveceria.jpg"/>
+                                                <h4 class="text-primary">Cervecería CM (2)</h4><h5 class="text-primary">3:00 PM</h5></div>
+                                                <br>
+                                                <input type="radio" name="visitas" value="Visita18"><div> <img class="image_visitas" src="img/lamosa.jpg"/>
+                                                <h4 class="text-primary">Grupo Lamosa</h4><h5 class="text-primary">Pendiente</h5></div>
+                                                <br>
+                                                <input type="radio" name="visitas" value="Visita19"><div> <img class="image_visitas" src="img/bimbo.jpg"/>
+                                                <h4 class="text-primary">Bimbo (1)</h4><h5 class="text-primary">2:00 PM</h5></div>
+                                                <br>
+                                                <input type="radio" name="visitas" value="Visita20"><div> <img class="image_visitas" src="img/bimbo.jpg"/>
+                                                <h4 class="text-primary">Bimbo (2)</h4><h5 class="text-primary">3:00 PM</h5></div>
+                                                <br>
+                                                <input type="radio" name="visitas" value="Visita21"><div> <img class="image_visitas" src="img/deere.jpg"/>
+                                                <h4 class="text-primary">John Deere</h4><h5 class="text-primary">2:30 PM</h5></div>
                                             </div>
                                         </form>
                                     </div><!-- /.col-lg-6 -->
@@ -282,6 +318,10 @@
                                             <li>3. Esperar a que la opcion del boleto aparezca</li>
                                             <li>4. Registrar el Taller con tus datos</li>
                                             <li>5. Recuerda registrar solo un Taller</li>
+                                            <li>6. Volver hacer click en "Enter a Code"</li>
+                                            <li>7. Utilizar el codigo de Visita: <p class="text-primary" id="codigoVisita"></p></li>
+                                            <li>8. Registrar la Visita con tus datos</li>
+                                            <li>9. Recuerda solo registrar una visita</li>
                                             <br>
                                             <li>En caso de tener dudas, mandar correo a &#99;&#111;&#110;&#116;&#97;&#99;&#116;&#111;&#64;&#99;&#111;&#110;&#103;&#114;&#101;&#115;&#111;&#105;&#110;&#100;&#117;&#115;&#116;&#114;&#105;&#97;&#108;&#46;&#99;&#111;&#109;&#46;&#109;&#120;</li>
                                         </ul>
@@ -307,7 +347,7 @@
                         </div>
                         <ul class="pager wizard">
                             <li class="previous"><a href="javascript:;">Anterior</a></li>
-                            <li class="next"><a href="javascript:;">Siguiente</a></li>
+                            <li class="next"><a id="validate" href="javascript:;">Validar</a></li>
                             <li class="next finish" style="display:none;"><a href="javascript:;">Terminar</a></li>
                         </ul>
                     </div>
@@ -328,6 +368,14 @@
             <div>
         </footer>
 
+        <script type="text/javascript">
+            eventjoy.setApiKey('5c27f9e1de27081311a387dd938cf19d27e6');
+            eventjoy.setAccessToken( "83aaKha3glwxhU5fhFqtMkfqg1f3FLL948ZYYC9cQmHqzzNTOWUQZhOARaJoblVgjNHFKdZN01GCV0oHsvwwmw77KA==" );
+            eventjoy.order('3480864', function(success, orders) {
+                console.log(JSON.stringify(orders, null, 2));
+            });
+        </script>
+
         <!-- Scripts -->
         <script src="js/jquery-1.11.0.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
@@ -340,147 +388,6 @@
         <script src="js/classie.js"></script>
         <script src="js/cbpAnimatedHeader.js"></script>
         <script src="js/script.js"></script>
-        <script>
-        var TallerValue;
-        var VisitaValue;
-        var Encrypt;
-        var URL_complete;
-
-            $(document).ready(function() {
-                $('#form').bootstrapWizard({'tabClass': 'bwizard-steps', 'debug': false, onShow: function(tab, navigation, index) {
-                            
-                        }, onNext: function(tab, navigation, index) {
-                            if (index == 2){
-                                get_checked_radio('talleres', index);
-                                get_URL_code();
-                            }
-                            else if (index == 3){
-                                get_checked_radio('visitas', index);
-                                document.getElementById("codigoTaller").innerHTML = "Taller" + TallerValue + Encrypt;
-                            }
-                        }, onPrevious: function(tab, navigation, index) {
-                            
-                        }, onLast: function(tab, navigation, index) {
-                            return false;
-                        }, onTabClick: function(tab, navigation, index) {
-                            return false;
-                        }, onTabShow: function(tab, navigation, index) {
-                            var $total = navigation.find('li').length;
-                            var $current = index+1;
-                            var $percent = ($current/$total) * 100;
-                            $('#form .progress-bar').css({width:$percent+'%'});
-
-                            // If it's the last tab then hide the last button and show the finish instead
-                            if($current >= $total) {
-                                $('#form').find('.pager .next').hide();
-                                $('#form').find('.pager .finish').show();
-                                $('#form').find('.pager .finish').removeClass('disabled');
-                            } else {
-                                $('#form').find('.pager .next').show();
-                                $('#form').find('.pager .finish').hide();
-                            }
-                        }});
-
-                    $('#form .finish').click(function() {
-                        alert('Registro Completo!');
-                        window.location="http://www.congresoindustrial.com.mx";
-                    });
-            });
-                
-            function get_checked_radio(name, index)
-            {
-                var radioElements = document.getElementsByName(name);
-
-                for(var i=0; i < radioElements.length; i++)
-                {
-                    if(radioElements[i].checked) 
-                    {
-                        if(index == 2){
-                            TallerValue = i+1;
-                            Encrypt = Math.round((i+1+253)/2);
-                        }
-                        else if (index == 3){
-                            VisitaValue = i+1;
-                        }
-                    }
-                }
-            }
-    </script>
-    <script type="text/javascript">
-        eventjoy.setApiKey('5c27f9e1de27081311a387dd938cf19d27e6');
-
-        function isAuthorized(callback) {
-            if ( localStorage.getItem( 'eventjoy_access_token' ) ) {
-              // We aleady have an access token
-              console.log('found access token: '+localStorage.getItem('eventjoy_access_token'));
-              eventjoy.setAccessToken( localStorage.getItem('eventjoy_access_token') );
-              if ( callback ) callback( true );
-            } else if ( localStorage.getItem( 'eventjoy_oauth_token' ) ) {
-              // No, but we we do have a oauth request token
-              console.log('found oauth token: '+localStorage.getItem('eventjoy_oauth_token'));
-              eventjoy.auth( localStorage.getItem('eventjoy_oauth_token'), function(success, response) {
-                localStorage.setItem( 'eventjoy_access_token', response.access_token);
-                if ( callback ) callback( true );
-              });
-            } else {
-              console.log('no auth found');
-              if ( callback ) callback( false );
-            }
-        }
-        
-        function get_URL_code ()
-            {
-                URL_complete = window.location.href;
-                point = URL_complete.lastIndexOf("=");
-                URL_Code = URL_complete.substr(point);
-                alert(URL_Code);
-            }
-
-        function processAuth() {
-            initialiseDB();
-            get_URL_code();
-
-            isAuthorized( function( authorized ) {
-              if ( authorized ) {
-                // Once authorized, fetch all available events
-                eventjoy.events("", {"page[size]" : -1}, function(success, events) {
-                  $('onboarding-view #starting').addClass('hidden');
-                  $('onboarding-view #authenticate').addClass('hidden');
-                  $('onboarding-view #onboarding').addClass('hidden');
-                  $('onboarding-view #noevents').addClass('hidden');
-
-                  if ( success && events && events.data.length && events.data[0].ID ) {
-                    $('onboarding-view #onboarding').removeClass('hidden');
-                    // Create event of array and pass it to dropdown
-                    var eventArrays = [];
-                    events.data.forEach(function(order) {
-                      eventArrays.push({"eventName": order.name, "eventId" : order.ID});
-                    });
-
-                    $('onboarding-view').attr("event-array", JSON.stringify(eventArrays));
-                    $('settings-view').attr("event-array-settings", JSON.stringify(eventArrays));
-                  } else {
-                    $('onboarding-view #noevents').removeClass('hidden');
-                  }
-                });
-              } else {
-                $('onboarding-view #starting').addClass('hidden');
-                $('onboarding-view #onboarding').addClass('hidden');
-                $('onboarding-view #noevents').addClass('hidden');
-                $('onboarding-view #authenticate').removeClass('hidden');
-                /*console.log('triggering login');
-                */
-              }
-            });
-        }
-
-        function startLogin() {
-            console.log('login funct called');
-            eventjoy.login(function() {
-              processAuth();
-              console.log('login closed');
-            });
-        }
-    </script>
+        <script src="js/registro_script.js"></script>
     </body>
 </html>

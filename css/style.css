@@ -1308,6 +1308,7 @@ h5.map {
   border-bottom: 16px inset transparent;
   border-left: 20px solid #95268f;
   border-top: 16px inset transparent;
+  content: "";
 }
 
 .bwizard-steps li:after {

@@ -373,11 +373,13 @@
         <script type="text/javascript">
             eventjoy.setApiKey('5c27f9e1de27081311a387dd938cf19d27e6');
             eventjoy.setAccessToken( "83aaKha3glwxhU5fhFqtMkfqg1f3FLL948ZYYC9cQmHqzzNTOWUQZhOARaJoblVgjNHFKdZN01GCV0oHsvwwmw77KA==" );
-            /*eventjoy.order('3480864', function(success, orders) {
+
+            //Udhava Harí Sánchez de Tagle Pízaña
+            eventjoy.order('3480862', function(success, orders) {
                 console.log(JSON.stringify(orders, null, 2));
-            }); */
-            
-            eventjoy.events_attendees('3451277', {}, function(success, events_attendees) {
+            });
+            //Abiel Zahid  González Martínez
+            eventjoy.events_attendee('3451277', 'el_zid_10@hotmail.com', {}, function(success, events_attendees) {
                 console.log(JSON.stringify(events_attendees, null, 2));
             });
         </script>

@@ -37,9 +37,22 @@ $(document).ready(function() {
                 }
                 else if (index == 3){
                     get_checked_radio('visitas', index);
-                    document.getElementById("codigoTaller").innerHTML = "Taller" + TallerValue + Encrypt_Taller;
-                    document.getElementById("codigoVisita").innerHTML = "Visita" + VisitaValue + Encrypt_Visita;
-                    return true;
+                    if (TallerValue <= 8 && VisitaValue <= 10) {
+                        alert("El Taller y la Visita seleccionados son el mismo día");
+                        return false;
+                    }
+                    else if (TallerValue > 8 && VisitaValue > 10) {
+                        alert("El Taller y la Visita seleccionados son el mismo día");
+                        return false;
+                    }
+                    else {
+                        document.getElementById("codigoTaller").innerHTML = "Taller" + TallerValue + Encrypt_Taller;
+                        document.getElementById("codigoVisita").innerHTML = "Visita" + VisitaValue + Encrypt_Visita;
+                        return true;
+                    }
+                    //document.getElementById("codigoTaller").innerHTML = "Taller" + TallerValue + Encrypt_Taller;
+                    //document.getElementById("codigoVisita").innerHTML = "Visita" + VisitaValue + Encrypt_Visita;
+                    //return true;
                 }
                 return false;
             }, onPrevious: function(tab, navigation, index) {

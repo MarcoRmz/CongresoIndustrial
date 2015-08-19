@@ -13,7 +13,7 @@ $(document).ready(function() {
                 if (index == 1){
                     // Make sure we entered the name
                     $('button.close').click(function() {
-                        $('.alert').slideToggle();
+                        $('.alert.error').slideToggle();
                     });
                     if(!$('#email').val()) {
                         $('.alert.error').slideToggle();

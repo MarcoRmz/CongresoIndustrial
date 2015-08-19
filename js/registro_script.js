@@ -44,11 +44,11 @@ $(document).ready(function() {
                 }
                 else if (index == 3){
                     get_checked_radio('visitas', index);
-                    if (TallerValue <= 8 && VisitaValue <= 10) {
+                    if (TallerValue <= 11 && VisitaValue <= 10) {
                         alert("El Taller y la Visita seleccionados son el mismo día");
                         return false;
                     }
-                    else if (TallerValue > 8 && VisitaValue > 10) {
+                    else if (TallerValue > 11 && VisitaValue > 10) {
                         alert("El Taller y la Visita seleccionados son el mismo día");
                         return false;
                     }

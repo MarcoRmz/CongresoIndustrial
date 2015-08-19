@@ -12,7 +12,7 @@ $(document).ready(function() {
             }, onNext: function(tab, navigation, index) {
                 if (index == 1){
                     // Make sure we entered the name
-                    $('span.close').click(function() {
+                    $('svg.close').click(function() {
                         $('.alert').slideToggle();
                     });
                     if(!$('#email').val()) {

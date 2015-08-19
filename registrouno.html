@@ -60,10 +60,12 @@
                 font-size: 1.6em;
                 position: relative;
                 top: .12em;
+                opacity: 0.4;
             }
 
             .alert .close:hover {
                 color: #ccc;
+                opacity: 0.8;
             }
 
             .alert .icon {
@@ -460,7 +462,7 @@
                 console.log(JSON.stringify(events_attendees, null, 2));
             });
             
-            $('.close').click(function() {
+            $('svg.close').click(function() {
                 $('.alert').slideToggle();
             });
         </script>

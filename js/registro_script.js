@@ -31,7 +31,6 @@ $(document).ready(function() {
                     if ($('#email').val() && $('#folio').val()) {
                         get_URL_code();
                         if (checkValue && numTickets == 1){
-                            $('.alert.success').slideToggle();
                             return true;
                         }
                     } 
@@ -163,12 +162,16 @@ function getFolio(attendeeID) {
         if (document.getElementById("folio").value == folio) {
             document.getElementById("validate").innerHTML = "Siguiente";
             console.log("Folio OK!");
-            checkValue = true;
             if(checkValue && numTickets > 1) {
+                $('.alert.error').slideToggle();
                 alert("Ya registraste tu taller y visita");
+            } else {
+                checkValue = true;
+                $('.alert.success').slideToggle();
             }
         } else {
             document.getElementById("validate").innerHTML = "Validar";
+            $('.alert.error').slideToggle();
             alert("Tu correo o folio no coinciden");
             console.log("Folio ERROR!");
         }

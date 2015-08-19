@@ -36,6 +36,51 @@
 
         <!-- Custom Fonts -->
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+
+        <style type="text/css">
+            .alertContainer {
+              width: 85%;
+              margin: 0 auto;
+              position: relative;
+            }
+            .alert {
+              display: none;
+            }
+
+            .alert p {
+              padding: 0;
+            }
+
+            .alert span.close {
+              float: right;
+              font-size: 1.6em;
+              position: relative;
+              top: .12em;
+            }
+
+            .alert span.close:hover {
+              color: #ccc;
+            }
+
+            .alert span.icon {
+              margin-right: .5em;
+              font-size: 1.5em;
+              position: relative;
+              top: .12em;
+            }
+
+            .alert.success {
+              background: #53ca74;
+              color: #fff;
+              padding: 2em 0;
+            }
+
+            .alert.error {
+              background: #EA6C6C;
+              color: #fff;
+              padding: 2em 0;
+            }
+        </style>
     </head>
     
     <body>
@@ -83,6 +128,14 @@
                         <div class="tab-pane" id="form-tab1">
                             <!-- Info General -->
                             <div class="container">
+                                <div class="alert success">
+                                  <p class="alertContainer"><span class="icon fontawesome-ok-sign"></span>¡Se valido correctamente!<span class="close fontawesome-remove-sign"></span></p>
+                                </div>
+
+                                <div class="alert error">
+                                  <p class="alertContainer"><span class="icon fontawesome-minus-sign"></span>¡Error!<span class="close fontawesome-remove-sign"></span></p>
+                                </div>
+
                                 <div class="row text-center">
                                     <div class="col-md-12">
                                         <h2 class="section-heading">Registro Talleres y Visitas</h2>
@@ -372,8 +425,6 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
         <script src="js/jquery.bootstrap.wizard.min.js"></script>
-        <script src="js/eventjoy.storage.js"></script>
-        <script src="js/moment.js"></script>
         <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
         <script src="js/classie.js"></script>
         <script src="js/cbpAnimatedHeader.js"></script>

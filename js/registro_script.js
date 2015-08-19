@@ -14,12 +14,18 @@ $(document).ready(function() {
                                     // Make sure we entered the name
                     if(!$('#email').val()) {
                         alert('Debes de escribir tu email');
+                        $('.button').click(function() {
+                          $('.alert.error').slideToggle();
+                        });
                         $('#email').focus();
                         return false;
                     }
 
                     if(!$('#folio').val()) {
                         alert('Debes de escribir tu folio');
+                        $('.button').click(function() {
+                          $('.alert.error').slideToggle();
+                        });
                         $('#folio').focus();
                         return false;
                     }
@@ -27,6 +33,9 @@ $(document).ready(function() {
                     if ($('#email').val() && $('#folio').val()) {
                         get_URL_code();
                         if (checkValue && numTickets == 1){
+                            $('.button').click(function() {
+                              $('.alert.success').slideToggle();
+                            });
                             return true;
                         }
                     } 

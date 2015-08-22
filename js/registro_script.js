@@ -18,7 +18,7 @@ $(document).ready(function() {
                     if(!$('#email').val()) {
                         document.getElementById("alertError").innerHTML = "ERROR: Debes escribir tu email";
                         $('.alert.error').slideToggle();
-                        setTimeout(function(){ $('.alert.error').slideToggle(); }, 2650);
+                        setTimeout(function(){ $('.alert.error').slideToggle(); }, 2850);
 
                         //alert('Debes de escribir tu email');
                         $('#email').focus();
@@ -28,7 +28,7 @@ $(document).ready(function() {
                     if(!$('#folio').val()) {
                         document.getElementById("alertError").innerHTML = "ERROR: Debes escribir tu folio";
                         $('.alert.error').slideToggle();
-                        setTimeout(function(){ $('.alert.error').slideToggle(); }, 2650);
+                        setTimeout(function(){ $('.alert.error').slideToggle(); }, 2850);
 
                         //alert('Debes de escribir tu folio');
                         $('#folio').focus();
@@ -193,7 +193,8 @@ $(document).ready(function() {
                     $('#form').find('.pager .previous').hide();
                 } else {
                     $('#form').find('.pager .previous').show();
-                    document.getElementById("validate").style.background = "";
+                    document.getElementById("validate").style.background = "#ff9955";
+                    document.getElementById("validate").style.border = "#ff9955";
                 }
 
                 // If it's the last tab then hide the last button and show the finish instead
@@ -290,26 +291,33 @@ function getFolio(attendeeID) {
                 if(checkValue && numTickets > 1) {
                     document.getElementById("alertError").innerHTML = "ERROR: Ya registraste tu taller y visita";
                     $('.alert.error').slideToggle();
-                    setTimeout(function(){ $('.alert.error').slideToggle(); }, 2650);
+                    setTimeout(function(){ $('.alert.error').slideToggle(); }, 2850);
 
                     //alert("Ya registraste tu taller y visita");
                 } else {
                     document.getElementById("validate").innerHTML = "Siguiente";
                     document.getElementById("validate").style.background = "#53ca74";
+                    document.getElementById("validate").style.border = "#53ca74";
                     checkValue = true;
                     $('.alert.success').slideToggle();
                 }
             } else {
-                document.getElementById("validate").innerHTML = "Validar";
+                //document.getElementById("validate").innerHTML = "Validar";
                 document.getElementById("alertError").innerHTML = "ERROR: Tu correo o folio no coinciden";
                 $('.alert.error').slideToggle();
-                setTimeout(function(){ $('.alert.error').slideToggle(); }, 2650);
+                setTimeout(function(){ $('.alert.error').slideToggle(); }, 2850);
 
                 //alert("Tu correo o folio no coinciden");
                 console.log("Folio ERROR!");
             }
-        } else {  
-           console.log("Error", this.statusText);  
+        } else {
+            document.getElementById("alertError").innerHTML = "ERROR: Tu correo o folio no coinciden";
+            $('.alert.error').slideToggle();
+            setTimeout(function(){ $('.alert.error').slideToggle(); }, 2850);
+
+            //alert("Tu correo o folio no coinciden");
+            console.log("Folio ERROR!");
+            console.log("Error", this.statusText);
         }
       }
     });

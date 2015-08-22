@@ -193,6 +193,7 @@ $(document).ready(function() {
                     $('#form').find('.pager .previous').hide();
                 } else {
                     $('#form').find('.pager .previous').show();
+                    document.getElementById("validate").style.background = "";
                 }
 
                 // If it's the last tab then hide the last button and show the finish instead
@@ -285,7 +286,6 @@ function getFolio(attendeeID) {
             folio = xhr2.responseText.substring(xhr2.responseText.indexOf("Folio") + 9, xhr2.responseText.indexOf("}]}}") - 1);
 
             if (document.getElementById("folio").value == folio) {
-                document.getElementById("validate").innerHTML = "Siguiente";
                 console.log("Folio OK!");
                 if(checkValue && numTickets > 1) {
                     document.getElementById("alertError").innerHTML = "ERROR: Ya registraste tu taller y visita";
@@ -294,6 +294,8 @@ function getFolio(attendeeID) {
 
                     //alert("Ya registraste tu taller y visita");
                 } else {
+                    document.getElementById("validate").innerHTML = "Siguiente";
+                    document.getElementById("validate").style.background = "#53ca74";
                     checkValue = true;
                     $('.alert.success').slideToggle();
                 }

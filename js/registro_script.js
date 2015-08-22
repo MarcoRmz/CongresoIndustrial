@@ -36,12 +36,13 @@ $(document).ready(function() {
                     }
 
                     if ($('#email').val() && $('#folio').val()) {
-                        get_URL_code();
                         if (checkValue && numTickets == 1){
                             $('button.close').click(function() {
                                 $('.alert.success').slideToggle();
                             });
                             return true;
+                        } else if (!checkValue) {
+                            get_URL_code();
                         }
                     } 
                 }
@@ -288,6 +289,7 @@ function getFolio(attendeeID) {
             folio = xhr2.responseText.substring(xhr2.responseText.indexOf("Folio") + 9, xhr2.responseText.indexOf("}]}}") - 1);
 
             if (document.getElementById("folio").value == folio) {
+                checkValue = true;
                 console.log("Folio OK!");
                 if(checkValue && numTickets > 1) {
                     document.getElementById("alertError").innerHTML = "ERROR: Ya registraste tu taller y visita";
@@ -295,15 +297,13 @@ function getFolio(attendeeID) {
                     setTimeout(function(){ $('.alert.error').slideToggle(); }, 2850);
 
                     //alert("Ya registraste tu taller y visita");
-                } else {
+                } else if (checkValue && numTickets == 1){
                     document.getElementById("validate").innerHTML = "Siguiente";
                     document.getElementById("validate").style.background = "#53ca74";
                     document.getElementById("validate").style.border = "#53ca74";
-                    checkValue = true;
                     $('.alert.success').slideToggle();
                 }
             } else {
-                checkValue = false;
                 //document.getElementById("validate").innerHTML = "Validar";
                 document.getElementById("alertError").innerHTML = "ERROR: Tu correo o folio no coinciden";
                 $('.alert.error').slideToggle();

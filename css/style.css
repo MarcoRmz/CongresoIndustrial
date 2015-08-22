@@ -1488,7 +1488,13 @@ h5.map {
     }
 
     .caso {
-        margin-bottom: -32%;
+        margin-bottom: -15%;
+        margin-top: -20%;
+    }
+
+    .info {
+      margin-top: -20%;
+      margin-bottom: -10%;
     }
 
     .taller {

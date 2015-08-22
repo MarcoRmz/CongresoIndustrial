@@ -277,33 +277,37 @@ function getFolio(attendeeID) {
 
     xhr2.addEventListener("readystatechange", function () {
       if (this.readyState === this.DONE) {
-        //console.log(this.responseText);
-        jsonResponse2 = JSON.parse(xhr2.responseText);
-        //console.log(jsonResponse2);
-        //console.log("Folio: "+ xhr2.responseText.substring(xhr2.responseText.indexOf("Folio") + 9, xhr2.responseText.indexOf("}]}}") - 1));
-        folio = xhr2.responseText.substring(xhr2.responseText.indexOf("Folio") + 9, xhr2.responseText.indexOf("}]}}") - 1);
+        if (this.status === 200) {  
+          //console.log(this.responseText);
+            jsonResponse2 = JSON.parse(xhr2.responseText);
+            //console.log(jsonResponse2);
+            //console.log("Folio: "+ xhr2.responseText.substring(xhr2.responseText.indexOf("Folio") + 9, xhr2.responseText.indexOf("}]}}") - 1));
+            folio = xhr2.responseText.substring(xhr2.responseText.indexOf("Folio") + 9, xhr2.responseText.indexOf("}]}}") - 1);
 
-        if (document.getElementById("folio").value == folio) {
-            document.getElementById("validate").innerHTML = "Siguiente";
-            console.log("Folio OK!");
-            if(checkValue && numTickets > 1) {
-                document.getElementById("alertError").innerHTML = "ERROR: Ya registraste tu taller y visita";
+            if (document.getElementById("folio").value == folio) {
+                document.getElementById("validate").innerHTML = "Siguiente";
+                console.log("Folio OK!");
+                if(checkValue && numTickets > 1) {
+                    document.getElementById("alertError").innerHTML = "ERROR: Ya registraste tu taller y visita";
+                    $('.alert.error').slideToggle();
+                    setTimeout(function(){ $('.alert.error').slideToggle(); }, 2650);
+
+                    //alert("Ya registraste tu taller y visita");
+                } else {
+                    checkValue = true;
+                    $('.alert.success').slideToggle();
+                }
+            } else {
+                document.getElementById("validate").innerHTML = "Validar";
+                document.getElementById("alertError").innerHTML = "ERROR: Tu correo o folio no coinciden";
                 $('.alert.error').slideToggle();
                 setTimeout(function(){ $('.alert.error').slideToggle(); }, 2650);
 
-                //alert("Ya registraste tu taller y visita");
-            } else {
-                checkValue = true;
-                $('.alert.success').slideToggle();
+                //alert("Tu correo o folio no coinciden");
+                console.log("Folio ERROR!");
             }
-        } else {
-            document.getElementById("validate").innerHTML = "Validar";
-            document.getElementById("alertError").innerHTML = "ERROR: Tu correo o folio no coinciden";
-            $('.alert.error').slideToggle();
-            setTimeout(function(){ $('.alert.error').slideToggle(); }, 2650);
-
-            //alert("Tu correo o folio no coinciden");
-            console.log("Folio ERROR!");
+        } else {  
+           console.log("Error", this.statusText);  
         }
       }
     });
@@ -339,13 +343,17 @@ function processAuth() {
 
         xhr.addEventListener("readystatechange", function () {
           if (this.readyState === this.DONE) {
-            //console.log(this.responseText);
-            jsonResponse = JSON.parse(xhr.responseText);
-            //console.log(jsonResponse);
-            console.log("Attendee ID: " + xhr.responseText.substring(xhr.responseText.indexOf("ID") + 4, xhr.responseText.indexOf("type") - 2));
-            console.log("#Tickets: " + xhr.responseText.substring(xhr.responseText.indexOf("total") + 7, xhr.responseText.indexOf("total") + 8));
-            numTickets = xhr.responseText.substring(xhr.responseText.indexOf("total") + 7, xhr.responseText.indexOf("total") + 8);
-            getFolio(xhr.responseText.substring(xhr.responseText.indexOf("ID") + 4, xhr.responseText.indexOf("type") - 2));
+            if (this.status === 200) {
+                //console.log(this.responseText);
+                jsonResponse = JSON.parse(xhr.responseText);
+                //console.log(jsonResponse);
+                console.log("Attendee ID: " + xhr.responseText.substring(xhr.responseText.indexOf("ID") + 4, xhr.responseText.indexOf("type") - 2));
+                console.log("#Tickets: " + xhr.responseText.substring(xhr.responseText.indexOf("total") + 7, xhr.responseText.indexOf("total") + 8));
+                numTickets = xhr.responseText.substring(xhr.responseText.indexOf("total") + 7, xhr.responseText.indexOf("total") + 8);
+                getFolio(xhr.responseText.substring(xhr.responseText.indexOf("ID") + 4, xhr.responseText.indexOf("type") - 2));
+            } else {
+                console.log("Error", this.statusText);
+            }
           }
         });
 

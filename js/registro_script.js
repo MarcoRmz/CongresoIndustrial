@@ -46,6 +46,7 @@ $(document).ready(function() {
                     } 
                 }
                 if (index == 2){
+                    checkValue = false;
                     get_checked_radio('talleres', index);
                     return true;
                 }
@@ -302,6 +303,7 @@ function getFolio(attendeeID) {
                     $('.alert.success').slideToggle();
                 }
             } else {
+                checkValue = false;
                 //document.getElementById("validate").innerHTML = "Validar";
                 document.getElementById("alertError").innerHTML = "ERROR: Tu correo o folio no coinciden";
                 $('.alert.error').slideToggle();

@@ -12,10 +12,11 @@ $(document).ready(function() {
             }, onNext: function(tab, navigation, index) {
                 if (index == 1){
                     // Make sure we entered the name
-                    $('button.close').click(function() {
+                    /*$('button.close').click(function() {
                         $('.alert.error').slideToggle();
-                    });
+                    }); */
                     if(!$('#email').val()) {
+                        document.getElementById("alertError").innerHTML = "ERROR: Debes escribir tu email";
                         $('.alert.error').slideToggle();
                         setTimeout(function(){ $('.alert.error').slideToggle(); }, 2000);
 
@@ -25,6 +26,7 @@ $(document).ready(function() {
                     }
 
                     if(!$('#folio').val()) {
+                        document.getElementById("alertError").innerHTML = "ERROR: Debes escribir tu folio";
                         $('.alert.error').slideToggle();
                         setTimeout(function(){ $('.alert.error').slideToggle(); }, 2000);
 
@@ -36,6 +38,9 @@ $(document).ready(function() {
                     if ($('#email').val() && $('#folio').val()) {
                         get_URL_code();
                         if (checkValue && numTickets == 1){
+                            $('button.close').click(function() {
+                                $('.alert.success').slideToggle();
+                            });
                             return true;
                         }
                     } 
@@ -276,6 +281,7 @@ function getFolio(attendeeID) {
             document.getElementById("validate").innerHTML = "Siguiente";
             console.log("Folio OK!");
             if(checkValue && numTickets > 1) {
+                document.getElementById("alertError").innerHTML = "ERROR: Ya registraste tu taller y visita";
                 $('.alert.error').slideToggle();
                 setTimeout(function(){ $('.alert.error').slideToggle(); }, 2000);
 
@@ -286,6 +292,7 @@ function getFolio(attendeeID) {
             }
         } else {
             document.getElementById("validate").innerHTML = "Validar";
+            document.getElementById("alertError").innerHTML = "ERROR: Tu correo o folio no coinciden";
             $('.alert.error').slideToggle();
             setTimeout(function(){ $('.alert.error').slideToggle(); }, 2000);
 

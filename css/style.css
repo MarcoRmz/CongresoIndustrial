@@ -1334,6 +1334,21 @@ h5.map {
         font-size: 4vw;
         line-height: 4.5vw;
     }
+    .form-container {
+      width: 95%;
+    }
+
+    .row-margin-m {
+      margin: -10%;
+    }
+
+    .row-margin-sm {
+      margin: -5%;
+    }
+
+    .alert-text-responsive {
+      font-size: 4.4vw;
+    }
 }
 
 @media (max-width: 415px) {
@@ -1397,6 +1412,25 @@ h5.map {
         font-size: 4vw;
         line-height: 4vw;
     }
+    .bwizard-steps a {
+      font-size: 14px;
+      font-weight: 700;
+    }
+    .bwizard-steps li {
+      line-height: 17px;
+    }
+    .section-heading {
+      font-size: 6.5vw;
+    }
+    .responsive-text-m {
+      font-size: 6vw;
+    }
+    .responsive-text-sm {
+      font-size: 5vw;
+    }
+    .alert-text-responsive {
+      font-size: 3.9vw;
+    }
 }
 
 @media (max-width: 360px) {
@@ -1423,8 +1457,8 @@ h5.map {
 
 @media (max-width: 320px) {
     .big-columns-mag {
-    width: 110.6%;
-    margin-left: -15px;
+      width: 110.6%;
+      margin-left: -15px;
     }
 
     br.big-columns-mag {
@@ -1432,16 +1466,12 @@ h5.map {
     }
 
     .big-columns-conf {
-    width: 110.6%;
-    margin-left: -15px;
+      width: 110.6%;
+      margin-left: -15px;
     }
 
     br.big-columns-conf {
         line-height: 2;
-    }
-
-    .section-heading {
-    font-size: 30px;
     }
 
     .conf {
@@ -1454,6 +1484,25 @@ h5.map {
 
     .tab-inner {
         padding-top: 50%;
+    }
+    .bwizard-steps a {
+      font-size: 14px;
+      font-weight: 700;
+    }
+    .bwizard-steps li {
+      line-height: 17px;
+    }
+    .section-heading {
+      font-size: 6.5vw;
+    }
+    .responsive-text-m {
+      font-size: 6vw;
+    }
+    .responsive-text-sm {
+      font-size: 5vw;
+    }
+    .alert-text-responsive {
+      font-size: 3.9vw;
     }
 }
 

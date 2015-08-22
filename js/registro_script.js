@@ -18,7 +18,7 @@ $(document).ready(function() {
                     if(!$('#email').val()) {
                         document.getElementById("alertError").innerHTML = "ERROR: Debes escribir tu email";
                         $('.alert.error').slideToggle();
-                        setTimeout(function(){ $('.alert.error').slideToggle(); }, 2000);
+                        setTimeout(function(){ $('.alert.error').slideToggle(); }, 2650);
 
                         //alert('Debes de escribir tu email');
                         $('#email').focus();
@@ -28,7 +28,7 @@ $(document).ready(function() {
                     if(!$('#folio').val()) {
                         document.getElementById("alertError").innerHTML = "ERROR: Debes escribir tu folio";
                         $('.alert.error').slideToggle();
-                        setTimeout(function(){ $('.alert.error').slideToggle(); }, 2000);
+                        setTimeout(function(){ $('.alert.error').slideToggle(); }, 2650);
 
                         //alert('Debes de escribir tu folio');
                         $('#folio').focus();
@@ -289,7 +289,7 @@ function getFolio(attendeeID) {
             if(checkValue && numTickets > 1) {
                 document.getElementById("alertError").innerHTML = "ERROR: Ya registraste tu taller y visita";
                 $('.alert.error').slideToggle();
-                setTimeout(function(){ $('.alert.error').slideToggle(); }, 2000);
+                setTimeout(function(){ $('.alert.error').slideToggle(); }, 2650);
 
                 //alert("Ya registraste tu taller y visita");
             } else {
@@ -300,7 +300,7 @@ function getFolio(attendeeID) {
             document.getElementById("validate").innerHTML = "Validar";
             document.getElementById("alertError").innerHTML = "ERROR: Tu correo o folio no coinciden";
             $('.alert.error').slideToggle();
-            setTimeout(function(){ $('.alert.error').slideToggle(); }, 2000);
+            setTimeout(function(){ $('.alert.error').slideToggle(); }, 2650);
 
             //alert("Tu correo o folio no coinciden");
             console.log("Folio ERROR!");

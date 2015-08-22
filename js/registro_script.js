@@ -189,6 +189,12 @@ $(document).ready(function() {
                 var $percent = ($current/$total) * 100;
                 $('#form .progress-bar').css({width:$percent+'%'});
 
+                if ($current == 1) {
+                    $('#form').find('.pager .previous').hide();
+                } else {
+                    $('#form').find('.pager .previous').show();
+                }
+
                 // If it's the last tab then hide the last button and show the finish instead
                 if($current >= $total) {
                     $('#form').find('.pager .next').hide();

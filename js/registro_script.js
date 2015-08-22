@@ -17,16 +17,18 @@ $(document).ready(function() {
                     });
                     if(!$('#email').val()) {
                         $('.alert.error').slideToggle();
+                        setTimeout(function(){ $('.alert.error').slideToggle(); }, 2000);
 
-                        alert('Debes de escribir tu email');
+                        //alert('Debes de escribir tu email');
                         $('#email').focus();
                         return false;
                     }
 
                     if(!$('#folio').val()) {
                         $('.alert.error').slideToggle();
+                        setTimeout(function(){ $('.alert.error').slideToggle(); }, 2000);
 
-                        alert('Debes de escribir tu folio');
+                        //alert('Debes de escribir tu folio');
                         $('#folio').focus();
                         return false;
                     }
@@ -275,7 +277,9 @@ function getFolio(attendeeID) {
             console.log("Folio OK!");
             if(checkValue && numTickets > 1) {
                 $('.alert.error').slideToggle();
-                alert("Ya registraste tu taller y visita");
+                setTimeout(function(){ $('.alert.error').slideToggle(); }, 2000);
+
+                //alert("Ya registraste tu taller y visita");
             } else {
                 checkValue = true;
                 $('.alert.success').slideToggle();
@@ -283,7 +287,9 @@ function getFolio(attendeeID) {
         } else {
             document.getElementById("validate").innerHTML = "Validar";
             $('.alert.error').slideToggle();
-            alert("Tu correo o folio no coinciden");
+            setTimeout(function(){ $('.alert.error').slideToggle(); }, 2000);
+
+            //alert("Tu correo o folio no coinciden");
             console.log("Folio ERROR!");
         }
       }

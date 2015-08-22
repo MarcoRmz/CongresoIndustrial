@@ -1546,25 +1546,25 @@ h5.map {
   }
 
   .tab-inner {
-        padding-top: 50%;
-    }
-    .bwizard-steps a {
-      font-size: 14px;
-      font-weight: 700;
-    }
-    .bwizard-steps li {
-      line-height: 17px;
-    }
-    .section-heading {
-      font-size: 6.5vw;
-    }
-    .responsive-text-m {
-      font-size: 6vw;
-    }
-    .responsive-text-sm {
-      font-size: 5vw;
-    }
-    .alert-text-responsive {
-      font-size: 3.9vw;
-    }
+    padding-top: 50%;
+  }
+  .bwizard-steps a {
+    font-size: 14px;
+    font-weight: 700;
+  }
+  .bwizard-steps li {
+    line-height: 17px;
+  }
+  .section-heading {
+    font-size: 6.5vw;
+  }
+  .responsive-text-m {
+    font-size: 6vw;
+  }
+  .responsive-text-sm {
+    font-size: 5vw;
+  }
+  .alert-text-responsive {
+    font-size: 3.9vw;
+  }
 }

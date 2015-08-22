@@ -1422,7 +1422,7 @@ h5.map {
   .responsive-text-sm {
     font-size: 5vw;
   }
-  .alert p {
+  .alert-text-responsive {
     font-size: 3.9vw;
   }
 }
@@ -1440,7 +1440,7 @@ h5.map {
     margin: -5%;
   }
 
-  .alert p {
+  .alert-text-responsive {
     font-size: 4.4vw;
   }
 }

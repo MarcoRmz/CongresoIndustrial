@@ -1410,7 +1410,7 @@ h5.map {
 @media (max-width: 768px) {
 
     header .intro-text {
-        padding-top: 15%;
+        padding-top: 24%;
         padding-bottom: 11%;
     }
 
@@ -1436,8 +1436,8 @@ h5.map {
     }
 
     .big-columns-mag {
-    width: 106.6%;
-    margin-left: -24px;
+        width: 116.1%;
+        margin-left: -53px;
     }
 
     br.big-columns-mag {
@@ -1511,11 +1511,15 @@ h5.map {
     #count-down ul {
       display: block;
       margin-right: 0%;
-      margin-left: 23%;
+      margin-left: 20%;
       padding: 0;
     }
     .navbar-default .navbar-brand {
         margin-top: -1%;
+    }
+    .tabpanel {
+        width: 90%;
+        margin-left: 5%;
     }
 }
 

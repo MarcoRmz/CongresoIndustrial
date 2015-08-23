@@ -1113,9 +1113,17 @@ h5.map {
 }
 @media (max-width: 1600px) {
 
+    .wrapper {
+        margin-right: 0%;
+    }
+
+    #count-down {
+        font-size: 1.8em;
+    }
+
     .big-columns-mag {
-    width: 126.3%;
-    margin-left: -150px;
+    width: 140.4%;
+    margin-left: -230px;
     }
 
     br.big-columns-mag {
@@ -1171,6 +1179,10 @@ h5.map {
       margin-left: 50%;
       padding: 0;
     }
+}
+
+@media (max-width: 1440px) {
+
 }
 
 @media (max-width: 1366px) {

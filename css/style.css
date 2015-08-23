@@ -1746,9 +1746,16 @@ h5.map {
         visibility: hidden;
         margin-bottom: -250%;
     }
+    .tab-info1-5 {
+        visibility: hidden;
+        margin-bottom: -420%;
+    }
     .tab-info2 {
         visibility: hidden;
-        margin-bottom: -100%;
+        margin-bottom: -255%;
+    }
+    .tab-info2-2 {
+        visibility: hidden;
     }
     .tab-info3 {
         visibility: hidden;

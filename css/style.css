@@ -1363,6 +1363,9 @@ h5.map {
       margin-left: 23%;
       padding: 0;
     }
+    .navbar-default .navbar-brand {
+        margin-top: -1%;
+    }
 }
 
 @media (max-width: 480px) {

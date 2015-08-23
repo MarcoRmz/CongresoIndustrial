@@ -1335,6 +1335,10 @@ h5.map {
         padding-bottom: 11%;
     }
 
+    .wrapper{
+        visibility: visible;
+    }
+
     header .intro-text .intro-lead-in {
         margin-bottom: 25px;
         /*line-height: 40px;*/
@@ -1432,10 +1436,19 @@ h5.map {
     }
 }
 
+@media (max-width: 600px) {
+    .wrapper{
+        visibility: hidden;
+    }
+}
+
 @media (max-width: 480px) {
     .big-columns-mag {
     width: 106.6%;
     margin-left: -15px;
+    }
+    .wrapper{
+        visibility: visible;
     }
 
     br.big-columns-mag {
@@ -1551,6 +1564,9 @@ h5.map {
 @media (max-width: 415px) {
     header .intro-text {
         margin-top: -12%;
+    }
+    .wrapper{
+        visibility: visible;
     }
 
     .big-columns-mag {

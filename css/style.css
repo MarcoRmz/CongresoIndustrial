@@ -1335,6 +1335,10 @@ h5.map {
         padding-bottom: 11%;
     }
 
+    .sct-margin {
+        margin-top: -2%;
+    }
+
     .wrapper{
         visibility: visible;
     }

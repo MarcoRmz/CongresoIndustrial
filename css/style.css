@@ -1484,6 +1484,11 @@ h5.map {
         margin-top: -12%;
     }
 
+    .big-columns-mag {
+        width: 107.7%;
+        margin-left: -15px;
+    }
+
     #count-down {
         font-size: 1.4em;
     }

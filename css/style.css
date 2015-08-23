@@ -1606,7 +1606,7 @@ h5.map {
     }
 
     .tab-inner {
-        padding-top: 50%;
+        padding-top: 25%;
     }
 
     .bwizard-steps a {
@@ -1631,6 +1631,34 @@ h5.map {
 }
 
 @media (max-width: 360px) {
+    .sct-margin {
+        margin-top: -16%;
+    }
+
+    .big-columns-mag {
+        width: 109%;
+        margin-left: -15px;
+    }
+
+    .caso {
+        margin-bottom: -15%;
+        margin-top: -23%;
+    }
+
+    .horario {
+        margin-top: -25%;
+        margin-bottom: -25%;
+    }
+
+    .contacto {
+        margin-top: -25%;
+        margin-bottom: -20%;
+    }
+
+    .tab-inner {
+        padding-top: 20%;
+    }
+
   .bwizard-steps a {
     font-size: 14px;
     font-weight: 700;

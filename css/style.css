@@ -1182,7 +1182,16 @@ h5.map {
 }
 
 @media (max-width: 1440px) {
+    .container {
+        width: 90%;
+    }
+    .wrapper {
+        margin-right: -2%;
+    }
 
+    #count-down {
+        font-size: 1.6em;
+    }
 }
 
 @media (max-width: 1366px) {

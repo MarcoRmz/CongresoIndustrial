@@ -1480,21 +1480,50 @@ h5.map {
 }
 
 @media (max-width: 415px) {
-  .form-container {
-    width: 95%;
-  }
+    header .intro-text {
+        margin-top: -12%;
+    }
 
-  .row-margin-m {
-    margin: -10%;
-  }
+    #count-down {
+        font-size: 1.4em;
+    }
 
-  .row-margin-sm {
-    margin: -5%;
-  }
+    #count-down ul {
+        margin-right: -10px;
+        margin-left: -90px;
+        margin-top: -4%;
+    }
 
-  .alert-text-responsive {
-    font-size: 4.4vw;
-  }
+    .conf {
+        margin-bottom: -30%;
+        margin-top: -25%;
+    }
+
+    .caso {
+        margin-bottom: -15%;
+        margin-top: -20%;
+    }
+
+    .interactiva {
+        margin-bottom: -15%;
+        margin-top: -20%;
+    }
+
+    .form-container {
+        width: 95%;
+    }
+
+    .row-margin-m {
+        margin: -10%;
+    }
+
+    .row-margin-sm {
+        margin: -5%;
+    }
+
+    .alert-text-responsive {
+        font-size: 4.4vw;
+    }
 }
 
 @media (max-width: 375px) {

@@ -410,10 +410,10 @@ header {
     background-image: url(../img/header-bg.png);
     background-position: center center;
     background-repeat: no-repeat;
-    -webkit-background-size: contain;
-    -moz-background-size: contain;
-    background-size: contain;
-    -o-background-size: contain;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
 }
 
 header .intro-text {
@@ -1109,7 +1109,9 @@ h5.map {
         width: 168.3%;
         margin-left: -389px;
     }
-
+    #count-down li {
+        width: 14%;
+    }
 }
 @media (max-width: 1600px) {
 
@@ -1991,6 +1993,41 @@ h5.map {
 }
 
 @media (max-width: 318px) {
+    .tab-info1 {
+        visibility: hidden;
+        margin-bottom: -250%;
+    }
+    .tab-info1-5 {
+        visibility: hidden;
+        margin-bottom: -420%;
+    }
+    .tab-info2 {
+        visibility: hidden;
+        margin-bottom: -255%;
+    }
+    .tab-info2-2 {
+        visibility: hidden;
+    }
+    .tab-info2-3 {
+        visibility: hidden;
+        margin-bottom: -320%;
+    }
+    .tab-info3 {
+        visibility: hidden;
+        margin-bottom: -195%;
+    }
+    .tab-info3-1 {
+        visibility: hidden;
+        margin-bottom: -440%;
+    }
+    .tab-info4 {
+        visibility: hidden;
+    }
+    .tab-info4-1 {
+        visibility: hidden;
+        margin-bottom: -280%;
+    }
+
   /* badges only on small screens */
   .bwizard-steps li:after,
   .bwizard-steps li:before {

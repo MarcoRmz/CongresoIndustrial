@@ -1682,8 +1682,8 @@ h5.map {
 
 @media (max-width: 320px) {
     .big-columns-mag {
-      width: 110.6%;
-      margin-left: -15px;
+      width: 110.2%;
+      margin-left: -14.6px;
     }
 
     br.big-columns-mag {
@@ -1709,9 +1709,24 @@ h5.map {
         margin-top: -20%;
     }
 
+    .interactiva {
+        margin-bottom: -15%;
+        margin-top: -25%;
+    }
+
+    .taller-visita {
+        margin-top: -30%;
+        margin-bottom: -25%;
+    }
+
     .info {
-      margin-top: -20%;
-      margin-bottom: -10%;
+      margin-top: -25%;
+      margin-bottom: -15%;
+    }
+
+    .mapa {
+        margin-top: -30%;
+        margin-bottom: -20%;
     }
 
     .taller {
@@ -1719,12 +1734,17 @@ h5.map {
     }
 
     .contacto {
-      margin-top: -15%;
+      margin-top: -30%;
     }
 
     .tab-inner {
-        padding-top: 50%;
+        padding-top: 20%;
     }
+
+    .tab-info {
+        visibility: hidden;
+    }
+    
     .bwizard-steps a {
       font-size: 14px;
       font-weight: 700;

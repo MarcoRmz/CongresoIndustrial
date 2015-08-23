@@ -1393,10 +1393,36 @@ h5.map {
 
     .conf {
         margin-bottom: -30%;
+        margin-top: -20%;
     }
 
     .caso {
-        margin-bottom: -30%;
+        margin-bottom: -15%;
+    }
+
+    .interactiva {
+        margin-bottom: -10%;
+        margin-top: -20%;
+    }
+
+    .horario {
+        margin-top: -20%;
+        margin-bottom: -15%;
+    }
+
+    .taller-visita {
+        margin-top: -20%;
+        margin-bottom: -15%;
+    }
+
+    .mapa {
+        margin-top: -20%;
+        margin-bottom: -10%;
+    }
+
+    .contacto {
+        margin-top: -20%;
+        margin-bottom: -10%;
     }
 
     .tab-inner {
@@ -1415,9 +1441,13 @@ h5.map {
     }
 
     header .intro-text .intro-lead-in{
-        font-size: 4vw;
-        line-height: 4.5vw;
+        font-size: 3vw;
+        line-height: 4vw;
     }
+    header .intro-text {
+        margin-top: -14%;
+    }
+
     .form-container {
       width: 95%;
     }

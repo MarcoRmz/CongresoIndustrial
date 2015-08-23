@@ -1108,10 +1108,36 @@ h5.map {
 
     .conf {
         margin-bottom: -15%;
+        margin-top: -5%;
     }
 
     .caso {
-        margin-bottom: -14%;
+        margin-bottom: -5%;
+    }
+
+    .interactiva {
+        margin-bottom: -4%;
+        margin-top: -5%;
+    }
+
+    .horario {
+      margin-top: -5%;
+      margin-bottom: -2%;
+    }
+
+    .taller-visita {
+      margin-top: -5%;
+      margin-bottom: -5%;
+    }
+
+    .mapa {
+      margin-top: -5%;
+      margin-bottom: -2%;
+    }
+
+    .contacto {
+      margin-top: -5%;
+      margin-bottom: -3%;
     }
 
     #count-down ul {

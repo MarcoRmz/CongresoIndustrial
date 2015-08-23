@@ -1230,6 +1230,10 @@ h5.map {
 
 @media (max-width: 1024px) {
 
+    header .intro-text {
+        padding-bottom: 20%;
+    }
+
     .big-columns-mag {
     width: 109%;
     margin-left: -41px;
@@ -1253,7 +1257,8 @@ h5.map {
     }
 
     .caso {
-        margin-bottom: -14%;
+        margin-bottom: -5%;
+        margin-top: -3%;
     }
 
     #count-down ul {

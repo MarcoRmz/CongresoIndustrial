@@ -1731,6 +1731,7 @@ h5.map {
 
     .taller {
       margin-top: -20%;
+      margin-bottom: -100%;
     }
 
     .contacto {
@@ -1738,13 +1739,26 @@ h5.map {
     }
 
     .tab-inner {
-        padding-top: 20%;
+        padding-top: 0%;
     }
 
-    .tab-info {
+    .tab-info1 {
         visibility: hidden;
+        margin-bottom: -250%;
     }
-    
+    .tab-info2 {
+        visibility: hidden;
+        margin-bottom: -100%;
+    }
+    .tab-info3 {
+        visibility: hidden;
+        margin-bottom: -100%;
+    }
+    .tab-info4 {
+        visibility: hidden;
+        margin-bottom: -100%;
+    }
+
     .bwizard-steps a {
       font-size: 14px;
       font-weight: 700;

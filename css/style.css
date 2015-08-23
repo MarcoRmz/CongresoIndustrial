@@ -1869,8 +1869,8 @@ h5.map {
 
 @media (max-width: 320px) {
     .big-columns-mag {
-      width: 110.2%;
-      margin-left: -14.6px;
+      width: 124%;
+      margin-left: -31px;
     }
 
     br.big-columns-mag {
@@ -1878,8 +1878,8 @@ h5.map {
     }
 
     .big-columns-conf {
-      width: 110.6%;
-      margin-left: -15px;
+      width: 124%;
+      margin-left: -31px;
     }
 
     br.big-columns-conf {

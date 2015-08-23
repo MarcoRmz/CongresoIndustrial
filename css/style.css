@@ -1536,6 +1536,7 @@ h5.map {
     }
     .wrapper{
         visibility: visible;
+        margin-top: -4%;
     }
 
     br.big-columns-mag {
@@ -1620,7 +1621,7 @@ h5.map {
     }
 
     #count-down {
-        font-size: 1.5em;
+        font-size: 1.3em;
     }
 
     header .intro-text .intro-lead-in{

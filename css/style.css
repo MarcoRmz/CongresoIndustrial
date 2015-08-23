@@ -1262,14 +1262,17 @@ h5.map {
     header .intro-text {
         padding-bottom: 23%;
     }
+    #count-down {
+        font-size: 1.5em;
+    }
 
     .sct-margin {
         margin-top: -7%;
     }
 
     .big-columns-mag {
-    width: 112.3%;
-    margin-left: -70px;
+        width: 114%;
+        margin-left: -79px;
     }
 
     br.big-columns-mag {

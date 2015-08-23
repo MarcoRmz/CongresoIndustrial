@@ -1194,6 +1194,10 @@ h5.map {
         padding-bottom: 23%;
     }
 
+    .sct-margin {
+        margin-top: -7%;
+    }
+
     .big-columns-mag {
     width: 112.3%;
     margin-left: -70px;
@@ -1220,6 +1224,21 @@ h5.map {
         margin-bottom: -5%;
     }
 
+    .info {
+        margin-top: -7%;
+        margin-bottom: -4%;
+    }
+
+    .taller {
+        margin-top: -8%;
+        margin-bottom: -6%;
+    }
+
+    .visitas {
+        margin-top: -7%;
+        margin-bottom: -5%;
+    }
+
     #count-down ul {
       display: block;
       margin-right: 0%;
@@ -1232,6 +1251,10 @@ h5.map {
 
     header .intro-text {
         padding-bottom: 20%;
+    }
+
+    .sct-margin {
+        margin-top: -7%;
     }
 
     .big-columns-mag {
@@ -1279,6 +1302,21 @@ h5.map {
 
     .contacto {
         margin-top: -8%;
+        margin-bottom: -5%;
+    }
+
+    .info {
+        margin-top: -7%;
+        margin-bottom: -4%;
+    }
+
+    .taller {
+        margin-top: -8%;
+        margin-bottom: -6%;
+    }
+
+    .visitas {
+        margin-top: -7%;
         margin-bottom: -5%;
     }
 

@@ -1186,11 +1186,23 @@ h5.map {
         width: 90%;
     }
     .wrapper {
-        margin-right: -2%;
+        margin-right: -4%;
     }
 
     #count-down {
         font-size: 1.6em;
+    }
+
+    #count-down ul {
+        margin-left: 53%;
+    }
+
+    .sct-margin {
+        margin-top: -7%;
+    }
+    .big-columns-mag {
+        width: 113.8%;
+        margin-left: -87px;
     }
 }
 

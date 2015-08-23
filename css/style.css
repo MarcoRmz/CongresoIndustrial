@@ -1517,7 +1517,7 @@ h5.map {
     .navbar-default .navbar-brand {
         margin-top: -1%;
     }
-    #tabpanel {
+    .tabpanel {
         width: 90%;
         margin-left: 5%;
     }

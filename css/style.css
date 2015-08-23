@@ -1088,9 +1088,8 @@ h5.map {
 /* MEDIA QUERIES */
 @media (max-width: 1920px) {
     header .intro-text {
-        padding-top: 31%;
-        padding-bottom: 35%;
-        margin-right: -20%;
+        padding-top: 20%;
+        padding-bottom: 27%;
     }
     .container {
         width: 80%;

@@ -1378,6 +1378,10 @@ h5.map {
         line-height: 2;
     }
 
+    .sct-margin {
+        margin-top: -6.5%;
+    }
+
     .big-columns-conf {
     width: 106.6%;
     margin-left: -15px;
@@ -1425,8 +1429,18 @@ h5.map {
         margin-bottom: -10%;
     }
 
+    .info {
+        margin-top: -20%;
+        margin-bottom: -10%;
+    }
+
+    .taller {
+        margin-top: -20%;
+        margin-bottom: -15%;
+    }
+
     .tab-inner {
-        padding-top: 50%;
+        padding-top: 25%;
     }
 
     #count-down ul {

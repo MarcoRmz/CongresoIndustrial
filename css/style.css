@@ -1235,8 +1235,8 @@ h5.map {
     }
 
     .big-columns-mag {
-    width: 109%;
-    margin-left: -41px;
+        width: 108.9%;
+        margin-left: -41.6px;
     }
 
     br.big-columns-mag {
@@ -1254,11 +1254,32 @@ h5.map {
 
     .conf {
         margin-bottom: -15%;
+        margin-top: -8%;
     }
 
     .caso {
         margin-bottom: -5%;
         margin-top: -3%;
+    }
+
+    .horario {
+        margin-top: -8%;
+        margin-bottom: -5%;
+    }
+
+    .taller-visita {
+        margin-top: -8%;
+        margin-bottom: -6%;
+    }
+
+    .mapa {
+        margin-top: -8%;
+        margin-bottom: -5%;
+    }
+
+    .contacto {
+        margin-top: -8%;
+        margin-bottom: -5%;
     }
 
     #count-down ul {

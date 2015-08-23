@@ -1532,6 +1532,24 @@ h5.map {
 }
 
 @media (max-width: 375px) {
+
+    header .intro-text {
+        margin-top: 5%;
+    }
+
+    .wrapper{
+        visibility: hidden;
+    }
+
+    header .intro-text .intro-lead-in{
+        font-size: 3.5vw;
+        line-height: 4vw;
+    }
+
+    .sct-margin {
+        margin-top: -15%;
+    }
+
     .big-columns-mag {
     width: 108.6%;
     margin-left: -15px;
@@ -1559,7 +1577,22 @@ h5.map {
     }
 
     .caso {
-        margin-bottom: -30%;
+        margin-bottom: -15%;
+    }
+
+    .horario {
+        margin-top: -20%;
+        margin-bottom: -20%;
+    }
+
+    .taller-visita {
+        margin-top: -25%;
+        margin-bottom: -20%;
+    }
+
+    .mapa {
+        margin-top: -25%;
+        margin-bottom: -15%;
     }
 
     .taller {
@@ -1567,21 +1600,14 @@ h5.map {
     }
 
     .contacto {
-      margin-top: -15%;
+        margin-top: -20%;
+        margin-bottom: -15%;
     }
 
     .tab-inner {
         padding-top: 50%;
     }
 
-    .wrapper{
-        visibility: hidden;
-    }
-
-    header .intro-text .intro-lead-in{
-        font-size: 4vw;
-        line-height: 4vw;
-    }
     .bwizard-steps a {
       font-size: 14px;
       font-weight: 700;

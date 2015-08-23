@@ -1819,8 +1819,8 @@ h5.map {
     }
 
     .big-columns-mag {
-        width: 109%;
-        margin-left: -15px;
+        width: 122%;
+        margin-left: -33px;
     }
 
     .caso {
@@ -1840,6 +1840,10 @@ h5.map {
 
     .tab-inner {
         padding-top: 20%;
+    }
+
+    .tabpanel {
+        margin-left: -2%;
     }
 
   .bwizard-steps a {

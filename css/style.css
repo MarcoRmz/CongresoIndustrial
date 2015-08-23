@@ -1352,6 +1352,11 @@ h5.map {
         margin-bottom: -10%;
     }
 
+    .visitas {
+        margin-top: -10%;
+        margin-bottom: -10%;
+    }
+
     .contacto {
       margin-top: -10%;
       margin-bottom: -5%;
@@ -1435,6 +1440,11 @@ h5.map {
     }
 
     .taller {
+        margin-top: -20%;
+        margin-bottom: -15%;
+    }
+
+    .visitas {
         margin-top: -20%;
         margin-bottom: -15%;
     }
@@ -1596,6 +1606,11 @@ h5.map {
     }
 
     .taller {
+      margin-top: -20%;
+      margin-bottom: -20%;
+    }
+
+    .visitas {
       margin-top: -20%;
       margin-bottom: -20%;
     }
@@ -1775,6 +1790,11 @@ h5.map {
     .tab-info4-1 {
         visibility: hidden;
         margin-bottom: -280%;
+    }
+
+    .visitas {
+        margin-top: -25%;
+        margin-bottom: -70%;
     }
 
     .bwizard-steps a {

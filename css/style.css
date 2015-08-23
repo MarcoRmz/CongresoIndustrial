@@ -1151,8 +1151,8 @@ h5.map {
 @media (max-width: 1366px) {
 
     .big-columns-mag {
-    width: 120%;
-    margin-left: -112px;
+        width: 119.8%;
+        margin-left: -112px;
     }
 
     br.big-columns-mag {
@@ -1161,7 +1161,7 @@ h5.map {
 
     .big-columns-conf {
     width: 239.7%;
-    margin-left: -112px;
+    margin-left: -113px;
     }
 
     br.big-columns-conf {
@@ -1173,7 +1173,7 @@ h5.map {
     }
 
     .caso {
-        margin-bottom: -14%;
+        margin-bottom: -5%;
     }
 
     #count-down ul {
@@ -1181,6 +1181,10 @@ h5.map {
       margin-right: 0%;
       margin-left: 50%;
       padding: 0;
+    }
+
+    header .intro-text {
+        padding-bottom: 28.5%;
     }
 }
 

@@ -1325,13 +1325,20 @@ h5.map {
         padding-bottom: 20%;
     }
 
+    .wrapper {
+        margin-right: -3%;
+    }
+    #count-down li {
+        width: 15%;
+    }
+
     .sct-margin {
         margin-top: -7%;
     }
 
     .big-columns-mag {
-        width: 108.9%;
-        margin-left: -41.6px;
+        width: 114.8%;
+        margin-left: -66px;
     }
 
     br.big-columns-mag {

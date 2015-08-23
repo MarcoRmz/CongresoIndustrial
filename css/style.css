@@ -1092,6 +1092,25 @@ h5.map {
         padding-bottom: 35%;
         margin-right: -20%;
     }
+    .container {
+        width: 80%;
+    }
+    .wrapper {
+        margin-right: -7%;
+    }
+    #count-down {
+        font-size: 2em;
+    }
+    .conf {
+        margin-bottom: -10%;
+        margin-top: -4%;
+        width: 1170px;
+    }
+    .big-columns-mag {
+        width: 168.3%;
+        margin-left: -389px;
+    }
+
 }
 @media (max-width: 1600px) {
 

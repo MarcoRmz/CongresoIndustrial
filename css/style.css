@@ -1186,7 +1186,7 @@ h5.map {
         width: 90%;
     }
     .wrapper {
-        margin-right: -4%;
+        margin-right: -2%;
     }
 
     #count-down {
@@ -1208,9 +1208,16 @@ h5.map {
 
 @media (max-width: 1366px) {
 
+    .wrapper {
+        margin-right: 0%;
+    }
+
+    .sct-margin {
+        margin-top: -5%;
+    }
     .big-columns-mag {
-        width: 119.8%;
-        margin-left: -112px;
+        width: 113.9%;
+        margin-left: -83px;
     }
 
     br.big-columns-mag {
@@ -1232,6 +1239,10 @@ h5.map {
 
     .caso {
         margin-bottom: -5%;
+    }
+
+    #count-down li {
+        width: 14%;
     }
 
     #count-down ul {

@@ -1049,7 +1049,18 @@ h5.map {
   padding: 1.1em 0;
 }
 
+.alert.success2 {
+  background: #53ca74;
+  color: #fff;
+  padding: 1.1em 0;
+}
+
 .alert.error {
+  background: #D40C0C;
+  color: #fff;
+  padding: 1.1em 0;
+}
+.alert.error2 {
   background: #D40C0C;
   color: #fff;
   padding: 1.1em 0;

@@ -4,6 +4,7 @@ var Encrypt_Taller;
 var Encrypt_Visita;
 var URL_complete;
 var checkValue = false;
+var numCheck = false;
 var numTickets;
 
 $(document).ready(function() {
@@ -213,8 +214,14 @@ $(document).ready(function() {
             }});
 
         $('#form .finish').click(function() {
-            alert('Registro Completo!');
-            window.location="http://www.congresoindustrial.com.mx";
+            if (numCheck){
+                alert('Registro Completo!');
+                window.location="http://www.congresoindustrial.com.mx";
+                return true;
+            } else if (!checkValue) {
+                ticketCheck();
+            }
+            return false;
         });
 
 });
@@ -271,6 +278,48 @@ function get_URL_code() {
     Token = decodeURIComponent(URL_Code);
     Token = "IiivMq/eoVxYaEKHGcp92m/IG2WJ8WKiMdg6g816qCz2k3lB8GI+enwy0qoDHFDYktW5gqLwBvcu/Qksfj9/aMDRLl1niFJ+Y07L1j/yYgJilytuCUOJLW520YS9xgWX";
     processAuth();
+}
+
+function ticketCheck() {
+    var data3 = null;
+    var xhr3 = new XMLHttpRequest();
+    var jsonResponse3;
+
+    xhr3.withCredentials = false;
+
+    xhr3.addEventListener("readystatechange", function () {
+      if (this.readyState === this.DONE) {
+        if (this.status === 200) {
+            console.log(this.responseText);
+            jsonResponse3 = JSON.parse(xhr3.responseText);
+            console.log(jsonResponse3);
+            //console.log("Attendee ID: " + xhr3.responseText.substring(xhr3.responseText.indexOf("ID") + 4, xhr3.responseText.indexOf("type") - 2));
+            console.log("#Tickets: " + xhr3.responseText.substring(xhr3.responseText.indexOf("total") + 7, xhr3.responseText.indexOf("total") + 8));
+            numTickets = xhr3.responseText.substring(xhr3.responseText.indexOf("total") + 7, xhr3.responseText.indexOf("total") + 8);
+            var missingTickets = 3 - numTickets;
+            if (numTickets < 3) {
+                document.getElementById("alertError2").innerHTML = "ERROR: Te falta inscribir " + missingTickets + " boleto(s) más!";
+                $('.alert.error2').slideToggle();
+                setTimeout(function(){ $('.alert.error').slideToggle(); }, 2850);
+                numCheck = false;
+            } else if (numTickets == 3) {
+                numCheck = true;
+                $('.alert.success2').slideToggle();
+                alert('Registro Completo!');
+                window.location="http://www.congresoindustrial.com.mx";
+            }
+        } else {
+            console.log("Error", this.statusText);
+        }
+      }
+    });
+
+    xhr3.open("GET", "https://api.eventjoy.com/v1/events/3451277/attendees/email/" + document.getElementById("email").value);
+    xhr3.setRequestHeader("content-type", "application/json");
+    xhr3.setRequestHeader("x-api-key", "5c27f9e1de27081311a387dd938cf19d27e6");
+    xhr3.setRequestHeader("access_token", "83aaKha3glwxhU5fhFqtMkfqg1f3FLL948ZYYC9cQmHqzzNTOWUQZhOARaJoblVgjNHFKdZN01GCV0oHsvwwmw77KA==");
+
+    xhr3.send(data3);
 }
 
 function getFolio(attendeeID) {
@@ -345,6 +394,7 @@ function processAuth() {
     });
 
     eventjoy.setAccessToken("83aaKha3glwxhU5fhFqtMkfqg1f3FLL948ZYYC9cQmHqzzNTOWUQZhOARaJoblVgjNHFKdZN01GCV0oHsvwwmw77KA==");
+    Token = "83aaKha3glwxhU5fhFqtMkfqg1f3FLL948ZYYC9cQmHqzzNTOWUQZhOARaJoblVgjNHFKdZN01GCV0oHsvwwmw77KA==";
 
     if (Token != '') {
         console.log('Authorized');

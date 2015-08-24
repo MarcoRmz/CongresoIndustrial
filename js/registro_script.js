@@ -64,7 +64,7 @@ $(document).ready(function() {
                     else {
                         document.getElementById("codigoTaller").innerHTML = "Taller" + TallerValue + Encrypt_Taller;
                         document.getElementById("codigoVisita").innerHTML = "Visita" + VisitaValue + Encrypt_Visita;
-                        return true;
+                        //return true;
 
                         if (TallerValue <= 6){
                             document.getElementById("taller-fecha").innerHTML = "Jueves 3:30 PM";
@@ -173,6 +173,8 @@ $(document).ready(function() {
                             }
                             break;
                         }
+                        
+                        return true;
                     }
                     //document.getElementById("codigoTaller").innerHTML = "Taller" + TallerValue + Encrypt_Taller;
                     //document.getElementById("codigoVisita").innerHTML = "Visita" + VisitaValue + Encrypt_Visita;

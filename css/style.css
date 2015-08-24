@@ -1079,10 +1079,24 @@ h5.map {
 
 #codigoTaller{
     font-size: 14pt;
+    display: inline;
+    color: #ff9955;
 }
 
 #codigoVisita{
     font-size: 14pt;
+    display: inline;
+    color: #ff9955;
+}
+
+#taller-fecha {
+    margin-top: -5px;
+    display: inline;
+}
+
+#visita-fecha {
+    margin-top: -5px;
+    display: inline;
 }
 
 /* MEDIA QUERIES */

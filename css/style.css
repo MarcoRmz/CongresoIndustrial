@@ -1024,18 +1024,18 @@ h5.map {
   margin: 0 auto;
   position: relative;
 }
-.alert {
+.alert2 {
   display: none;
   margin-right: 3%;
 }
 
-.alert p {
+.alert2 p {
   padding: 0;
   color: #fff;
   font-weight: 900;
 }
 
-.alert .icon {
+.alert2 .icon {
   float: left;
   margin-right: .5em;
   font-size: 1.5em;
@@ -1043,24 +1043,24 @@ h5.map {
   top: .12em;
 }
 
-.alert.success {
+.alert2.success {
   background: #53ca74;
   color: #fff;
   padding: 1.1em 0;
 }
 
-.alert.success2 {
+.alert2.success2 {
   background: #53ca74;
   color: #fff;
   padding: 1.1em 0;
 }
 
-.alert.error {
+.alert2.error {
   background: #D40C0C;
   color: #fff;
   padding: 1.1em 0;
 }
-.alert.error2 {
+.alert2.error2 {
   background: #D40C0C;
   color: #fff;
   padding: 1.1em 0;

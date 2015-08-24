@@ -1066,6 +1066,13 @@ h5.map {
   padding: 1.1em 0;
 }
 
+.alert-warning {
+    color: #ee5522;
+    background-color: #ee5522;
+    border-color: #ee5522;
+    width: 97%;
+}
+
 .image_registro{
   height:70px; 
   width:70px; 

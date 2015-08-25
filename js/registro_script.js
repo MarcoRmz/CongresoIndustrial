@@ -304,6 +304,9 @@ function ticketCheck() {
                 numCheck = false;
             } else if (numTickets == 3) {
                 numCheck = true;
+                document.getElementById("done").innerHTML = "Salir";
+                document.getElementById("done").style.background = "#53ca74";
+                document.getElementById("done").style.border = "#53ca74";
                 $('.alert.success2').slideToggle();
                 alert('Registro Completo!');
                 window.location="http://www.congresoindustrial.com.mx";

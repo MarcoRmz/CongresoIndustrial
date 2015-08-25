@@ -1024,17 +1024,6 @@ h5.map {
   margin: 0 auto;
   position: relative;
 }
-.alert.success {
-  display: none;
-  margin-right: 3%;
-}
-
-.alert.success p {
-  padding: 0;
-  color: #fff;
-  font-weight: 900;
-}
-
 .alert .icon {
   float: left;
   margin-right: .5em;
@@ -1046,13 +1035,48 @@ h5.map {
   display: none;
   margin-right: 3%;
 }
-
+.alert.error2 {
+  display: none;
+  margin-right: 3%;
+}
 .alert.error p {
   padding: 0;
   color: #fff;
   font-weight: 900;
 }
-
+.alert.error2 p {
+  padding: 0;
+  color: #fff;
+  font-weight: 900;
+}
+.alert.error {
+  background: #D40C0C;
+  color: #fff;
+  padding: 1.1em 0;
+}
+.alert.error2 {
+  background: #D40C0C;
+  color: #fff;
+  padding: 1.1em 0;
+}
+.alert.success {
+  display: none;
+  margin-right: 3%;
+}
+.alert.success2 {
+  display: none;
+  margin-right: 3%;
+}
+.alert.success p {
+  padding: 0;
+  color: #fff;
+  font-weight: 900;
+}
+.alert.success2 p {
+  padding: 0;
+  color: #fff;
+  font-weight: 900;
+}
 .alert.success {
   background: #53ca74;
   color: #fff;
@@ -1064,18 +1088,6 @@ h5.map {
   color: #fff;
   padding: 1.1em 0;
 }
-
-.alert.error {
-  background: #D40C0C;
-  color: #fff;
-  padding: 1.1em 0;
-}
-.alert.error2 {
-  background: #D40C0C;
-  color: #fff;
-  padding: 1.1em 0;
-}
-
 .alert-warning {
     color: #ee5522;
     background-color: #ee5522;

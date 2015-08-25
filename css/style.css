@@ -1024,43 +1024,53 @@ h5.map {
   margin: 0 auto;
   position: relative;
 }
-.alert2 {
+.alert.success {
   display: none;
   margin-right: 3%;
 }
 
-.alert2 p {
+.alert.success p {
   padding: 0;
   color: #fff;
   font-weight: 900;
 }
 
-.alert2 .icon {
+.alert .icon {
   float: left;
   margin-right: .5em;
   font-size: 1.5em;
   position: relative;
   top: .12em;
 }
+.alert.error {
+  display: none;
+  margin-right: 3%;
+}
 
-.alert2.success {
+.alert.error p {
+  padding: 0;
+  color: #fff;
+  font-weight: 900;
+}
+
+.alert.success {
   background: #53ca74;
   color: #fff;
   padding: 1.1em 0;
 }
 
-.alert2.success2 {
+.alert.success2 {
   background: #53ca74;
   color: #fff;
   padding: 1.1em 0;
 }
 
-.alert2.error {
+.alert.error {
   background: #D40C0C;
   color: #fff;
   padding: 1.1em 0;
 }
-.alert2.error2 {
+.alert.error2 {
   background: #D40C0C;
   color: #fff;
   padding: 1.1em 0;

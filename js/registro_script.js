@@ -257,27 +257,6 @@ var Token;
 var AccessToken;
 eventjoy.setApiKey('5c27f9e1de27081311a387dd938cf19d27e6');
 
-/*
-function isAuthorized(callback) {
-    console.log('isAuthorized funct called');
-    if ( localStorage.getItem( 'eventjoy_access_token' ) ) {
-      // We aleady have an access token
-      console.log('found access token: '+localStorage.getItem('eventjoy_access_token'));
-      eventjoy.setAccessToken( localStorage.getItem('eventjoy_access_token') );
-      if ( callback ) callback( true );
-    } else if ( localStorage.getItem( 'eventjoy_oauth_token' ) ) {
-      // No, but we we do have a oauth request token
-      console.log('found oauth token: '+localStorage.getItem('eventjoy_oauth_token'));
-      eventjoy.auth( localStorage.getItem('eventjoy_oauth_token'), function(success, response) {
-        localStorage.setItem( 'eventjoy_access_token', response.access_token);
-        if ( callback ) callback( true );
-      });
-    } else {
-      console.log('no auth found');
-      if ( callback ) callback( false );
-    }
-} */
-
 function get_URL_code() {
     URL_complete = window.location.href;
     point = URL_complete.lastIndexOf("=")+1;
@@ -342,14 +321,14 @@ function getFolio(attendeeID) {
 
     xhr2.addEventListener("readystatechange", function () {
       if (this.readyState === this.DONE) {
-        if (this.status === 200) { 
-            console.log(this.responseText);
+        if (this.status === 200) {
+            //console.log(this.responseText);
             jsonResponse2 = JSON.parse(xhr2.responseText);
-            console.log(jsonResponse2);
+            //console.log(jsonResponse2);
             //console.log("Folio: "+ xhr2.responseText.substring(xhr2.responseText.indexOf("Folio") + 9, xhr2.responseText.indexOf("}]}}") - 1));
             folio = xhr2.responseText.substring(xhr2.responseText.indexOf("Folio") + 9, xhr2.responseText.indexOf("}]}}") - 1);
-            console.log(document.getElementById("folio").value);
-            console.log(folio);
+            //console.log(document.getElementById("folio").value);
+            //console.log(folio);
             if (document.getElementById("folio").value == folio) {
                 checkValue = true;
                 console.log("Folio OK!");
@@ -357,8 +336,6 @@ function getFolio(attendeeID) {
                     document.getElementById("alertError").innerHTML = "ERROR: Ya registraste tu taller y visita";
                     $('.alert.error').slideToggle();
                     setTimeout(function(){ $('.alert.error').slideToggle(); }, 2850);
-
-                    //alert("Ya registraste tu taller y visita");
                 } else if (checkValue && numTickets == 1){
                     document.getElementById("validate").innerHTML = "Siguiente";
                     document.getElementById("validate").style.background = "#53ca74";
@@ -419,19 +396,23 @@ function processAuth() {
         xhr.addEventListener("readystatechange", function () {
           if (this.readyState === this.DONE) {
             if (this.status === 200) {
-                console.log(this.responseText);
+                //console.log(this.responseText);
                 jsonResponse = JSON.parse(xhr.responseText);
-                console.log(jsonResponse);
+                //console.log(jsonResponse);
                 console.log("Attendee ID: " + xhr.responseText.substring(xhr.responseText.indexOf("ID") + 4, xhr.responseText.indexOf("type") - 2));
                 console.log("#Tickets: " + xhr.responseText.substring(xhr.responseText.indexOf("total") + 7, xhr.responseText.indexOf("total") + 8));
                 numTickets = xhr.responseText.substring(xhr.responseText.indexOf("total") + 7, xhr.responseText.indexOf("total") + 8);
                 if (numTickets == 1) {
                     getFolio(xhr.responseText.substring(xhr.responseText.indexOf("ID") + 4, xhr.responseText.indexOf("type") - 2));
-                } else {
+                } else if (numTickets > 1) {
                     document.getElementById("alertError").innerHTML = "ERROR: Ya registraste tu taller y visita";
                     $('.alert.error').slideToggle();
                     setTimeout(function(){ $('.alert.error').slideToggle(); }, 2850);
-                }  
+                } else {
+                    document.getElementById("alertError").innerHTML = "ERROR: Tu correo o folio no coinciden";
+                    $('.alert.error').slideToggle();
+                    setTimeout(function(){ $('.alert.error').slideToggle(); }, 2850);
+                }
             } else {
                 console.log("Error", this.statusText);
             }

@@ -201,7 +201,7 @@ $(document).ready(function() {
                 var $percent = ($current/$total) * 100;
                 $('#form .progress-bar').css({width:$percent+'%'});
 
-                if ($current == 1) {
+                if ($current == 1 || $current == 2) {
                     $('#form').find('.pager .previous').hide();
                 } else {
                     $('#form').find('.pager .previous').show();

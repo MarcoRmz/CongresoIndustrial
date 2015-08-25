@@ -414,7 +414,13 @@ function processAuth() {
                 console.log("Attendee ID: " + xhr.responseText.substring(xhr.responseText.indexOf("ID") + 4, xhr.responseText.indexOf("type") - 2));
                 console.log("#Tickets: " + xhr.responseText.substring(xhr.responseText.indexOf("total") + 7, xhr.responseText.indexOf("total") + 8));
                 numTickets = xhr.responseText.substring(xhr.responseText.indexOf("total") + 7, xhr.responseText.indexOf("total") + 8);
-                getFolio(xhr.responseText.substring(xhr.responseText.indexOf("ID") + 4, xhr.responseText.indexOf("type") - 2));
+                if (numTickets == 1) {
+                    getFolio(xhr.responseText.substring(xhr.responseText.indexOf("ID") + 4, xhr.responseText.indexOf("type") - 2));
+                } else {
+                    document.getElementById("alertError").innerHTML = "ERROR: Ya registraste tu taller y visita";
+                    $('.alert.error').slideToggle();
+                    setTimeout(function(){ $('.alert.error').slideToggle(); }, 2850);
+                }  
             } else {
                 console.log("Error", this.statusText);
             }

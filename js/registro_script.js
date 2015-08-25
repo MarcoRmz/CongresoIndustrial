@@ -342,13 +342,14 @@ function getFolio(attendeeID) {
 
     xhr2.addEventListener("readystatechange", function () {
       if (this.readyState === this.DONE) {
-        if (this.status === 200) {  
-          //console.log(this.responseText);
+        if (this.status === 200) { 
+            console.log(this.responseText);
             jsonResponse2 = JSON.parse(xhr2.responseText);
-            //console.log(jsonResponse2);
+            console.log(jsonResponse2);
             //console.log("Folio: "+ xhr2.responseText.substring(xhr2.responseText.indexOf("Folio") + 9, xhr2.responseText.indexOf("}]}}") - 1));
             folio = xhr2.responseText.substring(xhr2.responseText.indexOf("Folio") + 9, xhr2.responseText.indexOf("}]}}") - 1);
-
+            console.log(document.getElementById("folio").value);
+            console.log(folio);
             if (document.getElementById("folio").value == folio) {
                 checkValue = true;
                 console.log("Folio OK!");
@@ -418,9 +419,9 @@ function processAuth() {
         xhr.addEventListener("readystatechange", function () {
           if (this.readyState === this.DONE) {
             if (this.status === 200) {
-                //console.log(this.responseText);
+                console.log(this.responseText);
                 jsonResponse = JSON.parse(xhr.responseText);
-                //console.log(jsonResponse);
+                console.log(jsonResponse);
                 console.log("Attendee ID: " + xhr.responseText.substring(xhr.responseText.indexOf("ID") + 4, xhr.responseText.indexOf("type") - 2));
                 console.log("#Tickets: " + xhr.responseText.substring(xhr.responseText.indexOf("total") + 7, xhr.responseText.indexOf("total") + 8));
                 numTickets = xhr.responseText.substring(xhr.responseText.indexOf("total") + 7, xhr.responseText.indexOf("total") + 8);

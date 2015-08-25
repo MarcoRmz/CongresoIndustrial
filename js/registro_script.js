@@ -10,7 +10,7 @@ var numTickets;
 $(document).ready(function() {
     window.onbeforeunload = confirmExit;
     function confirmExit() {
-        if (numTickets < 3 && numTickets != null) {
+        if (numTickets < 3 && numTickets != null && numTickets != 0) {
             return "Aún no completas tu registro! ¿Seguro que quieres salir?";
         }
     }

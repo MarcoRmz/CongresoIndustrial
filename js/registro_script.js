@@ -18,8 +18,8 @@ $(document).ready(function() {
                     }); */
                     if(!$('#email').val()) {
                         document.getElementById("alertError").innerHTML = "ERROR: Debes escribir tu email";
-                        $('.alert.error').slideToggle();
-                        setTimeout(function(){ $('.alert.error').slideToggle(); }, 2850);
+                        $('.alert2.error').slideToggle();
+                        setTimeout(function(){ $('.alert2.error').slideToggle(); }, 2850);
 
                         //alert('Debes de escribir tu email');
                         $('#email').focus();
@@ -28,8 +28,8 @@ $(document).ready(function() {
 
                     if(!$('#folio').val()) {
                         document.getElementById("alertError").innerHTML = "ERROR: Debes escribir tu folio";
-                        $('.alert.error').slideToggle();
-                        setTimeout(function(){ $('.alert.error').slideToggle(); }, 2850);
+                        $('.alert2.error').slideToggle();
+                        setTimeout(function(){ $('.alert2.error').slideToggle(); }, 2850);
 
                         //alert('Debes de escribir tu folio');
                         $('#folio').focus();
@@ -39,7 +39,7 @@ $(document).ready(function() {
                     if ($('#email').val() && $('#folio').val()) {
                         if (checkValue && numTickets == 1){
                             $('button.close').click(function() {
-                                $('.alert.success').slideToggle();
+                                $('.alert2.success').slideToggle();
                             });
                             return true;
                         } else if (!checkValue) {
@@ -299,12 +299,12 @@ function ticketCheck() {
             var missingTickets = 3 - numTickets;
             if (numTickets < 3) {
                 document.getElementById("alertError2").innerHTML = "ERROR: Te falta inscribir " + missingTickets + " boleto(s) más!";
-                $('.alert.error2').slideToggle();
-                setTimeout(function(){ $('.alert.error').slideToggle(); }, 2850);
+                $('.alert2.error2').slideToggle();
+                setTimeout(function(){ $('.alert2.error').slideToggle(); }, 2850);
                 numCheck = false;
             } else if (numTickets == 3) {
                 numCheck = true;
-                $('.alert.success2').slideToggle();
+                $('.alert2.success2').slideToggle();
                 alert('Registro Completo!');
                 window.location="http://www.congresoindustrial.com.mx";
             }
@@ -344,29 +344,29 @@ function getFolio(attendeeID) {
                 console.log("Folio OK!");
                 if(checkValue && numTickets > 1) {
                     document.getElementById("alertError").innerHTML = "ERROR: Ya registraste tu taller y visita";
-                    $('.alert.error').slideToggle();
-                    setTimeout(function(){ $('.alert.error').slideToggle(); }, 2850);
+                    $('.alert2.error').slideToggle();
+                    setTimeout(function(){ $('.alert2.error').slideToggle(); }, 2850);
 
                     //alert("Ya registraste tu taller y visita");
                 } else if (checkValue && numTickets == 1){
                     document.getElementById("validate").innerHTML = "Siguiente";
                     document.getElementById("validate").style.background = "#53ca74";
                     document.getElementById("validate").style.border = "#53ca74";
-                    $('.alert.success').slideToggle();
+                    $('.alert2.success').slideToggle();
                 }
             } else {
                 //document.getElementById("validate").innerHTML = "Validar";
                 document.getElementById("alertError").innerHTML = "ERROR: Tu correo o folio no coinciden";
-                $('.alert.error').slideToggle();
-                setTimeout(function(){ $('.alert.error').slideToggle(); }, 2850);
+                $('.alert2.error').slideToggle();
+                setTimeout(function(){ $('.alert2.error').slideToggle(); }, 2850);
 
                 //alert("Tu correo o folio no coinciden");
                 console.log("Folio ERROR!");
             }
         } else {
             document.getElementById("alertError").innerHTML = "ERROR: Tu correo o folio no coinciden";
-            $('.alert.error').slideToggle();
-            setTimeout(function(){ $('.alert.error').slideToggle(); }, 2850);
+            $('.alert2.error').slideToggle();
+            setTimeout(function(){ $('.alert2.error').slideToggle(); }, 2850);
 
             //alert("Tu correo o folio no coinciden");
             console.log("Folio ERROR!");
@@ -418,8 +418,8 @@ function processAuth() {
                     getFolio(xhr.responseText.substring(xhr.responseText.indexOf("ID") + 4, xhr.responseText.indexOf("type") - 2));
                 } else {
                     document.getElementById("alertError").innerHTML = "ERROR: Ya registraste tu taller y visita";
-                    $('.alert.error').slideToggle();
-                    setTimeout(function(){ $('.alert.error').slideToggle(); }, 2850);
+                    $('.alert2.error').slideToggle();
+                    setTimeout(function(){ $('.alert2.error').slideToggle(); }, 2850);
                 }  
             } else {
                 console.log("Error", this.statusText);

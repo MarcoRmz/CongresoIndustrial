@@ -203,6 +203,8 @@ $(document).ready(function() {
 
                 if ($current == 1 || $current == 2) {
                     $('#form').find('.pager .previous').hide();
+                    document.getElementById("validate").style.background = "#ff9955";
+                    document.getElementById("validate").style.border = "#ff9955";
                 } else {
                     $('#form').find('.pager .previous').show();
                     document.getElementById("validate").style.background = "#ff9955";

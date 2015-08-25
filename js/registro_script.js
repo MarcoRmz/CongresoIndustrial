@@ -300,7 +300,7 @@ function ticketCheck() {
             if (numTickets < 3) {
                 document.getElementById("alertError2").innerHTML = "ERROR: Te falta inscribir " + missingTickets + " boleto(s) más!";
                 $('.alert.error2').slideToggle();
-                setTimeout(function(){ $('.alert.error2').slideToggle(); }, 2850);
+                setTimeout(function(){ $('.alert.error2').slideToggle(); }, 3100);
                 numCheck = false;
             } else if (numTickets == 3) {
                 numCheck = true;

@@ -290,9 +290,9 @@ function ticketCheck() {
     xhr3.addEventListener("readystatechange", function () {
       if (this.readyState === this.DONE) {
         if (this.status === 200) {
-            console.log(this.responseText);
+            //console.log(this.responseText);
             jsonResponse3 = JSON.parse(xhr3.responseText);
-            console.log(jsonResponse3);
+            //console.log(jsonResponse3);
             //console.log("Attendee ID: " + xhr3.responseText.substring(xhr3.responseText.indexOf("ID") + 4, xhr3.responseText.indexOf("type") - 2));
             console.log("#Tickets: " + xhr3.responseText.substring(xhr3.responseText.indexOf("total") + 7, xhr3.responseText.indexOf("total") + 8));
             numTickets = xhr3.responseText.substring(xhr3.responseText.indexOf("total") + 7, xhr3.responseText.indexOf("total") + 8);
@@ -300,7 +300,7 @@ function ticketCheck() {
             if (numTickets < 3) {
                 document.getElementById("alertError2").innerHTML = "ERROR: Te falta inscribir " + missingTickets + " boleto(s) más!";
                 $('.alert.error2').slideToggle();
-                setTimeout(function(){ $('.alert.error').slideToggle(); }, 2850);
+                setTimeout(function(){ $('.alert.error2').slideToggle(); }, 2850);
                 numCheck = false;
             } else if (numTickets == 3) {
                 numCheck = true;

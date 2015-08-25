@@ -290,7 +290,7 @@ function ticketCheck() {
                 $('.alert.error2').slideToggle();
                 setTimeout(function(){ $('.alert.error2').slideToggle(); }, 3100);
                 numCheck = false;
-            } else if (numTickets => 3) {
+            } else if (numTickets >= 3) {
                 numCheck = true;
                 document.getElementById("done").innerHTML = "Salir";
                 document.getElementById("done").style.background = "#53ca74";

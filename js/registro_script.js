@@ -8,6 +8,13 @@ var numCheck = false;
 var numTickets;
 
 $(document).ready(function() {
+    window.onbeforeunload = confirmExit;
+    function confirmExit() {
+        if (numTickets < 3 && numTickets != null) {
+            return "Aún no completas tu registro! ¿Seguro que quieres salir?";
+        }
+    }
+
     $('#form').bootstrapWizard({'tabClass': 'bwizard-steps', 'debug': false, onShow: function(tab, navigation, index) {
                 
             }, onNext: function(tab, navigation, index) {

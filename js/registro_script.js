@@ -245,11 +245,11 @@ function get_checked_radio(name, index)
         {
             if(index == 2){
                 TallerValue = i+1;
-                Encrypt_Taller = Math.round((i+1+253)/2);
+                Encrypt_Taller = Math.round((i+1+253)/2.0);
             }
             else if (index == 3){
                 VisitaValue = i+1;
-                Encrypt_Visita = Math.round(((i+1+254)*2)/3);
+                Encrypt_Visita = Math.round(((i+1+254)*2)/3.0);
             }
         }
     }

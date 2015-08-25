@@ -333,7 +333,7 @@ function getFolio(attendeeID) {
             //console.log(folio);
             if (document.getElementById("folio").value == folio) {
                 checkValue = true;
-                console.log("Folio OK!");
+                //console.log("Folio OK!");
                 if(checkValue && numTickets > 1) {
                     document.getElementById("alertError").innerHTML = "ERROR: Ya registraste tu taller y visita";
                     $('.alert.error').slideToggle();
@@ -351,7 +351,7 @@ function getFolio(attendeeID) {
                 setTimeout(function(){ $('.alert.error').slideToggle(); }, 2850);
 
                 //alert("Tu correo o folio no coinciden");
-                console.log("Folio ERROR!");
+                //console.log("Folio ERROR!");
             }
         } else {
             document.getElementById("alertError").innerHTML = "ERROR: Tu correo o folio no coinciden";
@@ -359,7 +359,7 @@ function getFolio(attendeeID) {
             setTimeout(function(){ $('.alert.error').slideToggle(); }, 2850);
 
             //alert("Tu correo o folio no coinciden");
-            console.log("Folio ERROR!");
+            //console.log("Folio ERROR!");
             console.log("Error", this.statusText);
         }
       }
@@ -374,7 +374,7 @@ function getFolio(attendeeID) {
 }
 
 function processAuth() {
-    console.log('processAuth');
+    //console.log('processAuth');
 
     eventjoy.auth(Token, function(success, response) {
         //localStorage.setItem( 'eventjoy_access_token', response.access_token);
@@ -387,7 +387,7 @@ function processAuth() {
     Token = "83aaKha3glwxhU5fhFqtMkfqg1f3FLL948ZYYC9cQmHqzzNTOWUQZhOARaJoblVgjNHFKdZN01GCV0oHsvwwmw77KA==";
 
     if (Token != '') {
-        console.log('Authorized');
+        //console.log('Authorized');
 
         var data = null;
         var xhr = new XMLHttpRequest();
@@ -401,7 +401,7 @@ function processAuth() {
                 //console.log(this.responseText);
                 jsonResponse = JSON.parse(xhr.responseText);
                 //console.log(jsonResponse);
-                console.log("Attendee ID: " + xhr.responseText.substring(xhr.responseText.indexOf("ID") + 4, xhr.responseText.indexOf("type") - 2));
+                //console.log("Attendee ID: " + xhr.responseText.substring(xhr.responseText.indexOf("ID") + 4, xhr.responseText.indexOf("type") - 2));
                 console.log("#Tickets: " + xhr.responseText.substring(xhr.responseText.indexOf("total") + 7, xhr.responseText.indexOf("total") + 8));
                 numTickets = xhr.responseText.substring(xhr.responseText.indexOf("total") + 7, xhr.responseText.indexOf("total") + 8);
                 if (numTickets == 1) {

@@ -105,7 +105,7 @@ $(document).ready(function() {
                             }
                             break;
                             case 5:{
-                            document.getElementById("visita-fecha").innerHTML = "FECHA PENDIENTE";
+                            document.getElementById("visita-fecha").innerHTML = "Jueves 12:00 PM";
                             }
                             break;
                             case 6:{
@@ -149,7 +149,7 @@ $(document).ready(function() {
                             }
                             break;
                             case 16:{
-                            document.getElementById("visita-fecha").innerHTML = "FECHA PENDIENTE";
+                            document.getElementById("visita-fecha").innerHTML = "Viernes 12:00 PM";
                             }
                             break;
                             case 17:{

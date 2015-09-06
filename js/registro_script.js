@@ -278,9 +278,9 @@ function ticketCheck() {
     xhr3.addEventListener("readystatechange", function () {
       if (this.readyState === this.DONE) {
         if (this.status === 200) {
-            //console.log(this.responseText);
+            console.log(this.responseText);
             jsonResponse3 = JSON.parse(xhr3.responseText);
-            //console.log(jsonResponse3);
+            console.log(jsonResponse3);
             //console.log("Attendee ID: " + xhr3.responseText.substring(xhr3.responseText.indexOf("ID") + 4, xhr3.responseText.indexOf("type") - 2));
             console.log("#Tickets: " + xhr3.responseText.substring(xhr3.responseText.indexOf("total") + 7, xhr3.responseText.indexOf("total") + 8));
             numTickets = xhr3.responseText.substring(xhr3.responseText.indexOf("total") + 7, xhr3.responseText.indexOf("total") + 8);
@@ -324,10 +324,10 @@ function getFolio(attendeeID) {
     xhr2.addEventListener("readystatechange", function () {
       if (this.readyState === this.DONE) {
         if (this.status === 200) {
-            //console.log(this.responseText);
+            console.log(this.responseText);
             jsonResponse2 = JSON.parse(xhr2.responseText);
-            //console.log(jsonResponse2);
-            //console.log("Folio: "+ xhr2.responseText.substring(xhr2.responseText.indexOf("Folio") + 9, xhr2.responseText.indexOf("}]}}") - 1));
+            console.log(jsonResponse2);
+            console.log("Folio: "+ xhr2.responseText.substring(xhr2.responseText.indexOf("Folio") + 9, xhr2.responseText.indexOf("}]}}") - 1));
             folio = xhr2.responseText.substring(xhr2.responseText.indexOf("Folio") + 9, xhr2.responseText.indexOf("}]}}") - 1);
             //console.log(document.getElementById("folio").value);
             //console.log(folio);
@@ -398,9 +398,9 @@ function processAuth() {
         xhr.addEventListener("readystatechange", function () {
           if (this.readyState === this.DONE) {
             if (this.status === 200) {
-                //console.log(this.responseText);
+                console.log(this.responseText);
                 jsonResponse = JSON.parse(xhr.responseText);
-                //console.log(jsonResponse);
+                console.log(jsonResponse);
                 //console.log("Attendee ID: " + xhr.responseText.substring(xhr.responseText.indexOf("ID") + 4, xhr.responseText.indexOf("type") - 2));
                 console.log("#Tickets: " + xhr.responseText.substring(xhr.responseText.indexOf("total") + 7, xhr.responseText.indexOf("total") + 8));
                 numTickets = xhr.responseText.substring(xhr.responseText.indexOf("total") + 7, xhr.responseText.indexOf("total") + 8);

@@ -10,9 +10,11 @@ var numTickets;
 $(document).ready(function() {
     window.onbeforeunload = confirmExit;
     function confirmExit() {
+        return "¿Seguro que quieres salir? Debes completar el registro de tu taller y visita.";
+        /*
         if (numTickets < 3 && numTickets != null && numTickets != 0) {
             return "Aún no completas tu registro! ¿Seguro que quieres salir?";
-        }
+        } */
     }
 
     $('#form').bootstrapWizard({'tabClass': 'bwizard-steps', 'debug': false, onShow: function(tab, navigation, index) {
@@ -44,6 +46,11 @@ $(document).ready(function() {
                     }
 
                     if ($('#email').val() && $('#folio').val()) {
+                        $('button.close').click(function() {
+                            $('.alert.success').slideToggle();
+                        });
+                        return true;
+                        /*
                         if (checkValue && numTickets == 1){
                             $('button.close').click(function() {
                                 $('.alert.success').slideToggle();
@@ -52,6 +59,7 @@ $(document).ready(function() {
                         } else if (!checkValue) {
                             get_URL_code();
                         }
+                        */
                     } 
                 }
                 if (index == 2){
@@ -223,6 +231,10 @@ $(document).ready(function() {
             }});
 
         $('#form .finish').click(function() {
+            alert('Registro Completo! Verifica tu correo para los boletos.');
+                window.location="http://www.congresoindustrial.com.mx";
+                return true;
+                /*
             if (numCheck){
                 alert('Registro Completo!');
                 window.location="http://www.congresoindustrial.com.mx";
@@ -231,6 +243,7 @@ $(document).ready(function() {
                 ticketCheck();
             }
             return false;
+            */
         });
 
 });

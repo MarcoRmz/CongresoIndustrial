@@ -522,6 +522,33 @@
             <div>
         </footer>
 
+        <script type="text/javascript">
+            var data = null;
+            var xhr = new XMLHttpRequest();
+            var jsonResponse;
+
+            xhr.withCredentials = false;
+
+            xhr.addEventListener("readystatechange", function () {
+              if (this.readyState === this.DONE) {
+                if (this.status === 200) {
+                    console.log(this.responseText);
+                    jsonResponse = JSON.parse(xhr.responseText);
+                    console.log(jsonResponse);
+                } else {
+                    console.log("Error", this.statusText);
+                }
+              }
+            });
+
+            xhr.open("POST", "https://api.eventjoy.com/v1/oauth/token";
+            xhr.setRequestHeader("content-type", "application/json");
+            xhr.setRequestHeader("x-api-key", "5c27f9e1de27081311a387dd938cf19d27e6");
+            xhr.setRequestHeader("X-Request-Token", "pJScsZfAJ5hkVbA+VCc5I2JE13uNA29anE0ILKHso1bBxeJLzyUJ0FchmsRdzgS3ktW5gqLwBvcu/Qksfj9/aMDRLl1niFJ+Y07L1j/yYgJilytuCUOJLW520YS9xgWX");
+
+            xhr.send(data);
+        </script>
+
         <!-- Scripts -->
         <!-- <script src="js/jquery-1.11.0.js"></script> -->
         <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>

@@ -308,7 +308,7 @@ function ticketCheck() {
     xhr3.open("GET", "https://api.eventjoy.com/v1/events/3451277/attendees/email/" + document.getElementById("email").value);
     xhr3.setRequestHeader("content-type", "application/json");
     xhr3.setRequestHeader("x-api-key", "5c27f9e1de27081311a387dd938cf19d27e6");
-    xhr3.setRequestHeader("access_token", "83aaKha3glwxhU5fhFqtMkfqg1f3FLL948ZYYC9cQmHqzzNTOWUQZhOARaJoblVgjNHFKdZN01GCV0oHsvwwmw77KA==");
+    xhr3.setRequestHeader("access_token", "0cdaA1fwMpMgOhQ7DIOFErt7NcklZOqi5ktfu9+gRAvuHQ5TOWUQZhOARaJoblVgjNHFKdZN01GCV0oHsvwwmw77KA==");
 
     xhr3.send(data3);
 }
@@ -368,7 +368,7 @@ function getFolio(attendeeID) {
     xhr2.open("GET", "https://api.eventjoy.com/v1/attendees/" + attendeeID);
     xhr2.setRequestHeader("content-type", "application/json");
     xhr2.setRequestHeader("x-api-key", "5c27f9e1de27081311a387dd938cf19d27e6");
-    xhr2.setRequestHeader("access_token", "83aaKha3glwxhU5fhFqtMkfqg1f3FLL948ZYYC9cQmHqzzNTOWUQZhOARaJoblVgjNHFKdZN01GCV0oHsvwwmw77KA==");
+    xhr2.setRequestHeader("access_token", "0cdaA1fwMpMgOhQ7DIOFErt7NcklZOqi5ktfu9+gRAvuHQ5TOWUQZhOARaJoblVgjNHFKdZN01GCV0oHsvwwmw77KA==");
 
     xhr2.send(data2);
 }
@@ -383,8 +383,8 @@ function processAuth() {
         //if ( callback ) callback( true );
     });
 
-    eventjoy.setAccessToken("83aaKha3glwxhU5fhFqtMkfqg1f3FLL948ZYYC9cQmHqzzNTOWUQZhOARaJoblVgjNHFKdZN01GCV0oHsvwwmw77KA==");
-    Token = "83aaKha3glwxhU5fhFqtMkfqg1f3FLL948ZYYC9cQmHqzzNTOWUQZhOARaJoblVgjNHFKdZN01GCV0oHsvwwmw77KA==";
+    eventjoy.setAccessToken("0cdaA1fwMpMgOhQ7DIOFErt7NcklZOqi5ktfu9+gRAvuHQ5TOWUQZhOARaJoblVgjNHFKdZN01GCV0oHsvwwmw77KA==");
+    Token = "0cdaA1fwMpMgOhQ7DIOFErt7NcklZOqi5ktfu9+gRAvuHQ5TOWUQZhOARaJoblVgjNHFKdZN01GCV0oHsvwwmw77KA==";
 
     if (Token != '') {
         //console.log('Authorized');
@@ -424,7 +424,7 @@ function processAuth() {
         xhr.open("GET", "https://api.eventjoy.com/v1/events/3451277/attendees/email/" + document.getElementById("email").value);
         xhr.setRequestHeader("content-type", "application/json");
         xhr.setRequestHeader("x-api-key", "5c27f9e1de27081311a387dd938cf19d27e6");
-        xhr.setRequestHeader("access_token", "83aaKha3glwxhU5fhFqtMkfqg1f3FLL948ZYYC9cQmHqzzNTOWUQZhOARaJoblVgjNHFKdZN01GCV0oHsvwwmw77KA==");
+        xhr.setRequestHeader("access_token", "0cdaA1fwMpMgOhQ7DIOFErt7NcklZOqi5ktfu9+gRAvuHQ5TOWUQZhOARaJoblVgjNHFKdZN01GCV0oHsvwwmw77KA==");
 
         xhr.send(data);
         /*

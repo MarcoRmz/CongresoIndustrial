@@ -44,6 +44,11 @@ $(document).ready(function() {
                     }
 
                     if ($('#email').val() && $('#folio').val()) {
+                        $('button.close').click(function() {
+                                $('.alert.success').slideToggle();
+                            });
+                            return true;
+                        /*
                         if (checkValue && numTickets == 1){
                             $('button.close').click(function() {
                                 $('.alert.success').slideToggle();
@@ -52,6 +57,7 @@ $(document).ready(function() {
                         } else if (!checkValue) {
                             get_URL_code();
                         }
+                        */
                     } 
                 }
                 if (index == 2){
@@ -63,242 +69,117 @@ $(document).ready(function() {
                     get_checked_radio('visitas', index);
                     
                     document.getElementById("codigoTaller").innerHTML = "Taller" + TallerValue + Encrypt_Taller;
-                        document.getElementById("codigoVisita").innerHTML = "Visita" + VisitaValue + Encrypt_Visita;
-                        //return true;
-
-                        if (TallerValue <= 6){
-                            document.getElementById("taller-fecha").innerHTML = "Jueves 3:30 PM";
-                        }
-                        else if (TallerValue > 6 && TallerValue <= 11){
-                            document.getElementById("taller-fecha").innerHTML = "Jueves 5:00 PM";
-                        }
-                        else if (TallerValue > 11 && TallerValue <= 16){
-                            document.getElementById("taller-fecha").innerHTML = "Viernes 3:30 PM";
-                        }
-                        else if (TallerValue > 16){
-                            document.getElementById("taller-fecha").innerHTML = "Viernes 5:00 PM";
-                        }
-
-                        switch(VisitaValue){
-                            case 1:{
-                            document.getElementById("visita-fecha").innerHTML = "Jueves 12:30 PM";
-                            }
-                            break;
-                            case 2:{
-                            document.getElementById("visita-fecha").innerHTML = "Jueves 1:30 PM";    
-                            }
-                            break;
-                            case 3:{
-                            document.getElementById("visita-fecha").innerHTML = "Jueves 2:00 PM";
-                            }
-                            break;
-                            case 4:{
-                            document.getElementById("visita-fecha").innerHTML = "Jueves 2:30 PM";    
-                            }
-                            break;
-                            case 5:{
-                            document.getElementById("visita-fecha").innerHTML = "Jueves 12:00 PM";
-                            }
-                            break;
-                            case 6:{
-                            document.getElementById("visita-fecha").innerHTML = "Jueves 2:00 PM";    
-                            }
-                            break;
-                            case 7:{
-                            document.getElementById("visita-fecha").innerHTML = "Jueves 2:00 PM";
-                            }
-                            break;
-                            case 8:{
-                            document.getElementById("visita-fecha").innerHTML = "Jueves 3:00 PM";    
-                            }
-                            break;
-                            case 9:{
-                            document.getElementById("visita-fecha").innerHTML = "FECHA PENDIENTE";
-                            }
-                            break;
-                            case 10:{
-                            document.getElementById("visita-fecha").innerHTML = "Jueves 2:00 PM";    
-                            }
-                            break;
-                            case 11:{
-                            document.getElementById("visita-fecha").innerHTML = "Jueves 3:00 PM";
-                            }
-                            break;
-                            case 12:{
-                            document.getElementById("visita-fecha").innerHTML = "Viernes 12:30 PM";    
-                            }
-                            break;
-                            case 13:{
-                            document.getElementById("visita-fecha").innerHTML = "Viernes 1:30 PM";    
-                            }
-                            break;
-                            case 14:{
-                            document.getElementById("visita-fecha").innerHTML = "Viernes 2:00 PM";
-                            }
-                            break;
-                            case 15:{
-                            document.getElementById("visita-fecha").innerHTML = "Viernes 2:30 PM";    
-                            }
-                            break;
-                            case 16:{
-                            document.getElementById("visita-fecha").innerHTML = "Viernes 12:00 PM";
-                            }
-                            break;
-                            case 17:{
-                            document.getElementById("visita-fecha").innerHTML = "Viernes 2:00 PM";    
-                            }
-                            break;
-                            case 18:{
-                            document.getElementById("visita-fecha").innerHTML = "Viernes 2:00 PM";
-                            }
-                            break;
-                            case 19:{
-                            document.getElementById("visita-fecha").innerHTML = "Viernes 3:00 PM";    
-                            }
-                            break;
-                            case 20:{
-                            document.getElementById("visita-fecha").innerHTML = "FECHA PENDIENTE";
-                            }
-                            break;
-                            case 21:{
-                            document.getElementById("visita-fecha").innerHTML = "Viernes 2:00 PM";    
-                            }
-                            break;
-                            case 22:{
-                            document.getElementById("visita-fecha").innerHTML = "Viernes 3:00 PM";
-                            }
-                            break;
-                            case 23:{
-                            document.getElementById("visita-fecha").innerHTML = "Viernes 2:30 PM";    
-                            }
-                            break;
-                    /*
-                    if (TallerValue <= 11 && VisitaValue <= 11) {
-                        alert("El Taller y la Visita seleccionados son el mismo día");
-                        return false;
-                    }
-                    else if (TallerValue > 11 && VisitaValue > 11) {
-                        alert("El Taller y la Visita seleccionados son el mismo día");
-                        return false;
-                    }
-                    else {
-                        document.getElementById("codigoTaller").innerHTML = "Taller" + TallerValue + Encrypt_Taller;
-                        document.getElementById("codigoVisita").innerHTML = "Visita" + VisitaValue + Encrypt_Visita;
-                        //return true;
-
-                        if (TallerValue <= 6){
-                            document.getElementById("taller-fecha").innerHTML = "Jueves 3:30 PM";
-                        }
-                        else if (TallerValue > 6 && TallerValue <= 11){
-                            document.getElementById("taller-fecha").innerHTML = "Jueves 5:00 PM";
-                        }
-                        else if (TallerValue > 11 && TallerValue <= 16){
-                            document.getElementById("taller-fecha").innerHTML = "Viernes 3:30 PM";
-                        }
-                        else if (TallerValue > 16){
-                            document.getElementById("taller-fecha").innerHTML = "Viernes 5:00 PM";
-                        }
-
-                        switch(VisitaValue){
-                            case 1:{
-                            document.getElementById("visita-fecha").innerHTML = "Jueves 12:30 PM";
-                            }
-                            break;
-                            case 2:{
-                            document.getElementById("visita-fecha").innerHTML = "Jueves 1:30 PM";    
-                            }
-                            break;
-                            case 3:{
-                            document.getElementById("visita-fecha").innerHTML = "Jueves 2:00 PM";
-                            }
-                            break;
-                            case 4:{
-                            document.getElementById("visita-fecha").innerHTML = "Jueves 2:30 PM";    
-                            }
-                            break;
-                            case 5:{
-                            document.getElementById("visita-fecha").innerHTML = "Jueves 12:00 PM";
-                            }
-                            break;
-                            case 6:{
-                            document.getElementById("visita-fecha").innerHTML = "Jueves 2:00 PM";    
-                            }
-                            break;
-                            case 7:{
-                            document.getElementById("visita-fecha").innerHTML = "Jueves 2:00 PM";
-                            }
-                            break;
-                            case 8:{
-                            document.getElementById("visita-fecha").innerHTML = "Jueves 3:00 PM";    
-                            }
-                            break;
-                            case 9:{
-                            document.getElementById("visita-fecha").innerHTML = "FECHA PENDIENTE";
-                            }
-                            break;
-                            case 10:{
-                            document.getElementById("visita-fecha").innerHTML = "Jueves 2:00 PM";    
-                            }
-                            break;
-                            case 11:{
-                            document.getElementById("visita-fecha").innerHTML = "Jueves 3:00 PM";
-                            }
-                            break;
-                            case 12:{
-                            document.getElementById("visita-fecha").innerHTML = "Viernes 12:30 PM";    
-                            }
-                            break;
-                            case 13:{
-                            document.getElementById("visita-fecha").innerHTML = "Viernes 1:30 PM";    
-                            }
-                            break;
-                            case 14:{
-                            document.getElementById("visita-fecha").innerHTML = "Viernes 2:00 PM";
-                            }
-                            break;
-                            case 15:{
-                            document.getElementById("visita-fecha").innerHTML = "Viernes 2:30 PM";    
-                            }
-                            break;
-                            case 16:{
-                            document.getElementById("visita-fecha").innerHTML = "Viernes 12:00 PM";
-                            }
-                            break;
-                            case 17:{
-                            document.getElementById("visita-fecha").innerHTML = "Viernes 2:00 PM";    
-                            }
-                            break;
-                            case 18:{
-                            document.getElementById("visita-fecha").innerHTML = "Viernes 2:00 PM";
-                            }
-                            break;
-                            case 19:{
-                            document.getElementById("visita-fecha").innerHTML = "Viernes 3:00 PM";    
-                            }
-                            break;
-                            case 20:{
-                            document.getElementById("visita-fecha").innerHTML = "FECHA PENDIENTE";
-                            }
-                            break;
-                            case 21:{
-                            document.getElementById("visita-fecha").innerHTML = "Viernes 2:00 PM";    
-                            }
-                            break;
-                            case 22:{
-                            document.getElementById("visita-fecha").innerHTML = "Viernes 3:00 PM";
-                            }
-                            break;
-                            case 23:{
-                            document.getElementById("visita-fecha").innerHTML = "Viernes 2:30 PM";    
-                            }
-                            break;
-                        } */
-                        
-                        return true;
-                    }
-                    //document.getElementById("codigoTaller").innerHTML = "Taller" + TallerValue + Encrypt_Taller;
-                    //document.getElementById("codigoVisita").innerHTML = "Visita" + VisitaValue + Encrypt_Visita;
+                    document.getElementById("codigoVisita").innerHTML = "Visita" + VisitaValue + Encrypt_Visita;
                     //return true;
+
+                    if (TallerValue <= 6){
+                        document.getElementById("taller-fecha").innerHTML = "Jueves 3:30 PM";
+                    }
+                    else if (TallerValue > 6 && TallerValue <= 11){
+                        document.getElementById("taller-fecha").innerHTML = "Jueves 5:00 PM";
+                    }
+                    else if (TallerValue > 11 && TallerValue <= 16){
+                        document.getElementById("taller-fecha").innerHTML = "Viernes 3:30 PM";
+                    }
+                    else if (TallerValue > 16){
+                        document.getElementById("taller-fecha").innerHTML = "Viernes 5:00 PM";
+                    }
+
+                    switch(VisitaValue){
+                        case 1:{
+                        document.getElementById("visita-fecha").innerHTML = "Jueves 12:30 PM";
+                        }
+                        break;
+                        case 2:{
+                        document.getElementById("visita-fecha").innerHTML = "Jueves 1:30 PM";    
+                        }
+                        break;
+                        case 3:{
+                        document.getElementById("visita-fecha").innerHTML = "Jueves 2:00 PM";
+                        }
+                        break;
+                        case 4:{
+                        document.getElementById("visita-fecha").innerHTML = "Jueves 2:30 PM";    
+                        }
+                        break;
+                        case 5:{
+                        document.getElementById("visita-fecha").innerHTML = "Jueves 12:00 PM";
+                        }
+                        break;
+                        case 6:{
+                        document.getElementById("visita-fecha").innerHTML = "Jueves 2:00 PM";    
+                        }
+                        break;
+                        case 7:{
+                        document.getElementById("visita-fecha").innerHTML = "Jueves 2:00 PM";
+                        }
+                        break;
+                        case 8:{
+                        document.getElementById("visita-fecha").innerHTML = "Jueves 3:00 PM";    
+                        }
+                        break;
+                        case 9:{
+                        document.getElementById("visita-fecha").innerHTML = "FECHA PENDIENTE";
+                        }
+                        break;
+                        case 10:{
+                        document.getElementById("visita-fecha").innerHTML = "Jueves 2:00 PM";    
+                        }
+                        break;
+                        case 11:{
+                        document.getElementById("visita-fecha").innerHTML = "Jueves 3:00 PM";
+                        }
+                        break;
+                        case 12:{
+                        document.getElementById("visita-fecha").innerHTML = "Viernes 12:30 PM";    
+                        }
+                        break;
+                        case 13:{
+                        document.getElementById("visita-fecha").innerHTML = "Viernes 1:30 PM";    
+                        }
+                        break;
+                        case 14:{
+                        document.getElementById("visita-fecha").innerHTML = "Viernes 2:00 PM";
+                        }
+                        break;
+                        case 15:{
+                        document.getElementById("visita-fecha").innerHTML = "Viernes 2:30 PM";    
+                        }
+                        break;
+                        case 16:{
+                        document.getElementById("visita-fecha").innerHTML = "Viernes 12:00 PM";
+                        }
+                        break;
+                        case 17:{
+                        document.getElementById("visita-fecha").innerHTML = "Viernes 2:00 PM";    
+                        }
+                        break;
+                        case 18:{
+                        document.getElementById("visita-fecha").innerHTML = "Viernes 2:00 PM";
+                        }
+                        break;
+                        case 19:{
+                        document.getElementById("visita-fecha").innerHTML = "Viernes 3:00 PM";    
+                        }
+                        break;
+                        case 20:{
+                        document.getElementById("visita-fecha").innerHTML = "FECHA PENDIENTE";
+                        }
+                        break;
+                        case 21:{
+                        document.getElementById("visita-fecha").innerHTML = "Viernes 2:00 PM";    
+                        }
+                        break;
+                        case 22:{
+                        document.getElementById("visita-fecha").innerHTML = "Viernes 3:00 PM";
+                        }
+                        break;
+                        case 23:{
+                        document.getElementById("visita-fecha").innerHTML = "Viernes 2:30 PM";    
+                        }
+                        break;
+                    }
+                    return true;
                 }
                 return false;
             }, onPrevious: function(tab, navigation, index) {

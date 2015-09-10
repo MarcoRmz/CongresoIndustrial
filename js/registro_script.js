@@ -61,6 +61,7 @@ $(document).ready(function() {
                 }
                 else if (index == 3){
                     get_checked_radio('visitas', index);
+                    /*
                     if (TallerValue <= 11 && VisitaValue <= 11) {
                         alert("El Taller y la Visita seleccionados son el mismo día");
                         return false;
@@ -68,7 +69,7 @@ $(document).ready(function() {
                     else if (TallerValue > 11 && VisitaValue > 11) {
                         alert("El Taller y la Visita seleccionados son el mismo día");
                         return false;
-                    }
+                    } */
                     else {
                         document.getElementById("codigoTaller").innerHTML = "Taller" + TallerValue + Encrypt_Taller;
                         document.getElementById("codigoVisita").innerHTML = "Visita" + VisitaValue + Encrypt_Visita;

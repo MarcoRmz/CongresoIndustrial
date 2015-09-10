@@ -5,14 +5,19 @@ var Encrypt_Visita;
 var URL_complete;
 var checkValue = false;
 var numCheck = false;
+var finishClicked = false;
 var numTickets;
 
 $(document).ready(function() {
     window.onbeforeunload = confirmExit;
     function confirmExit() {
+        if (!finishClicked) {
+            return "¿Seguro que quieres salir? Debes completar el registro de tu taller y visita.";
+        }
+        /*
         if (numTickets < 3 && numTickets != null && numTickets != 0) {
             return "Aún no completas tu registro! ¿Seguro que quieres salir?";
-        }
+        } */
     }
 
     $('#form').bootstrapWizard({'tabClass': 'bwizard-steps', 'debug': false, onShow: function(tab, navigation, index) {
@@ -45,9 +50,9 @@ $(document).ready(function() {
 
                     if ($('#email').val() && $('#folio').val()) {
                         $('button.close').click(function() {
-                                $('.alert.success').slideToggle();
-                            });
-                            return true;
+                            $('.alert.success').slideToggle();
+                        });
+                        return true;
                         /*
                         if (checkValue && numTickets == 1){
                             $('button.close').click(function() {
@@ -67,119 +72,122 @@ $(document).ready(function() {
                 }
                 else if (index == 3){
                     get_checked_radio('visitas', index);
-                    
                     document.getElementById("codigoTaller").innerHTML = "Taller" + TallerValue + Encrypt_Taller;
-                    document.getElementById("codigoVisita").innerHTML = "Visita" + VisitaValue + Encrypt_Visita;
+                        document.getElementById("codigoVisita").innerHTML = "Visita" + VisitaValue + Encrypt_Visita;
+                        //return true;
+
+                        if (TallerValue <= 6){
+                            document.getElementById("taller-fecha").innerHTML = "Jueves 3:30 PM";
+                        }
+                        else if (TallerValue > 6 && TallerValue <= 11){
+                            document.getElementById("taller-fecha").innerHTML = "Jueves 5:00 PM";
+                        }
+                        else if (TallerValue > 11 && TallerValue <= 16){
+                            document.getElementById("taller-fecha").innerHTML = "Viernes 3:30 PM";
+                        }
+                        else if (TallerValue > 16){
+                            document.getElementById("taller-fecha").innerHTML = "Viernes 5:00 PM";
+                        }
+
+                        switch(VisitaValue){
+                            case 1:{
+                            document.getElementById("visita-fecha").innerHTML = "Jueves 12:30 PM";
+                            }
+                            break;
+                            case 2:{
+                            document.getElementById("visita-fecha").innerHTML = "Jueves 1:30 PM";    
+                            }
+                            break;
+                            case 3:{
+                            document.getElementById("visita-fecha").innerHTML = "Jueves 2:00 PM";
+                            }
+                            break;
+                            case 4:{
+                            document.getElementById("visita-fecha").innerHTML = "Jueves 2:30 PM";    
+                            }
+                            break;
+                            case 5:{
+                            document.getElementById("visita-fecha").innerHTML = "Jueves 12:00 PM";
+                            }
+                            break;
+                            case 6:{
+                            document.getElementById("visita-fecha").innerHTML = "Jueves 2:00 PM";    
+                            }
+                            break;
+                            case 7:{
+                            document.getElementById("visita-fecha").innerHTML = "Jueves 2:00 PM";
+                            }
+                            break;
+                            case 8:{
+                            document.getElementById("visita-fecha").innerHTML = "Jueves 3:00 PM";    
+                            }
+                            break;
+                            case 9:{
+                            document.getElementById("visita-fecha").innerHTML = "FECHA PENDIENTE";
+                            }
+                            break;
+                            case 10:{
+                            document.getElementById("visita-fecha").innerHTML = "Jueves 2:00 PM";    
+                            }
+                            break;
+                            case 11:{
+                            document.getElementById("visita-fecha").innerHTML = "Jueves 3:00 PM";
+                            }
+                            break;
+                            case 12:{
+                            document.getElementById("visita-fecha").innerHTML = "Viernes 12:30 PM";    
+                            }
+                            break;
+                            case 13:{
+                            document.getElementById("visita-fecha").innerHTML = "Viernes 1:30 PM";    
+                            }
+                            break;
+                            case 14:{
+                            document.getElementById("visita-fecha").innerHTML = "Viernes 2:00 PM";
+                            }
+                            break;
+                            case 15:{
+                            document.getElementById("visita-fecha").innerHTML = "Viernes 2:30 PM";    
+                            }
+                            break;
+                            case 16:{
+                            document.getElementById("visita-fecha").innerHTML = "Viernes 12:00 PM";
+                            }
+                            break;
+                            case 17:{
+                            document.getElementById("visita-fecha").innerHTML = "Viernes 2:00 PM";    
+                            }
+                            break;
+                            case 18:{
+                            document.getElementById("visita-fecha").innerHTML = "Viernes 2:00 PM";
+                            }
+                            break;
+                            case 19:{
+                            document.getElementById("visita-fecha").innerHTML = "Viernes 3:00 PM";    
+                            }
+                            break;
+                            case 20:{
+                            document.getElementById("visita-fecha").innerHTML = "FECHA PENDIENTE";
+                            }
+                            break;
+                            case 21:{
+                            document.getElementById("visita-fecha").innerHTML = "Viernes 2:00 PM";    
+                            }
+                            break;
+                            case 22:{
+                            document.getElementById("visita-fecha").innerHTML = "Viernes 3:00 PM";
+                            }
+                            break;
+                            case 23:{
+                            document.getElementById("visita-fecha").innerHTML = "Viernes 2:30 PM";    
+                            }
+                            break;
+                        }
+                        
+                        return true;
+                    //document.getElementById("codigoTaller").innerHTML = "Taller" + TallerValue + Encrypt_Taller;
+                    //document.getElementById("codigoVisita").innerHTML = "Visita" + VisitaValue + Encrypt_Visita;
                     //return true;
-
-                    if (TallerValue <= 6){
-                        document.getElementById("taller-fecha").innerHTML = "Jueves 3:30 PM";
-                    }
-                    else if (TallerValue > 6 && TallerValue <= 11){
-                        document.getElementById("taller-fecha").innerHTML = "Jueves 5:00 PM";
-                    }
-                    else if (TallerValue > 11 && TallerValue <= 16){
-                        document.getElementById("taller-fecha").innerHTML = "Viernes 3:30 PM";
-                    }
-                    else if (TallerValue > 16){
-                        document.getElementById("taller-fecha").innerHTML = "Viernes 5:00 PM";
-                    }
-
-                    switch(VisitaValue){
-                        case 1:{
-                        document.getElementById("visita-fecha").innerHTML = "Jueves 12:30 PM";
-                        }
-                        break;
-                        case 2:{
-                        document.getElementById("visita-fecha").innerHTML = "Jueves 1:30 PM";    
-                        }
-                        break;
-                        case 3:{
-                        document.getElementById("visita-fecha").innerHTML = "Jueves 2:00 PM";
-                        }
-                        break;
-                        case 4:{
-                        document.getElementById("visita-fecha").innerHTML = "Jueves 2:30 PM";    
-                        }
-                        break;
-                        case 5:{
-                        document.getElementById("visita-fecha").innerHTML = "Jueves 12:00 PM";
-                        }
-                        break;
-                        case 6:{
-                        document.getElementById("visita-fecha").innerHTML = "Jueves 2:00 PM";    
-                        }
-                        break;
-                        case 7:{
-                        document.getElementById("visita-fecha").innerHTML = "Jueves 2:00 PM";
-                        }
-                        break;
-                        case 8:{
-                        document.getElementById("visita-fecha").innerHTML = "Jueves 3:00 PM";    
-                        }
-                        break;
-                        case 9:{
-                        document.getElementById("visita-fecha").innerHTML = "FECHA PENDIENTE";
-                        }
-                        break;
-                        case 10:{
-                        document.getElementById("visita-fecha").innerHTML = "Jueves 2:00 PM";    
-                        }
-                        break;
-                        case 11:{
-                        document.getElementById("visita-fecha").innerHTML = "Jueves 3:00 PM";
-                        }
-                        break;
-                        case 12:{
-                        document.getElementById("visita-fecha").innerHTML = "Viernes 12:30 PM";    
-                        }
-                        break;
-                        case 13:{
-                        document.getElementById("visita-fecha").innerHTML = "Viernes 1:30 PM";    
-                        }
-                        break;
-                        case 14:{
-                        document.getElementById("visita-fecha").innerHTML = "Viernes 2:00 PM";
-                        }
-                        break;
-                        case 15:{
-                        document.getElementById("visita-fecha").innerHTML = "Viernes 2:30 PM";    
-                        }
-                        break;
-                        case 16:{
-                        document.getElementById("visita-fecha").innerHTML = "Viernes 12:00 PM";
-                        }
-                        break;
-                        case 17:{
-                        document.getElementById("visita-fecha").innerHTML = "Viernes 2:00 PM";    
-                        }
-                        break;
-                        case 18:{
-                        document.getElementById("visita-fecha").innerHTML = "Viernes 2:00 PM";
-                        }
-                        break;
-                        case 19:{
-                        document.getElementById("visita-fecha").innerHTML = "Viernes 3:00 PM";    
-                        }
-                        break;
-                        case 20:{
-                        document.getElementById("visita-fecha").innerHTML = "FECHA PENDIENTE";
-                        }
-                        break;
-                        case 21:{
-                        document.getElementById("visita-fecha").innerHTML = "Viernes 2:00 PM";    
-                        }
-                        break;
-                        case 22:{
-                        document.getElementById("visita-fecha").innerHTML = "Viernes 3:00 PM";
-                        }
-                        break;
-                        case 23:{
-                        document.getElementById("visita-fecha").innerHTML = "Viernes 2:30 PM";    
-                        }
-                        break;
-                    }
-                    return true;
                 }
                 return false;
             }, onPrevious: function(tab, navigation, index) {
@@ -194,10 +202,12 @@ $(document).ready(function() {
                 var $percent = ($current/$total) * 100;
                 $('#form .progress-bar').css({width:$percent+'%'});
 
-                if ($current == 1 || $current == 2) {
+                if ($current == 1) {
                     $('#form').find('.pager .previous').hide();
                     document.getElementById("validate").style.background = "#ff9955";
                     document.getElementById("validate").style.border = "#ff9955";
+                } else if($current == 2) {
+                    document.getElementById("validate").innerHTML = "Siguiente";
                 } else {
                     $('#form').find('.pager .previous').show();
                     document.getElementById("validate").style.background = "#ff9955";
@@ -216,6 +226,11 @@ $(document).ready(function() {
             }});
 
         $('#form .finish').click(function() {
+            alert('Registro Completo! Verifica tu correo para los boletos.');
+                window.location="http://www.congresoindustrial.com.mx";
+                finishClicked = true;
+                return true;
+                /*
             if (numCheck){
                 alert('Registro Completo!');
                 window.location="http://www.congresoindustrial.com.mx";
@@ -224,6 +239,7 @@ $(document).ready(function() {
                 ticketCheck();
             }
             return false;
+            */
         });
 
 });
@@ -271,9 +287,9 @@ function ticketCheck() {
     xhr3.addEventListener("readystatechange", function () {
       if (this.readyState === this.DONE) {
         if (this.status === 200) {
-            //console.log(this.responseText);
+            console.log(this.responseText);
             jsonResponse3 = JSON.parse(xhr3.responseText);
-            //console.log(jsonResponse3);
+            console.log(jsonResponse3);
             //console.log("Attendee ID: " + xhr3.responseText.substring(xhr3.responseText.indexOf("ID") + 4, xhr3.responseText.indexOf("type") - 2));
             console.log("#Tickets: " + xhr3.responseText.substring(xhr3.responseText.indexOf("total") + 7, xhr3.responseText.indexOf("total") + 8));
             numTickets = xhr3.responseText.substring(xhr3.responseText.indexOf("total") + 7, xhr3.responseText.indexOf("total") + 8);
@@ -301,7 +317,7 @@ function ticketCheck() {
     xhr3.open("GET", "https://api.eventjoy.com/v1/events/3451277/attendees/email/" + document.getElementById("email").value);
     xhr3.setRequestHeader("content-type", "application/json");
     xhr3.setRequestHeader("x-api-key", "5c27f9e1de27081311a387dd938cf19d27e6");
-    xhr3.setRequestHeader("access_token", "c2e2ZDO1OCXX/RMqYfpxx/pm3iNoyyYL9X+2LY1995dA7J5TOWUQZhOARaJoblVgjNHFKdZN01GCV0oHsvwwmw77KA==");
+    xhr3.setRequestHeader("access_token", "83aaKha3glwxhU5fhFqtMkfqg1f3FLL948ZYYC9cQmHqzzNTOWUQZhOARaJoblVgjNHFKdZN01GCV0oHsvwwmw77KA==");
 
     xhr3.send(data3);
 }
@@ -317,10 +333,10 @@ function getFolio(attendeeID) {
     xhr2.addEventListener("readystatechange", function () {
       if (this.readyState === this.DONE) {
         if (this.status === 200) {
-            //console.log(this.responseText);
+            console.log(this.responseText);
             jsonResponse2 = JSON.parse(xhr2.responseText);
-            //console.log(jsonResponse2);
-            //console.log("Folio: "+ xhr2.responseText.substring(xhr2.responseText.indexOf("Folio") + 9, xhr2.responseText.indexOf("}]}}") - 1));
+            console.log(jsonResponse2);
+            console.log("Folio: "+ xhr2.responseText.substring(xhr2.responseText.indexOf("Folio") + 9, xhr2.responseText.indexOf("}]}}") - 1));
             folio = xhr2.responseText.substring(xhr2.responseText.indexOf("Folio") + 9, xhr2.responseText.indexOf("}]}}") - 1);
             //console.log(document.getElementById("folio").value);
             //console.log(folio);
@@ -361,7 +377,7 @@ function getFolio(attendeeID) {
     xhr2.open("GET", "https://api.eventjoy.com/v1/attendees/" + attendeeID);
     xhr2.setRequestHeader("content-type", "application/json");
     xhr2.setRequestHeader("x-api-key", "5c27f9e1de27081311a387dd938cf19d27e6");
-    xhr2.setRequestHeader("access_token", "c2e2ZDO1OCXX/RMqYfpxx/pm3iNoyyYL9X+2LY1995dA7J5TOWUQZhOARaJoblVgjNHFKdZN01GCV0oHsvwwmw77KA==");
+    xhr2.setRequestHeader("access_token", "83aaKha3glwxhU5fhFqtMkfqg1f3FLL948ZYYC9cQmHqzzNTOWUQZhOARaJoblVgjNHFKdZN01GCV0oHsvwwmw77KA==");
 
     xhr2.send(data2);
 }
@@ -376,8 +392,8 @@ function processAuth() {
         //if ( callback ) callback( true );
     });
 
-    eventjoy.setAccessToken("c2e2ZDO1OCXX/RMqYfpxx/pm3iNoyyYL9X+2LY1995dA7J5TOWUQZhOARaJoblVgjNHFKdZN01GCV0oHsvwwmw77KA==");
-    Token = "c2e2ZDO1OCXX/RMqYfpxx/pm3iNoyyYL9X+2LY1995dA7J5TOWUQZhOARaJoblVgjNHFKdZN01GCV0oHsvwwmw77KA==";
+    eventjoy.setAccessToken("83aaKha3glwxhU5fhFqtMkfqg1f3FLL948ZYYC9cQmHqzzNTOWUQZhOARaJoblVgjNHFKdZN01GCV0oHsvwwmw77KA==");
+    Token = "83aaKha3glwxhU5fhFqtMkfqg1f3FLL948ZYYC9cQmHqzzNTOWUQZhOARaJoblVgjNHFKdZN01GCV0oHsvwwmw77KA==";
 
     if (Token != '') {
         //console.log('Authorized');
@@ -391,9 +407,9 @@ function processAuth() {
         xhr.addEventListener("readystatechange", function () {
           if (this.readyState === this.DONE) {
             if (this.status === 200) {
-                //console.log(this.responseText);
+                console.log(this.responseText);
                 jsonResponse = JSON.parse(xhr.responseText);
-                //console.log(jsonResponse);
+                console.log(jsonResponse);
                 //console.log("Attendee ID: " + xhr.responseText.substring(xhr.responseText.indexOf("ID") + 4, xhr.responseText.indexOf("type") - 2));
                 console.log("#Tickets: " + xhr.responseText.substring(xhr.responseText.indexOf("total") + 7, xhr.responseText.indexOf("total") + 8));
                 numTickets = xhr.responseText.substring(xhr.responseText.indexOf("total") + 7, xhr.responseText.indexOf("total") + 8);
@@ -417,7 +433,7 @@ function processAuth() {
         xhr.open("GET", "https://api.eventjoy.com/v1/events/3451277/attendees/email/" + document.getElementById("email").value);
         xhr.setRequestHeader("content-type", "application/json");
         xhr.setRequestHeader("x-api-key", "5c27f9e1de27081311a387dd938cf19d27e6");
-        xhr.setRequestHeader("access_token", "c2e2ZDO1OCXX/RMqYfpxx/pm3iNoyyYL9X+2LY1995dA7J5TOWUQZhOARaJoblVgjNHFKdZN01GCV0oHsvwwmw77KA==");
+        xhr.setRequestHeader("access_token", "83aaKha3glwxhU5fhFqtMkfqg1f3FLL948ZYYC9cQmHqzzNTOWUQZhOARaJoblVgjNHFKdZN01GCV0oHsvwwmw77KA==");
 
         xhr.send(data);
         /*
